@@ -1,0 +1,1126 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DEAA681720980C12003C06B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA681620980C12003C06B5 /* AppDelegate.swift */; };
+		DEAA681C20980C12003C06B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAA681A20980C12003C06B5 /* Main.storyboard */; };
+		DEAA681F20980C12003C06B5 /* Benevole.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEAA681D20980C12003C06B5 /* Benevole.xcdatamodeld */; };
+		DEAA682120980C12003C06B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEAA682020980C12003C06B5 /* Assets.xcassets */; };
+		DEAA682420980C12003C06B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAA682220980C12003C06B5 /* LaunchScreen.storyboard */; };
+		DEAA682F20980C13003C06B5 /* BenevoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA682E20980C13003C06B5 /* BenevoleTests.swift */; };
+		DEAA683A20980C13003C06B5 /* BenevoleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA683920980C13003C06B5 /* BenevoleUITests.swift */; };
+		DEAA684920980E24003C06B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA684720980E23003C06B5 /* LoginViewController.swift */; };
+		DEAA684A20980E24003C06B5 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA684820980E24003C06B5 /* LaunchViewController.swift */; };
+		DED83AD9209810D6007004DC /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A8A209810D5007004DC /* Array+Extensions.swift */; };
+		DED83ADA209810D6007004DC /* Common+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A8B209810D5007004DC /* Common+Extensions.swift */; };
+		DED83ADB209810D6007004DC /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A8C209810D5007004DC /* Date+Extension.swift */; };
+		DED83ADC209810D6007004DC /* Locale+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A8D209810D5007004DC /* Locale+Extensions.swift */; };
+		DED83ADD209810D6007004DC /* Optional+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A8E209810D5007004DC /* Optional+Extensions.swift */; };
+		DED83ADE209810D6007004DC /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A8F209810D5007004DC /* String+Extensions.swift */; };
+		DED83ADF209810D6007004DC /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A90209810D5007004DC /* UIAlertController+Extensions.swift */; };
+		DED83AE0209810D6007004DC /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A91209810D5007004DC /* UIApplication+Extensions.swift */; };
+		DED83AE1209810D6007004DC /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A92209810D5007004DC /* UIColor+Extensions.swift */; };
+		DED83AE2209810D6007004DC /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A93209810D5007004DC /* UIImage+Extensions.swift */; };
+		DED83AE3209810D6007004DC /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A94209810D5007004DC /* UIImageView+Extensions.swift */; };
+		DED83AE4209810D6007004DC /* UISearchBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A95209810D5007004DC /* UISearchBar+Extensions.swift */; };
+		DED83AE5209810D6007004DC /* UISegmentedControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A96209810D5007004DC /* UISegmentedControl+Extensions.swift */; };
+		DED83AE6209810D6007004DC /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A97209810D5007004DC /* UITextField+Extensions.swift */; };
+		DED83AE7209810D6007004DC /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A98209810D5007004DC /* UITextView+Extensions.swift */; };
+		DED83AE8209810D6007004DC /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A99209810D5007004DC /* UIView+Extensions.swift */; };
+		DED83AE9209810D6007004DC /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A9A209810D5007004DC /* UIViewController+Extensions.swift */; };
+		DED83AEA209810D6007004DC /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A9D209810D5007004DC /* ColorPickerViewController.swift */; };
+		DED83AEB209810D6007004DC /* ContactsPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A9F209810D5007004DC /* ContactsPickerViewController.swift */; };
+		DED83AEC209810D6007004DC /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AA1209810D5007004DC /* Contacts.swift */; };
+		DED83AED209810D6007004DC /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AA3209810D5007004DC /* Contact.swift */; };
+		DED83AEE209810D6007004DC /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AA5209810D5007004DC /* ContactCell.swift */; };
+		DED83AEF209810D6007004DC /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AA7209810D5007004DC /* DatePickerViewController.swift */; };
+		DED83AF0209810D6007004DC /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AA9209810D5007004DC /* ImagePickerViewController.swift */; };
+		DED83AF1209810D6007004DC /* ItemWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AAB209810D5007004DC /* ItemWithImage.swift */; };
+		DED83AF2209810D6007004DC /* Countries.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DED83AAD209810D5007004DC /* Countries.bundle */; };
+		DED83AF3209810D6007004DC /* LocalePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AAE209810D5007004DC /* LocalePickerViewController.swift */; };
+		DED83AF4209810D6007004DC /* LocaleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AB0209810D5007004DC /* LocaleStore.swift */; };
+		DED83AF5209810D6007004DC /* LocaleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AB2209810D5007004DC /* LocaleInfo.swift */; };
+		DED83AF6209810D6007004DC /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AB4209810D5007004DC /* CountryCell.swift */; };
+		DED83AF7209810D6007004DC /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AB5209810D5007004DC /* CurrencyCell.swift */; };
+		DED83AF8209810D6007004DC /* PhoneCodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AB6209810D5007004DC /* PhoneCodeCell.swift */; };
+		DED83AF9209810D6007004DC /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AB8209810D5007004DC /* LocationPickerViewController.swift */; };
+		DED83AFA209810D6007004DC /* LocationSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AB9209810D5007004DC /* LocationSearchResultsViewController.swift */; };
+		DED83AFB209810D6007004DC /* SearchHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83ABB209810D5007004DC /* SearchHistoryManager.swift */; };
+		DED83AFC209810D6007004DC /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83ABD209810D6007004DC /* Address.swift */; };
+		DED83AFD209810D6007004DC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83ABE209810D6007004DC /* Location.swift */; };
+		DED83AFE209810D6007004DC /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AC1209810D6007004DC /* Assets.swift */; };
+		DED83AFF209810D6007004DC /* PhotoLibraryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AC2209810D6007004DC /* PhotoLibraryPickerViewController.swift */; };
+		DED83B00209810D6007004DC /* PickerViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AC4209810D6007004DC /* PickerViewViewController.swift */; };
+		DED83B01209810D6007004DC /* PhotoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AC7209810D6007004DC /* PhotoLayout.swift */; };
+		DED83B02209810D6007004DC /* TelegramPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AC8209810D6007004DC /* TelegramPickerViewController.swift */; };
+		DED83B03209810D6007004DC /* ItemWithPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83ACA209810D6007004DC /* ItemWithPhoto.swift */; };
+		DED83B04209810D6007004DC /* LikeButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83ACB209810D6007004DC /* LikeButtonCell.swift */; };
+		DED83B05209810D6007004DC /* OneTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83ACD209810D6007004DC /* OneTextFieldViewController.swift */; };
+		DED83B06209810D6007004DC /* TwoTextFieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83ACE209810D6007004DC /* TwoTextFieldsViewController.swift */; };
+		DED83B07209810D6007004DC /* AttributedTextBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AD1209810D6007004DC /* AttributedTextBlock.swift */; };
+		DED83B08209810D6007004DC /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AD2209810D6007004DC /* TextViewController.swift */; };
+		DED83B09209810D6007004DC /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AD4209810D6007004DC /* Button.swift */; };
+		DED83B0A209810D6007004DC /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AD5209810D6007004DC /* GradientSlider.swift */; };
+		DED83B0B209810D6007004DC /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AD6209810D6007004DC /* Label.swift */; };
+		DED83B0C209810D6007004DC /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AD7209810D6007004DC /* SegmentedControl.swift */; };
+		DED83B0D209810D6007004DC /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83AD8209810D6007004DC /* TextField.swift */; };
+		DED83B11209810E4007004DC /* VegaScrollFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83B10209810E4007004DC /* VegaScrollFlowLayout.swift */; };
+		DED83B132098113B007004DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83B122098113B007004DC /* ViewController.swift */; };
+		DED83B15209812E7007004DC /* TypeOneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83B14209812E7007004DC /* TypeOneCell.swift */; };
+		FE33E78AAA5994345E2CBB45 /* Pods_Benevole.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B706929C8E6FB0EE1749C463 /* Pods_Benevole.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DEAA682B20980C13003C06B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEAA680B20980C12003C06B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEAA681220980C12003C06B5;
+			remoteInfo = Benevole;
+		};
+		DEAA683620980C13003C06B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEAA680B20980C12003C06B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEAA681220980C12003C06B5;
+			remoteInfo = Benevole;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		99243C816CAF470BA4488821 /* Pods-Benevole.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Benevole.release.xcconfig"; path = "Pods/Target Support Files/Pods-Benevole/Pods-Benevole.release.xcconfig"; sourceTree = "<group>"; };
+		B706929C8E6FB0EE1749C463 /* Pods_Benevole.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Benevole.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEAA681320980C12003C06B5 /* Benevole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Benevole.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEAA681620980C12003C06B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DEAA681B20980C12003C06B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DEAA681E20980C12003C06B5 /* Benevole.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Benevole.xcdatamodel; sourceTree = "<group>"; };
+		DEAA682020980C12003C06B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DEAA682320980C12003C06B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DEAA682520980C12003C06B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEAA682A20980C13003C06B5 /* BenevoleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BenevoleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEAA682E20980C13003C06B5 /* BenevoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenevoleTests.swift; sourceTree = "<group>"; };
+		DEAA683020980C13003C06B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEAA683520980C13003C06B5 /* BenevoleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BenevoleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEAA683920980C13003C06B5 /* BenevoleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenevoleUITests.swift; sourceTree = "<group>"; };
+		DEAA683B20980C13003C06B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEAA684720980E23003C06B5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DEAA684820980E24003C06B5 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		DED83A8A209810D5007004DC /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		DED83A8B209810D5007004DC /* Common+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Common+Extensions.swift"; sourceTree = "<group>"; };
+		DED83A8C209810D5007004DC /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		DED83A8D209810D5007004DC /* Locale+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Locale+Extensions.swift"; sourceTree = "<group>"; };
+		DED83A8E209810D5007004DC /* Optional+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Extensions.swift"; sourceTree = "<group>"; };
+		DED83A8F209810D5007004DC /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		DED83A90209810D5007004DC /* UIAlertController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extensions.swift"; sourceTree = "<group>"; };
+		DED83A91209810D5007004DC /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
+		DED83A92209810D5007004DC /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		DED83A93209810D5007004DC /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		DED83A94209810D5007004DC /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		DED83A95209810D5007004DC /* UISearchBar+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Extensions.swift"; sourceTree = "<group>"; };
+		DED83A96209810D5007004DC /* UISegmentedControl+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Extensions.swift"; sourceTree = "<group>"; };
+		DED83A97209810D5007004DC /* UITextField+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		DED83A98209810D5007004DC /* UITextView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
+		DED83A99209810D5007004DC /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		DED83A9A209810D5007004DC /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		DED83A9D209810D5007004DC /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
+		DED83A9F209810D5007004DC /* ContactsPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsPickerViewController.swift; sourceTree = "<group>"; };
+		DED83AA1209810D5007004DC /* Contacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		DED83AA3209810D5007004DC /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		DED83AA5209810D5007004DC /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		DED83AA7209810D5007004DC /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		DED83AA9209810D5007004DC /* ImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
+		DED83AAB209810D5007004DC /* ItemWithImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemWithImage.swift; sourceTree = "<group>"; };
+		DED83AAD209810D5007004DC /* Countries.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Countries.bundle; sourceTree = "<group>"; };
+		DED83AAE209810D5007004DC /* LocalePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalePickerViewController.swift; sourceTree = "<group>"; };
+		DED83AB0209810D5007004DC /* LocaleStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleStore.swift; sourceTree = "<group>"; };
+		DED83AB2209810D5007004DC /* LocaleInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleInfo.swift; sourceTree = "<group>"; };
+		DED83AB4209810D5007004DC /* CountryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		DED83AB5209810D5007004DC /* CurrencyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
+		DED83AB6209810D5007004DC /* PhoneCodeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneCodeCell.swift; sourceTree = "<group>"; };
+		DED83AB8209810D5007004DC /* LocationPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPickerViewController.swift; sourceTree = "<group>"; };
+		DED83AB9209810D5007004DC /* LocationSearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchResultsViewController.swift; sourceTree = "<group>"; };
+		DED83ABB209810D5007004DC /* SearchHistoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHistoryManager.swift; sourceTree = "<group>"; };
+		DED83ABD209810D6007004DC /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		DED83ABE209810D6007004DC /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		DED83AC1209810D6007004DC /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		DED83AC2209810D6007004DC /* PhotoLibraryPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPickerViewController.swift; sourceTree = "<group>"; };
+		DED83AC4209810D6007004DC /* PickerViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewViewController.swift; sourceTree = "<group>"; };
+		DED83AC7209810D6007004DC /* PhotoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLayout.swift; sourceTree = "<group>"; };
+		DED83AC8209810D6007004DC /* TelegramPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelegramPickerViewController.swift; sourceTree = "<group>"; };
+		DED83ACA209810D6007004DC /* ItemWithPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemWithPhoto.swift; sourceTree = "<group>"; };
+		DED83ACB209810D6007004DC /* LikeButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeButtonCell.swift; sourceTree = "<group>"; };
+		DED83ACD209810D6007004DC /* OneTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneTextFieldViewController.swift; sourceTree = "<group>"; };
+		DED83ACE209810D6007004DC /* TwoTextFieldsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoTextFieldsViewController.swift; sourceTree = "<group>"; };
+		DED83AD1209810D6007004DC /* AttributedTextBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedTextBlock.swift; sourceTree = "<group>"; };
+		DED83AD2209810D6007004DC /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		DED83AD4209810D6007004DC /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		DED83AD5209810D6007004DC /* GradientSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientSlider.swift; sourceTree = "<group>"; };
+		DED83AD6209810D6007004DC /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		DED83AD7209810D6007004DC /* SegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		DED83AD8209810D6007004DC /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		DED83B10209810E4007004DC /* VegaScrollFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VegaScrollFlowLayout.swift; sourceTree = "<group>"; };
+		DED83B122098113B007004DC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DED83B14209812E7007004DC /* TypeOneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeOneCell.swift; sourceTree = "<group>"; };
+		F93A823545285877410A6D3E /* Pods-Benevole.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Benevole.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Benevole/Pods-Benevole.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DEAA681020980C12003C06B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE33E78AAA5994345E2CBB45 /* Pods_Benevole.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEAA682720980C12003C06B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEAA683220980C13003C06B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C9C912C0FC303CCB59F1ED0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B706929C8E6FB0EE1749C463 /* Pods_Benevole.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		929879348E299B5401A3296A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F93A823545285877410A6D3E /* Pods-Benevole.debug.xcconfig */,
+				99243C816CAF470BA4488821 /* Pods-Benevole.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DEAA680A20980C12003C06B5 = {
+			isa = PBXGroup;
+			children = (
+				DEAA681520980C12003C06B5 /* Benevole */,
+				DEAA682D20980C13003C06B5 /* BenevoleTests */,
+				DEAA683820980C13003C06B5 /* BenevoleUITests */,
+				DEAA681420980C12003C06B5 /* Products */,
+				929879348E299B5401A3296A /* Pods */,
+				0C9C912C0FC303CCB59F1ED0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DEAA681420980C12003C06B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DEAA681320980C12003C06B5 /* Benevole.app */,
+				DEAA682A20980C13003C06B5 /* BenevoleTests.xctest */,
+				DEAA683520980C13003C06B5 /* BenevoleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DEAA681520980C12003C06B5 /* Benevole */ = {
+			isa = PBXGroup;
+			children = (
+				DED83A88209810D5007004DC /* Source */,
+				DEAA681620980C12003C06B5 /* AppDelegate.swift */,
+				DEAA684820980E24003C06B5 /* LaunchViewController.swift */,
+				DED83B122098113B007004DC /* ViewController.swift */,
+				DEAA684720980E23003C06B5 /* LoginViewController.swift */,
+				DEAA681A20980C12003C06B5 /* Main.storyboard */,
+				DEAA682020980C12003C06B5 /* Assets.xcassets */,
+				DEAA682220980C12003C06B5 /* LaunchScreen.storyboard */,
+				DEAA682520980C12003C06B5 /* Info.plist */,
+				DEAA681D20980C12003C06B5 /* Benevole.xcdatamodeld */,
+			);
+			path = Benevole;
+			sourceTree = "<group>";
+		};
+		DEAA682D20980C13003C06B5 /* BenevoleTests */ = {
+			isa = PBXGroup;
+			children = (
+				DEAA682E20980C13003C06B5 /* BenevoleTests.swift */,
+				DEAA683020980C13003C06B5 /* Info.plist */,
+			);
+			path = BenevoleTests;
+			sourceTree = "<group>";
+		};
+		DEAA683820980C13003C06B5 /* BenevoleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DEAA683920980C13003C06B5 /* BenevoleUITests.swift */,
+				DEAA683B20980C13003C06B5 /* Info.plist */,
+			);
+			path = BenevoleUITests;
+			sourceTree = "<group>";
+		};
+		DED83A88209810D5007004DC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DED83B0F209810E4007004DC /* FlowLayouts */,
+				DED83B0E209810E4007004DC /* Views */,
+				DED83A89209810D5007004DC /* Extensions */,
+				DED83A9B209810D5007004DC /* Pickers */,
+				DED83ACF209810D6007004DC /* Viewers */,
+				DED83AD3209810D6007004DC /* Views */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		DED83A89209810D5007004DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DED83A8A209810D5007004DC /* Array+Extensions.swift */,
+				DED83A8B209810D5007004DC /* Common+Extensions.swift */,
+				DED83A8C209810D5007004DC /* Date+Extension.swift */,
+				DED83A8D209810D5007004DC /* Locale+Extensions.swift */,
+				DED83A8E209810D5007004DC /* Optional+Extensions.swift */,
+				DED83A8F209810D5007004DC /* String+Extensions.swift */,
+				DED83A90209810D5007004DC /* UIAlertController+Extensions.swift */,
+				DED83A91209810D5007004DC /* UIApplication+Extensions.swift */,
+				DED83A92209810D5007004DC /* UIColor+Extensions.swift */,
+				DED83A93209810D5007004DC /* UIImage+Extensions.swift */,
+				DED83A94209810D5007004DC /* UIImageView+Extensions.swift */,
+				DED83A95209810D5007004DC /* UISearchBar+Extensions.swift */,
+				DED83A96209810D5007004DC /* UISegmentedControl+Extensions.swift */,
+				DED83A97209810D5007004DC /* UITextField+Extensions.swift */,
+				DED83A98209810D5007004DC /* UITextView+Extensions.swift */,
+				DED83A99209810D5007004DC /* UIView+Extensions.swift */,
+				DED83A9A209810D5007004DC /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DED83A9B209810D5007004DC /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				DED83A9C209810D5007004DC /* Color */,
+				DED83A9E209810D5007004DC /* Contacts */,
+				DED83AA6209810D5007004DC /* Date */,
+				DED83AA8209810D5007004DC /* Image */,
+				DED83AAC209810D5007004DC /* Locale */,
+				DED83AB7209810D5007004DC /* Location */,
+				DED83ABF209810D6007004DC /* PhotoLibrary */,
+				DED83AC3209810D6007004DC /* PickerView */,
+				DED83AC5209810D6007004DC /* Telegram */,
+				DED83ACC209810D6007004DC /* TextFields */,
+			);
+			path = Pickers;
+			sourceTree = "<group>";
+		};
+		DED83A9C209810D5007004DC /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				DED83A9D209810D5007004DC /* ColorPickerViewController.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		DED83A9E209810D5007004DC /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				DED83A9F209810D5007004DC /* ContactsPickerViewController.swift */,
+				DED83AA0209810D5007004DC /* Managers */,
+				DED83AA2209810D5007004DC /* Models */,
+				DED83AA4209810D5007004DC /* Views */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		DED83AA0209810D5007004DC /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DED83AA1209810D5007004DC /* Contacts.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		DED83AA2209810D5007004DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DED83AA3209810D5007004DC /* Contact.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DED83AA4209810D5007004DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DED83AA5209810D5007004DC /* ContactCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DED83AA6209810D5007004DC /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				DED83AA7209810D5007004DC /* DatePickerViewController.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		DED83AA8209810D5007004DC /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				DED83AA9209810D5007004DC /* ImagePickerViewController.swift */,
+				DED83AAA209810D5007004DC /* Views */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		DED83AAA209810D5007004DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DED83AAB209810D5007004DC /* ItemWithImage.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DED83AAC209810D5007004DC /* Locale */ = {
+			isa = PBXGroup;
+			children = (
+				DED83AAD209810D5007004DC /* Countries.bundle */,
+				DED83AAE209810D5007004DC /* LocalePickerViewController.swift */,
+				DED83AAF209810D5007004DC /* Managers */,
+				DED83AB1209810D5007004DC /* Models */,
+				DED83AB3209810D5007004DC /* Views */,
+			);
+			path = Locale;
+			sourceTree = "<group>";
+		};
+		DED83AAF209810D5007004DC /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DED83AB0209810D5007004DC /* LocaleStore.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		DED83AB1209810D5007004DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DED83AB2209810D5007004DC /* LocaleInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DED83AB3209810D5007004DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DED83AB4209810D5007004DC /* CountryCell.swift */,
+				DED83AB5209810D5007004DC /* CurrencyCell.swift */,
+				DED83AB6209810D5007004DC /* PhoneCodeCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DED83AB7209810D5007004DC /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				DED83AB8209810D5007004DC /* LocationPickerViewController.swift */,
+				DED83AB9209810D5007004DC /* LocationSearchResultsViewController.swift */,
+				DED83ABA209810D5007004DC /* Managers */,
+				DED83ABC209810D6007004DC /* Models */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		DED83ABA209810D5007004DC /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DED83ABB209810D5007004DC /* SearchHistoryManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		DED83ABC209810D6007004DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DED83ABD209810D6007004DC /* Address.swift */,
+				DED83ABE209810D6007004DC /* Location.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DED83ABF209810D6007004DC /* PhotoLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				DED83AC0209810D6007004DC /* Managers */,
+				DED83AC2209810D6007004DC /* PhotoLibraryPickerViewController.swift */,
+			);
+			path = PhotoLibrary;
+			sourceTree = "<group>";
+		};
+		DED83AC0209810D6007004DC /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DED83AC1209810D6007004DC /* Assets.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		DED83AC3209810D6007004DC /* PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				DED83AC4209810D6007004DC /* PickerViewViewController.swift */,
+			);
+			path = PickerView;
+			sourceTree = "<group>";
+		};
+		DED83AC5209810D6007004DC /* Telegram */ = {
+			isa = PBXGroup;
+			children = (
+				DED83AC6209810D6007004DC /* Layouts */,
+				DED83AC8209810D6007004DC /* TelegramPickerViewController.swift */,
+				DED83AC9209810D6007004DC /* Views */,
+			);
+			path = Telegram;
+			sourceTree = "<group>";
+		};
+		DED83AC6209810D6007004DC /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				DED83AC7209810D6007004DC /* PhotoLayout.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		DED83AC9209810D6007004DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DED83ACA209810D6007004DC /* ItemWithPhoto.swift */,
+				DED83ACB209810D6007004DC /* LikeButtonCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DED83ACC209810D6007004DC /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				DED83ACD209810D6007004DC /* OneTextFieldViewController.swift */,
+				DED83ACE209810D6007004DC /* TwoTextFieldsViewController.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		DED83ACF209810D6007004DC /* Viewers */ = {
+			isa = PBXGroup;
+			children = (
+				DED83AD0209810D6007004DC /* Models */,
+				DED83AD2209810D6007004DC /* TextViewController.swift */,
+			);
+			path = Viewers;
+			sourceTree = "<group>";
+		};
+		DED83AD0209810D6007004DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DED83AD1209810D6007004DC /* AttributedTextBlock.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DED83AD3209810D6007004DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DED83AD4209810D6007004DC /* Button.swift */,
+				DED83AD5209810D6007004DC /* GradientSlider.swift */,
+				DED83AD6209810D6007004DC /* Label.swift */,
+				DED83AD7209810D6007004DC /* SegmentedControl.swift */,
+				DED83AD8209810D6007004DC /* TextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DED83B0E209810E4007004DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DED83B14209812E7007004DC /* TypeOneCell.swift */,
+			);
+			name = Views;
+			path = "../../../../Downloads/alerts-and-pickers-new/Example/Views";
+			sourceTree = "<group>";
+		};
+		DED83B0F209810E4007004DC /* FlowLayouts */ = {
+			isa = PBXGroup;
+			children = (
+				DED83B10209810E4007004DC /* VegaScrollFlowLayout.swift */,
+			);
+			path = FlowLayouts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DEAA681220980C12003C06B5 /* Benevole */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEAA683E20980C13003C06B5 /* Build configuration list for PBXNativeTarget "Benevole" */;
+			buildPhases = (
+				1522339CAC23F69C410D13A9 /* [CP] Check Pods Manifest.lock */,
+				DEAA680F20980C12003C06B5 /* Sources */,
+				DEAA681020980C12003C06B5 /* Frameworks */,
+				DEAA681120980C12003C06B5 /* Resources */,
+				592B32324A29B56FFE518830 /* [CP] Embed Pods Frameworks */,
+				96BDB224EF6DBDEDCDA8C956 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Benevole;
+			productName = Benevole;
+			productReference = DEAA681320980C12003C06B5 /* Benevole.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DEAA682920980C12003C06B5 /* BenevoleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEAA684120980C13003C06B5 /* Build configuration list for PBXNativeTarget "BenevoleTests" */;
+			buildPhases = (
+				DEAA682620980C12003C06B5 /* Sources */,
+				DEAA682720980C12003C06B5 /* Frameworks */,
+				DEAA682820980C12003C06B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEAA682C20980C13003C06B5 /* PBXTargetDependency */,
+			);
+			name = BenevoleTests;
+			productName = BenevoleTests;
+			productReference = DEAA682A20980C13003C06B5 /* BenevoleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DEAA683420980C13003C06B5 /* BenevoleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEAA684420980C13003C06B5 /* Build configuration list for PBXNativeTarget "BenevoleUITests" */;
+			buildPhases = (
+				DEAA683120980C13003C06B5 /* Sources */,
+				DEAA683220980C13003C06B5 /* Frameworks */,
+				DEAA683320980C13003C06B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEAA683720980C13003C06B5 /* PBXTargetDependency */,
+			);
+			name = BenevoleUITests;
+			productName = BenevoleUITests;
+			productReference = DEAA683520980C13003C06B5 /* BenevoleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DEAA680B20980C12003C06B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = ESPRIT;
+				TargetAttributes = {
+					DEAA681220980C12003C06B5 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					DEAA682920980C12003C06B5 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DEAA681220980C12003C06B5;
+					};
+					DEAA683420980C13003C06B5 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DEAA681220980C12003C06B5;
+					};
+				};
+			};
+			buildConfigurationList = DEAA680E20980C12003C06B5 /* Build configuration list for PBXProject "Benevole" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DEAA680A20980C12003C06B5;
+			productRefGroup = DEAA681420980C12003C06B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DEAA681220980C12003C06B5 /* Benevole */,
+				DEAA682920980C12003C06B5 /* BenevoleTests */,
+				DEAA683420980C13003C06B5 /* BenevoleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DEAA681120980C12003C06B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DED83AF2209810D6007004DC /* Countries.bundle in Resources */,
+				DEAA682420980C12003C06B5 /* LaunchScreen.storyboard in Resources */,
+				DEAA682120980C12003C06B5 /* Assets.xcassets in Resources */,
+				DEAA681C20980C12003C06B5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEAA682820980C12003C06B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEAA683320980C13003C06B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1522339CAC23F69C410D13A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		592B32324A29B56FFE518830 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Benevole/Pods-Benevole-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96BDB224EF6DBDEDCDA8C956 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Benevole/Pods-Benevole-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DEAA680F20980C12003C06B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DED83AED209810D6007004DC /* Contact.swift in Sources */,
+				DED83AE8209810D6007004DC /* UIView+Extensions.swift in Sources */,
+				DED83ADA209810D6007004DC /* Common+Extensions.swift in Sources */,
+				DED83AF8209810D6007004DC /* PhoneCodeCell.swift in Sources */,
+				DED83AFB209810D6007004DC /* SearchHistoryManager.swift in Sources */,
+				DED83B02209810D6007004DC /* TelegramPickerViewController.swift in Sources */,
+				DED83ADE209810D6007004DC /* String+Extensions.swift in Sources */,
+				DED83ADD209810D6007004DC /* Optional+Extensions.swift in Sources */,
+				DEAA684920980E24003C06B5 /* LoginViewController.swift in Sources */,
+				DED83AFE209810D6007004DC /* Assets.swift in Sources */,
+				DED83AEB209810D6007004DC /* ContactsPickerViewController.swift in Sources */,
+				DED83AFA209810D6007004DC /* LocationSearchResultsViewController.swift in Sources */,
+				DED83AE0209810D6007004DC /* UIApplication+Extensions.swift in Sources */,
+				DED83AF6209810D6007004DC /* CountryCell.swift in Sources */,
+				DED83AE9209810D6007004DC /* UIViewController+Extensions.swift in Sources */,
+				DED83B06209810D6007004DC /* TwoTextFieldsViewController.swift in Sources */,
+				DED83AF4209810D6007004DC /* LocaleStore.swift in Sources */,
+				DED83B03209810D6007004DC /* ItemWithPhoto.swift in Sources */,
+				DED83B09209810D6007004DC /* Button.swift in Sources */,
+				DED83AFC209810D6007004DC /* Address.swift in Sources */,
+				DED83B132098113B007004DC /* ViewController.swift in Sources */,
+				DED83AEE209810D6007004DC /* ContactCell.swift in Sources */,
+				DED83AF0209810D6007004DC /* ImagePickerViewController.swift in Sources */,
+				DED83ADC209810D6007004DC /* Locale+Extensions.swift in Sources */,
+				DED83B11209810E4007004DC /* VegaScrollFlowLayout.swift in Sources */,
+				DED83AD9209810D6007004DC /* Array+Extensions.swift in Sources */,
+				DED83AE4209810D6007004DC /* UISearchBar+Extensions.swift in Sources */,
+				DED83B00209810D6007004DC /* PickerViewViewController.swift in Sources */,
+				DED83AF1209810D6007004DC /* ItemWithImage.swift in Sources */,
+				DED83AF3209810D6007004DC /* LocalePickerViewController.swift in Sources */,
+				DED83B0A209810D6007004DC /* GradientSlider.swift in Sources */,
+				DED83AF5209810D6007004DC /* LocaleInfo.swift in Sources */,
+				DED83B0D209810D6007004DC /* TextField.swift in Sources */,
+				DED83B0C209810D6007004DC /* SegmentedControl.swift in Sources */,
+				DEAA684A20980E24003C06B5 /* LaunchViewController.swift in Sources */,
+				DED83B07209810D6007004DC /* AttributedTextBlock.swift in Sources */,
+				DED83AE6209810D6007004DC /* UITextField+Extensions.swift in Sources */,
+				DEAA681F20980C12003C06B5 /* Benevole.xcdatamodeld in Sources */,
+				DED83AFF209810D6007004DC /* PhotoLibraryPickerViewController.swift in Sources */,
+				DED83AEF209810D6007004DC /* DatePickerViewController.swift in Sources */,
+				DED83B04209810D6007004DC /* LikeButtonCell.swift in Sources */,
+				DED83AE7209810D6007004DC /* UITextView+Extensions.swift in Sources */,
+				DED83AEA209810D6007004DC /* ColorPickerViewController.swift in Sources */,
+				DED83AF7209810D6007004DC /* CurrencyCell.swift in Sources */,
+				DED83ADB209810D6007004DC /* Date+Extension.swift in Sources */,
+				DED83B05209810D6007004DC /* OneTextFieldViewController.swift in Sources */,
+				DED83AE1209810D6007004DC /* UIColor+Extensions.swift in Sources */,
+				DED83B01209810D6007004DC /* PhotoLayout.swift in Sources */,
+				DED83AF9209810D6007004DC /* LocationPickerViewController.swift in Sources */,
+				DED83B15209812E7007004DC /* TypeOneCell.swift in Sources */,
+				DED83AE2209810D6007004DC /* UIImage+Extensions.swift in Sources */,
+				DED83AE5209810D6007004DC /* UISegmentedControl+Extensions.swift in Sources */,
+				DED83B0B209810D6007004DC /* Label.swift in Sources */,
+				DED83ADF209810D6007004DC /* UIAlertController+Extensions.swift in Sources */,
+				DED83AFD209810D6007004DC /* Location.swift in Sources */,
+				DED83AE3209810D6007004DC /* UIImageView+Extensions.swift in Sources */,
+				DEAA681720980C12003C06B5 /* AppDelegate.swift in Sources */,
+				DED83AEC209810D6007004DC /* Contacts.swift in Sources */,
+				DED83B08209810D6007004DC /* TextViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEAA682620980C12003C06B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEAA682F20980C13003C06B5 /* BenevoleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEAA683120980C13003C06B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEAA683A20980C13003C06B5 /* BenevoleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DEAA682C20980C13003C06B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEAA681220980C12003C06B5 /* Benevole */;
+			targetProxy = DEAA682B20980C13003C06B5 /* PBXContainerItemProxy */;
+		};
+		DEAA683720980C13003C06B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEAA681220980C12003C06B5 /* Benevole */;
+			targetProxy = DEAA683620980C13003C06B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DEAA681A20980C12003C06B5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEAA681B20980C12003C06B5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DEAA682220980C12003C06B5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEAA682320980C12003C06B5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DEAA683C20980C13003C06B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DEAA683D20980C13003C06B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DEAA683F20980C13003C06B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F93A823545285877410A6D3E /* Pods-Benevole.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 793G5FAC49;
+				INFOPLIST_FILE = Benevole/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = esprit.tn.com.Benevole;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DEAA684020980C13003C06B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99243C816CAF470BA4488821 /* Pods-Benevole.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 793G5FAC49;
+				INFOPLIST_FILE = Benevole/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = esprit.tn.com.Benevole;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DEAA684220980C13003C06B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 793G5FAC49;
+				INFOPLIST_FILE = BenevoleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = esprit.tn.com.BenevoleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Benevole.app/Benevole";
+			};
+			name = Debug;
+		};
+		DEAA684320980C13003C06B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 793G5FAC49;
+				INFOPLIST_FILE = BenevoleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = esprit.tn.com.BenevoleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Benevole.app/Benevole";
+			};
+			name = Release;
+		};
+		DEAA684520980C13003C06B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 793G5FAC49;
+				INFOPLIST_FILE = BenevoleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = esprit.tn.com.BenevoleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Benevole;
+			};
+			name = Debug;
+		};
+		DEAA684620980C13003C06B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 793G5FAC49;
+				INFOPLIST_FILE = BenevoleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = esprit.tn.com.BenevoleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Benevole;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DEAA680E20980C12003C06B5 /* Build configuration list for PBXProject "Benevole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEAA683C20980C13003C06B5 /* Debug */,
+				DEAA683D20980C13003C06B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEAA683E20980C13003C06B5 /* Build configuration list for PBXNativeTarget "Benevole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEAA683F20980C13003C06B5 /* Debug */,
+				DEAA684020980C13003C06B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEAA684120980C13003C06B5 /* Build configuration list for PBXNativeTarget "BenevoleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEAA684220980C13003C06B5 /* Debug */,
+				DEAA684320980C13003C06B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEAA684420980C13003C06B5 /* Build configuration list for PBXNativeTarget "BenevoleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEAA684520980C13003C06B5 /* Debug */,
+				DEAA684620980C13003C06B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DEAA681D20980C12003C06B5 /* Benevole.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DEAA681E20980C12003C06B5 /* Benevole.xcdatamodel */,
+			);
+			currentVersion = DEAA681E20980C12003C06B5 /* Benevole.xcdatamodel */;
+			path = Benevole.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DEAA680B20980C12003C06B5 /* Project object */;
+}
