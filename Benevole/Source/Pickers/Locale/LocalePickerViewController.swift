@@ -10,9 +10,11 @@ extension UIAlertController {
     
     func addLocalePicker(type: LocalePickerViewController.Kind, selection: @escaping LocalePickerViewController.Selection) {
         var info: LocaleInfo?
+       
         let selection: LocalePickerViewController.Selection = selection
         let buttonSelect: UIAlertAction = UIAlertAction(title: "Select", style: .default) { action in
             selection(info)
+            print("this is infoi \(info?.country)")
         }
         buttonSelect.isEnabled = false
         
@@ -42,6 +44,7 @@ final class LocalePickerViewController: UIViewController {
         case country
         case phoneCode
         case currency
+       
     }
     
     fileprivate var type: Kind
@@ -123,12 +126,15 @@ final class LocalePickerViewController: UIViewController {
         switch type {
         case .country:
             tableView.register(CountryTableViewCell.self, forCellReuseIdentifier: CountryTableViewCell.identifier)
+            
+
+            
         case .phoneCode:
             tableView.register(PhoneCodeTableViewCell.self, forCellReuseIdentifier: PhoneCodeTableViewCell.identifier)
         case .currency:
             tableView.register(CurrencyTableViewCell.self, forCellReuseIdentifier: CurrencyTableViewCell.identifier)
         }
-        
+      //RegionTableViewCell
         updateInfo()
     }
     
@@ -185,6 +191,52 @@ final class LocalePickerViewController: UIViewController {
                 }
             }
         }
+        
+        
+        
+        
+        LocaleStore.fetch2 { [unowned self] result in
+            switch result {
+                
+            case .success(let orderedInfo):
+                let data: [String: [LocaleInfo]] = orderedInfo
+                /*
+                 switch self.type {
+                 case .currency:
+                 data = data.filter { i in
+                 guard let code = i.currencyCode else { return false }
+                 return Locale.commonISOCurrencyCodes.contains(code)
+                 }.sorted { $0.currencyCode < $1.currencyCode }
+                 default: break }
+                 */
+                
+                self.orderedInfo = data
+                self.sortedInfoKeys = Array(self.orderedInfo.keys).sorted(by: <)
+                
+                DispatchQueue.main.async {
+                    self.indicatorView.stopAnimating()
+                    self.tableView.reloadData()
+                }
+                
+            case .error(let error):
+                
+                DispatchQueue.main.async {
+                    
+                    let alert = UIAlertController(style: .alert, title: error.title, message: error.message)
+                    alert.addAction(title: "OK", style: .cancel) { action in
+                        self.indicatorView.stopAnimating()
+                        self.alertController?.dismiss(animated: true)
+                    }
+                    alert.show()
+                }
+            }
+        }
+        
+        
+        
+        
+        
+        
     }
     
     func sortFilteredInfo() {
@@ -192,6 +244,7 @@ final class LocalePickerViewController: UIViewController {
             switch type {
             case .country:
                 return lhs.country < rhs.country
+           
             case .phoneCode:
                 return lhs.country < rhs.country
             case .currency:
@@ -309,9 +362,9 @@ extension LocalePickerViewController: UITableViewDataSource {
         if searchController.isActive { return nil }
         return sortedInfoKeys[section]
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        var test: [String] = ["Eggs", "Milk"]
+
         guard let info = info(at: indexPath) else { return UITableViewCell() }
         
         let cell: UITableViewCell
@@ -320,8 +373,9 @@ extension LocalePickerViewController: UITableViewDataSource {
             
         case .country:
             cell = tableView.dequeueReusableCell(withIdentifier: CountryTableViewCell.identifier) as! CountryTableViewCell
-            cell.textLabel?.text = info.country
-            
+          cell.textLabel?.text = info.country
+      
+            //cell.textLabel?.text = test[indexPath.row]
         case .phoneCode:
             cell = tableView.dequeueReusableCell(withIdentifier: PhoneCodeTableViewCell.identifier) as! PhoneCodeTableViewCell
             cell.textLabel?.text = info.phoneCode

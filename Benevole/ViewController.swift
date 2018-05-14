@@ -1,7 +1,7 @@
 import UIKit
 import SafariServices
 import Photos
-
+import RSSelectionMenu
 class ViewController: UIViewController {
     
     // MARK: Enums
@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         case dataPicker = "Date Picker"
         case pickerView = "Picker View"
         case countryPicker = "Country Picker"
+        case regionPicker = "regionPicker"
         case phoneCodePicker = "Phone Code Picker"
         case currencyPicker = "Currency Picker"
         case imagePicker = "Image Picker"
@@ -34,6 +35,7 @@ class ViewController: UIViewController {
             case .oneTextField: return "Input text"
             case .twoTextFields: return "2 TextFields"
             case .countryPicker: return "TableView"
+            case .regionPicker: return "TableView"
             case .phoneCodePicker: return "TableView"
             case .currencyPicker: return "TableView"
             case .imagePicker: return "CollectionView, horizontal flow"
@@ -55,6 +57,7 @@ class ViewController: UIViewController {
             case .oneTextField: return #imageLiteral(resourceName: "pen")
             case .twoTextFields: return #imageLiteral(resourceName: "login")
             case .countryPicker: return #imageLiteral(resourceName: "globe")
+            case .regionPicker: return #imageLiteral(resourceName: "globe")
             case .phoneCodePicker: return #imageLiteral(resourceName: "telephone")
             case .currencyPicker: return #imageLiteral(resourceName: "currency")
             case .imagePicker: return #imageLiteral(resourceName: "listings")
@@ -75,7 +78,7 @@ class ViewController: UIViewController {
                 return UIColor(hex: 0x5AC8FA)
             case .dataPicker, .pickerView, .contactsPicker, .locationPicker:
                 return UIColor(hex: 0x4CD964)
-            case .countryPicker, .phoneCodePicker, .currencyPicker, .textViewer:
+            case .regionPicker,.countryPicker, .phoneCodePicker, .currencyPicker, .textViewer:
                 return UIColor(hex: 0xFF5722)
             case .imagePicker, .photoLibraryPicker:
                 return UIColor(hex: 0xFF2DC6)
@@ -85,7 +88,7 @@ class ViewController: UIViewController {
         }
     }
     
-    fileprivate lazy var alerts: [AlertType] = [.simple, .simpleWithImages, .oneTextField, .twoTextFields, .dataPicker, .pickerView, .countryPicker, .phoneCodePicker, .currencyPicker, .imagePicker, .photoLibraryPicker, .colorPicker, .textViewer, .contactsPicker, .locationPicker, .telegramPicker]
+    fileprivate lazy var alerts: [AlertType] = [.oneTextField,  .countryPicker,.regionPicker, .photoLibraryPicker, .locationPicker]
     
     // MARK: UI Metrics
     
@@ -135,7 +138,7 @@ class ViewController: UIViewController {
     
     fileprivate lazy var layout: VerticalScrollFlowLayout = {
         $0.minimumLineSpacing = UI.lineSpacing
-        $0.sectionInset = UIEdgeInsets(top: 450, left: 0, bottom: 0, right: 0)
+        $0.sectionInset = UIEdgeInsets(top: 300, left: 0, bottom: 0, right: 0)
         $0.itemSize = itemSize
         
         return $0
@@ -224,6 +227,8 @@ class ViewController: UIViewController {
                 textField.returnKeyType = .done
                 textField.action { textField in
                     Log("textField = \(String(describing: textField.text))")
+                    
+                    
                 }
             }
             
@@ -310,11 +315,61 @@ class ViewController: UIViewController {
             alert.show()
             
         case .countryPicker:
-            let alert = UIAlertController(style: self.alertStyle)
-            alert.addLocalePicker(type: .country) { info in Log(info) }
-            alert.addAction(title: "Cancel", style: .cancel)
-            alert.show()
+//            let alert = UIAlertController(style: self.alertStyle)
+//            alert.addLocalePicker(type: .country) { info in Log(info)
+//
+//                print("le pays est"+(info?.country)!)
+//            }
+//            alert.addAction(title: "Cancel", style: .cancel)
+//            alert.show()
+//
+            print("countryPicker")
+            let simpleDataArray = ["Sachin", "Rahul", "Saurav", "Virat", "Suresh", "Ravindra", "Chris"]
+            var simpleSelectedArray = [String]()
             
+            // Show menu with datasource array - Default SelectionType = Single
+            // Here you'll get cell configuration where you can set any text based on condition
+            // Cell configuration following parameters.
+            // 1. UITableViewCell   2. Object of type T   3. IndexPath
+            
+            let selectionMenu =  RSSelectionMenu(dataSource: simpleDataArray) { (cell, object, indexPath) in
+                cell.textLabel?.text = object
+                
+                // Change tint color (if needed)
+                cell.tintColor = .orange
+            }
+            
+            // set default selected items when menu present on screen.
+            // Here you'll get onDidSelectRow
+            
+            selectionMenu.setSelectedItems(items: simpleSelectedArray) { (text, isSelected, selectedItems) in
+                
+                // update your existing array with updated selected items, so when menu presents second time updated items will be default selected.
+            simpleSelectedArray = selectedItems
+            }
+            selectionMenu.showSearchBar(withPlaceHolder: "Search Player", tintColor: UIColor.white) { (searchtext) -> ([String]) in
+                return simpleDataArray.filter({ $0.lowercased().hasPrefix(searchtext.lowercased()) })
+            }
+            
+            // customize default cancel button of seachbar
+            // 1. Set cancel button title to "Dismiss"
+            // 2. Change tint color. - nil value will set the default tint color
+            
+            selectionMenu.searchBarCancelButtonAttributes = SearchBarCancelButtonAttributes("Dismiss", nil)
+            // show as PresentationStyle = Push
+            //selectionMenu.show(style: .Present, from: self)
+            selectionMenu.show(style: .Formsheet, from: self)
+
+           
+        case .regionPicker:
+//            let alert = UIAlertController(style: self.alertStyle)
+//            alert.addLocalePicker(type: .country) { info in Log(info)
+//
+//                print("le pays est"+(info?.country)!)
+//            }
+//            alert.addAction(title: "Cancel", style: .cancel)
+//            alert.show()
+            print("regionPicker")
         case .phoneCodePicker:
             let alert = UIAlertController(style: self.alertStyle)
             alert.addLocalePicker(type: .phoneCode) { info in Log(info) }

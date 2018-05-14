@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE5F9286209A1B4C00601537 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F9285209A1B4C00601537 /* Region.swift */; };
+		DE83045720A4A88700A37EBF /* parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83045620A4A88700A37EBF /* parsing.swift */; };
 		DEAA681720980C12003C06B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA681620980C12003C06B5 /* AppDelegate.swift */; };
 		DEAA681C20980C12003C06B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAA681A20980C12003C06B5 /* Main.storyboard */; };
 		DEAA681F20980C12003C06B5 /* Benevole.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEAA681D20980C12003C06B5 /* Benevole.xcdatamodeld */; };
@@ -95,6 +97,8 @@
 /* Begin PBXFileReference section */
 		99243C816CAF470BA4488821 /* Pods-Benevole.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Benevole.release.xcconfig"; path = "Pods/Target Support Files/Pods-Benevole/Pods-Benevole.release.xcconfig"; sourceTree = "<group>"; };
 		B706929C8E6FB0EE1749C463 /* Pods_Benevole.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Benevole.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE5F9285209A1B4C00601537 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		DE83045620A4A88700A37EBF /* parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parsing.swift; sourceTree = "<group>"; };
 		DEAA681320980C12003C06B5 /* Benevole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Benevole.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEAA681620980C12003C06B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEAA681B20980C12003C06B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -407,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				DED83AB0209810D5007004DC /* LocaleStore.swift */,
+				DE83045620A4A88700A37EBF /* parsing.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -415,6 +420,7 @@
 			isa = PBXGroup;
 			children = (
 				DED83AB2209810D5007004DC /* LocaleInfo.swift */,
+				DE5F9285209A1B4C00601537 /* Region.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -756,6 +762,7 @@
 				DED83AF8209810D6007004DC /* PhoneCodeCell.swift in Sources */,
 				DED83AFB209810D6007004DC /* SearchHistoryManager.swift in Sources */,
 				DED83B02209810D6007004DC /* TelegramPickerViewController.swift in Sources */,
+				DE83045720A4A88700A37EBF /* parsing.swift in Sources */,
 				DED83ADE209810D6007004DC /* String+Extensions.swift in Sources */,
 				DED83ADD209810D6007004DC /* Optional+Extensions.swift in Sources */,
 				DEAA684920980E24003C06B5 /* LoginViewController.swift in Sources */,
@@ -772,6 +779,7 @@
 				DED83AFC209810D6007004DC /* Address.swift in Sources */,
 				DED83B132098113B007004DC /* ViewController.swift in Sources */,
 				DED83AEE209810D6007004DC /* ContactCell.swift in Sources */,
+				DE5F9286209A1B4C00601537 /* Region.swift in Sources */,
 				DED83AF0209810D6007004DC /* ImagePickerViewController.swift in Sources */,
 				DED83ADC209810D6007004DC /* Locale+Extensions.swift in Sources */,
 				DED83B11209810E4007004DC /* VegaScrollFlowLayout.swift in Sources */,

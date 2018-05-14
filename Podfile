@@ -7,5 +7,5 @@ target 'Benevole' do
 
  
 pod "TweeTextField"
-
+pod 'RSSelectionMenu'
 end
