@@ -178,7 +178,7 @@ class ViewController: UIViewController {
         let button = UIButton(frame: CGRect(x: 110, y: 600, width: 200, height: 50))
         button.backgroundColor = UIColor(hex: 0xEF4260)
         button.setTitle("Suivant", for: .normal)
-        //button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         
         button.layer.cornerRadius = 7
         button.layer.borderWidth = 1
@@ -193,8 +193,8 @@ class ViewController: UIViewController {
         let image = UIImage(named: imageName)
         let imageView = UIImageView(image: image!)
         
-        imageView.frame = CGRect(x: 178, y: 110, width: 220, height: 19)
-        view.addSubview(imageView)
+        imageView.frame = CGRect(x: 178, y: 55, width: 220, height: 19)
+        //view.addSubview(imageView)
         
         
         
@@ -218,6 +218,20 @@ class ViewController: UIViewController {
         //alertStyle = .actionSheet
         //segments.selectedSegmentIndex = 1
     }
+    
+    
+    
+    @objc func buttonAction(sender: UIButton!) {
+        print("Button tapped")
+        
+        let step2VC = storyboard?.instantiateViewController(withIdentifier: "step2") as! Step2ViewController
+
+        self.performSegue(withIdentifier: "step2", sender: nil)
+
+        //show(step2VC, sender: nil)
+        
+    }
+    
     
     func show(alert type: AlertType) {
         switch type {

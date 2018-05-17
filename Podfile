@@ -8,4 +8,5 @@ target 'Benevole' do
  
 pod "TweeTextField"
 pod 'RSSelectionMenu'
+pod 'BulletinBoard'
 end

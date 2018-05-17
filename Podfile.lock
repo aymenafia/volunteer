@@ -1,15 +1,24 @@
 PODS:
+  - BulletinBoard (1.3.0)
   - RSSelectionMenu (3.2)
   - TweeTextField (1.0.0)
 
 DEPENDENCIES:
+  - BulletinBoard
   - RSSelectionMenu
   - TweeTextField
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - BulletinBoard
+    - RSSelectionMenu
+    - TweeTextField
+
 SPEC CHECKSUMS:
+  BulletinBoard: 23c9d98cac654fd484d76f2a0655669974e9bd9c
   RSSelectionMenu: 9263c19c4b01b0dedf33903ae21a608b469e9b2b
   TweeTextField: 05f4e78d9073405c47088274aa2ee4245b801018
 
-PODFILE CHECKSUM: 72d2f50900f638641d240138985186d30f4b0c07
+PODFILE CHECKSUM: 495f13f1adf04e53d4539f789e9e635b4acac608
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.2

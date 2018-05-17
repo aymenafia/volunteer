@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE07389F20AD29A900131ABF /* Step2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE07389E20AD29A900131ABF /* Step2ViewController.swift */; };
 		DE5F9286209A1B4C00601537 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F9285209A1B4C00601537 /* Region.swift */; };
 		DE83045720A4A88700A37EBF /* parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83045620A4A88700A37EBF /* parsing.swift */; };
 		DEAA681720980C12003C06B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA681620980C12003C06B5 /* AppDelegate.swift */; };
@@ -97,6 +98,7 @@
 /* Begin PBXFileReference section */
 		99243C816CAF470BA4488821 /* Pods-Benevole.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Benevole.release.xcconfig"; path = "Pods/Target Support Files/Pods-Benevole/Pods-Benevole.release.xcconfig"; sourceTree = "<group>"; };
 		B706929C8E6FB0EE1749C463 /* Pods_Benevole.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Benevole.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE07389E20AD29A900131ABF /* Step2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step2ViewController.swift; sourceTree = "<group>"; };
 		DE5F9285209A1B4C00601537 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
 		DE83045620A4A88700A37EBF /* parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parsing.swift; sourceTree = "<group>"; };
 		DEAA681320980C12003C06B5 /* Benevole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Benevole.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,6 +253,7 @@
 				DEAA682220980C12003C06B5 /* LaunchScreen.storyboard */,
 				DEAA682520980C12003C06B5 /* Info.plist */,
 				DEAA681D20980C12003C06B5 /* Benevole.xcdatamodeld */,
+				DE07389E20AD29A900131ABF /* Step2ViewController.swift */,
 			);
 			path = Benevole;
 			sourceTree = "<group>";
@@ -582,7 +585,6 @@
 				DEAA681020980C12003C06B5 /* Frameworks */,
 				DEAA681120980C12003C06B5 /* Resources */,
 				592B32324A29B56FFE518830 /* [CP] Embed Pods Frameworks */,
-				96BDB224EF6DBDEDCDA8C956 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -710,13 +712,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Benevole-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		592B32324A29B56FFE518830 /* [CP] Embed Pods Frameworks */ = {
@@ -725,28 +730,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Benevole/Pods-Benevole-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BulletinBoard/BulletinBoard.framework",
+				"${BUILT_PRODUCTS_DIR}/RSSelectionMenu/RSSelectionMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/TweeTextField/TweeTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BulletinBoard.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSSelectionMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TweeTextField.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Benevole/Pods-Benevole-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		96BDB224EF6DBDEDCDA8C956 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Benevole/Pods-Benevole-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -765,6 +762,7 @@
 				DE83045720A4A88700A37EBF /* parsing.swift in Sources */,
 				DED83ADE209810D6007004DC /* String+Extensions.swift in Sources */,
 				DED83ADD209810D6007004DC /* Optional+Extensions.swift in Sources */,
+				DE07389F20AD29A900131ABF /* Step2ViewController.swift in Sources */,
 				DEAA684920980E24003C06B5 /* LoginViewController.swift in Sources */,
 				DED83AFE209810D6007004DC /* Assets.swift in Sources */,
 				DED83AEB209810D6007004DC /* ContactsPickerViewController.swift in Sources */,
