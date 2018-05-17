@@ -2,6 +2,8 @@ import UIKit
 import SafariServices
 import Photos
 import RSSelectionMenu
+
+
 class ViewController: UIViewController {
     
     // MARK: Enums
@@ -10,12 +12,13 @@ class ViewController: UIViewController {
         
         case simple = "Simple"
         case simpleWithImages = "Simple +Images"
-        case oneTextField = "One TextField"
+        case oneTextField1 = "Nom de l'organisation"
+        case oneTextField2 = "Site internet"
         case twoTextFields = "Login form"
         case dataPicker = "Date Picker"
         case pickerView = "Picker View"
-        case countryPicker = "Country Picker"
-        case regionPicker = "regionPicker"
+        case countryPicker = "Région administrative"
+        case regionPicker = "Centre d'action bénévole"
         case phoneCodePicker = "Phone Code Picker"
         case currencyPicker = "Currency Picker"
         case imagePicker = "Image Picker"
@@ -32,10 +35,11 @@ class ViewController: UIViewController {
             case .simpleWithImages: return "3 buttons with image"
             case .dataPicker: return "Select date and time"
             case .pickerView: return "Select alert's main view height"
-            case .oneTextField: return "Input text"
+            case .oneTextField1: return ""
+            case .oneTextField2: return ""
             case .twoTextFields: return "2 TextFields"
-            case .countryPicker: return "TableView"
-            case .regionPicker: return "TableView"
+            case .countryPicker: return ""
+            case .regionPicker: return ""
             case .phoneCodePicker: return "TableView"
             case .currencyPicker: return "TableView"
             case .imagePicker: return "CollectionView, horizontal flow"
@@ -54,7 +58,8 @@ class ViewController: UIViewController {
             case .simpleWithImages: return #imageLiteral(resourceName: "two_squares")
             case .dataPicker: return #imageLiteral(resourceName: "calendar")
             case .pickerView: return #imageLiteral(resourceName: "picker")
-            case .oneTextField: return #imageLiteral(resourceName: "pen")
+            case .oneTextField1: return #imageLiteral(resourceName: "pen")
+            case .oneTextField2: return #imageLiteral(resourceName: "pen")
             case .twoTextFields: return #imageLiteral(resourceName: "login")
             case .countryPicker: return #imageLiteral(resourceName: "globe")
             case .regionPicker: return #imageLiteral(resourceName: "globe")
@@ -74,7 +79,7 @@ class ViewController: UIViewController {
             switch self {
             case .simple, .simpleWithImages, .telegramPicker:
                 return UIColor(hex: 0x007AFF)
-            case .oneTextField, .twoTextFields:
+            case .oneTextField1,.oneTextField2, .twoTextFields:
                 return UIColor(hex: 0x5AC8FA)
             case .dataPicker, .pickerView, .contactsPicker, .locationPicker:
                 return UIColor(hex: 0x4CD964)
@@ -88,7 +93,7 @@ class ViewController: UIViewController {
         }
     }
     
-    fileprivate lazy var alerts: [AlertType] = [.oneTextField,  .countryPicker,.regionPicker, .photoLibraryPicker, .locationPicker]
+    fileprivate lazy var alerts: [AlertType] = [.oneTextField1,.oneTextField2,  .countryPicker,.regionPicker]
     
     // MARK: UI Metrics
     
@@ -129,6 +134,7 @@ class ViewController: UIViewController {
         //$0.contentInsetAdjustmentBehavior = .never
         $0.bounces = true
         $0.backgroundColor = .white
+        
     
         //$0.maskToBounds = false
         //$0.clipsToBounds = false
@@ -138,7 +144,7 @@ class ViewController: UIViewController {
     
     fileprivate lazy var layout: VerticalScrollFlowLayout = {
         $0.minimumLineSpacing = UI.lineSpacing
-        $0.sectionInset = UIEdgeInsets(top: 300, left: 0, bottom: 0, right: 0)
+        $0.sectionInset = UIEdgeInsets(top: 200, left: 0, bottom: 0, right: 0)
         $0.itemSize = itemSize
         
         return $0
@@ -160,23 +166,47 @@ class ViewController: UIViewController {
 //    }
     
     // MARK: ViewController LifeCycle
-    
+   
+
     override func loadView() {
         view = collectionView
     }
-    
+    var value = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Alerts & Pickers"
+        let button = UIButton(frame: CGRect(x: 110, y: 600, width: 200, height: 50))
+        button.backgroundColor = UIColor(hex: 0xEF4260)
+        button.setTitle("Suivant", for: .normal)
+        //button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         
-        navigationController?.navigationBar.backgroundColor = .white
-        navigationController?.navigationBar.tintColor = .black
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.shadowImage = UIImage()
+        button.layer.cornerRadius = 7
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.white.cgColor
+        
+        
+        self.view.addSubview(button)
+        
+        
+        
+        let imageName = "step1"
+        let image = UIImage(named: imageName)
+        let imageView = UIImageView(image: image!)
+        
+        imageView.frame = CGRect(x: 178, y: 110, width: 220, height: 19)
+        view.addSubview(imageView)
+        
+        
+        
+        //title = "Alerts & Pickers"
+        
+//        navigationController?.navigationBar.backgroundColor = .white
+//        navigationController?.navigationBar.tintColor = .black
+//        navigationController?.navigationBar.isTranslucent = false
+//        navigationController?.navigationBar.shadowImage = UIImage()
         
         if #available(iOS 11.0, *) {
-            navigationController?.navigationBar.prefersLargeTitles = true
+            //navigationController?.navigationBar.prefersLargeTitles = true
             //navigationItem.largeTitleDisplayMode = .always
         }
         
@@ -184,9 +214,9 @@ class ViewController: UIViewController {
         collectionView.collectionViewLayout.invalidateLayout()
         collectionView.reloadData()
         
-        navigationItem.titleView = segments
-        alertStyle = .actionSheet
-        segments.selectedSegmentIndex = 1
+        //navigationItem.titleView = segments
+        //alertStyle = .actionSheet
+        //segments.selectedSegmentIndex = 1
     }
     
     func show(alert type: AlertType) {
@@ -208,8 +238,8 @@ class ViewController: UIViewController {
             alert.addAction(image: #imageLiteral(resourceName: "login"), title: "Login", style: .destructive, isEnabled: false)
             alert.show()
             
-        case .oneTextField:
-            let alert = UIAlertController(style: self.alertStyle, title: "TextField", message: "Secure Entry")
+        case .oneTextField1:
+            let alert = UIAlertController(style: self.alertStyle, title: "Entrer le Nom de l'organisation", message: "")
             
             let textField: TextField.Config = { textField in
                 textField.left(image: #imageLiteral(resourceName: "pen"), color: .black)
@@ -220,7 +250,7 @@ class ViewController: UIViewController {
                 textField.borderColor = UIColor.lightGray.withAlphaComponent(0.5)
                 textField.backgroundColor = nil
                 textField.textColor = .black
-                textField.placeholder = "Type something"
+                textField.placeholder = ""
                 textField.keyboardAppearance = .default
                 textField.keyboardType = .default
                 //textField.isSecureTextEntry = true
@@ -237,6 +267,34 @@ class ViewController: UIViewController {
             alert.addAction(title: "OK", style: .cancel)
             alert.show()
             
+        case .oneTextField2:
+            let alert = UIAlertController(style: self.alertStyle, title: "Entrer votre Site internet", message: "")
+            
+            let textField: TextField.Config = { textField in
+                textField.left(image: #imageLiteral(resourceName: "pen"), color: .black)
+                textField.leftViewPadding = 12
+                textField.becomeFirstResponder()
+                textField.borderWidth = 1
+                textField.cornerRadius = 8
+                textField.borderColor = UIColor.lightGray.withAlphaComponent(0.5)
+                textField.backgroundColor = nil
+                textField.textColor = .black
+                textField.placeholder = ""
+                textField.keyboardAppearance = .default
+                textField.keyboardType = .default
+                //textField.isSecureTextEntry = true
+                textField.returnKeyType = .done
+                textField.action { textField in
+                    Log("textField = \(String(describing: textField.text))")
+                    
+                    
+                }
+            }
+            
+            alert.addOneTextField(configuration: textField)
+            
+            alert.addAction(title: "OK", style: .cancel)
+            alert.show()
         case .twoTextFields:
             let alert = UIAlertController(style: self.alertStyle)
             
@@ -324,14 +382,29 @@ class ViewController: UIViewController {
 //            alert.show()
 //
             print("countryPicker")
-            let simpleDataArray = ["Sachin", "Rahul", "Saurav", "Virat", "Suresh", "Ravindra", "Chris"]
-            var simpleSelectedArray = [String]()
+            let simpleDataArray = ["Abitibi-Témiscamingue",
+                "Bas-St-Laurent",
+                "apitale-Nationale",
+                "Centre-du-Québec",
+                "Chaudière-Appalaches",
+               "Côte-Nord",
+                "Estrie",
+                "Gaspésie–Îles-de-la-Madeleine",
+                "Lanaudière",
+                "Laurentides",
+                "Laval",
+                "Mauricie",
+                "Montérégie",
+                "Montréal",
+                "Outaouais",
+                "Saguenay-Lac-St-Jean"]
+         
             
             // Show menu with datasource array - Default SelectionType = Single
             // Here you'll get cell configuration where you can set any text based on condition
             // Cell configuration following parameters.
             // 1. UITableViewCell   2. Object of type T   3. IndexPath
-            
+                var simpleSelectedArray = [String]()
             let selectionMenu =  RSSelectionMenu(dataSource: simpleDataArray) { (cell, object, indexPath) in
                 cell.textLabel?.text = object
                 
@@ -345,7 +418,9 @@ class ViewController: UIViewController {
             selectionMenu.setSelectedItems(items: simpleSelectedArray) { (text, isSelected, selectedItems) in
                 
                 // update your existing array with updated selected items, so when menu presents second time updated items will be default selected.
-            simpleSelectedArray = selectedItems
+          simpleSelectedArray = selectedItems
+                print(String(describing: selectedItems))
+                self.value = simpleSelectedArray
             }
             selectionMenu.showSearchBar(withPlaceHolder: "Search Player", tintColor: UIColor.white) { (searchtext) -> ([String]) in
                 return simpleDataArray.filter({ $0.lowercased().hasPrefix(searchtext.lowercased()) })
@@ -369,6 +444,149 @@ class ViewController: UIViewController {
 //            }
 //            alert.addAction(title: "Cancel", style: .cancel)
 //            alert.show()
+            
+            var simpleDataArray = ["Abitibi-Témiscamingue"]
+            if (value == ["Abitibi-Témiscamingue"]){
+                simpleDataArray = ["Centre d'action bénévole l'Amicale" , "Centre de bénévolat Rouyn-Noranda"]
+                print("ok")
+                
+            }
+         
+            if (value == ["Bas-St-Laurent"]){
+                simpleDataArray = ["Centre d'action bénévole Cormoran" , "Centre d'action bénévole de La Mitis", "Centre d'action bénévole de la région de Matane" , "Centre d'action bénévole des Basques", "Centre d'action bénévole des Seigneuries" , "Centre d'action bénévole Région Témis", "Centre d'action bénévole Rimouski-Neigette", "Centre d'action bénévole Vallée-de-la Matapédia"]
+                print("ok")
+                
+            }
+           
+            if (value == ["Capitale-Nationale"]){
+                simpleDataArray = ["Association Bénévole de Charlevoix", "Centre d'action bénévole de Québec", "Centre d'action bénévole du Contrefort", "Centre d’action bénévole Aide 23"]
+                print("ok")
+                
+            }
+            
+            if (value == ["Chaudière-Appalaches"]){
+                simpleDataArray = [ "Centre d'action bénévole Beauce-Etchemin", "Centre d'action bénévole Bellechasse - Lévis - Lotbinière", "Centre d'entraide communautaire bénévole Montmagny-L'Islet", "Centre d’action bénévole Concert’Action"]
+                print("ok")
+                
+            }
+            
+            if (value == ["Centre-du-Québec"]){
+                simpleDataArray = ["Carrefour d'entraide bénévole des Bois-Francs", "Centre d'action bénévole de Nicolet", "Centre d'action bénévole Drummond", "Centre d'action bénévole du Lac-Saint-Pierre", "Centre d’action bénévole de l’Érable" , "Centre d’action bénévole de la MRC de Bécancour"]
+                print("ok")
+                
+            }
+            
+            if (value == ["Côte-Nord"]){
+                simpleDataArray = ["Centre d'action bénévole de La Minganie" , "Centre d'action Bénévole de Port-Cartier", "Centre d'action bénévole Le Nordest"]
+                print("ok")
+                
+            }
+            
+            if (value == ["Estrie"]){
+                simpleDataArray = ["Centre d'action bénévole aux 4 vents", "Centre d'action bénévole de Cowansville","Centre d'action bénévole de la Missisquoi-Nord","Centre d'action bénévole de la MRC de Coaticook","Centre d'action bénévole de Magog","Centre d'action bénévole de Richmond","Centre d'action bénévole de Sherbrooke","Centre d'action bénévole de Windsor & Région","Centre d'action bénévole des sources","Centre d'action bénévole du Granit","Centre d’action bénévole de Bedford et environs" ,"Centre d’action bénévole de Farnham","Centre d’action bénévole de Granby","Centre d’action bénévole du Haut-Saint-François","Centre d’action bénévole R.H. Rediker","Centre d’action bénévole Valcourt et Région"]
+                print("ok")
+                
+            }
+            if (value == ["Gaspésie–Îles-de-la-Madeleine"]){
+                simpleDataArray = ["Centre d'action bénévole des Chic-Chocs","Centre d'action bénévole Gascons-Percé","Centre d'action bénévole La Grande Corvée","Centre d'action bénévole Le Hauban","Centre d'action bénévole Les Hauts-Bois inc.","Centre d'action bénévole Saint-Alphonse-Nouvelle","Centre d’action bénévole Ascension Escuminac","Centre d’action bénévole des Îles-de-la-Madeleine","Centre d’action bénévole Saint-Siméon/Port-Daniel"]
+                print("ok")
+                
+            }
+            if (value == ["Lanaudière"]){
+                simpleDataArray = ["Centre communautaire bénévole Matawinie", "Centre d'action bénévole D'Autray","Centre d'action bénévole de Brandon","Centre d'action bénévole de Montcalm","Centre d'action bénévole des Moulins","Centre d’action bénévole Émilie-Gamelin","Service bénévole comté l'Assomption"]
+                print("ok")
+                
+            }
+            
+            if (value == ["Laurentides"]){
+                simpleDataArray = ["Centre d'action bénévole Argenteuil", "Centre d'action bénévole Laurentides","Centre d'action bénévole Léoonie-Bélanger","Centre d'action bénévole Les Artisans de l'aide","Centre d'action bénévole Saint-Jérôme inc","Centre d'action bénévole Solange-Beauchamp", "Entraide bénévole des Pays-d'en-Haut"]
+                print("ok")
+                
+            }
+            
+            if (value == ["Laval"]){
+                simpleDataArray = ["Centre de bénévolat et moisson Laval"]
+                print("ok")
+                
+            }
+            
+            if (value == ["Mauricie"]){
+                simpleDataArray = ["Carrefour d’action bénévole du Haut St-Maurice", "Centre d'action bénévole de Grand-Mère", "Centre d'action bénévole de la Moraine", "Centre d'action bénévole de la MRC de Maskinongé","Centre d'action bénévole de la région de Shawinigan", "Centre d'action bénévole des Riverains", "Centre d'action bénévole du Rivage", "Centre d'action bénévole Laviolette", "Centre d'action bénévole Mékinac"]
+                print("ok")
+                
+            }
+            
+            if (value == ["Montérégie"]){
+                simpleDataArray = ["Centre d'action bénévole Les petits bonheurs","Centre d'action bénévole d'Iberville et région","Centre d'action bénévole de Boucherville","Centre d'action bénévole de Saint-Césaire", "Centre d'action bénévole de Saint-Hubert", "Centre d'action bénévole de St-Jean-sur-Richelieu", "Centre d'action bénévole du Bas-Richelieu", "Centre d'action bénévole du Contrecoeur", "Centre d'action bénévole du Grand Châteauguay", "Centre d'action bénévole L'Actuel", "Centre d'action bénévole la Seigneurie de Monnoir", "Centre d'action bénévole Soulanges", "Centre d’action bénévole de Beauharnoi", "Centre d’action bénévole de la Frontière", "Centre d’action bénévole de la Vallée du Richelieu","Centre de bénévolat Acton-Vale", "Centre de bénévolat de la Rive-Sud", "Centre Entraide Régional Henryville (C.E.R.H.)", "L’Envolée, Centre d’action bénévole Sainte-Julie", "La Mosaïque, Le Centre de Bénévolat de St-Hyacinthe", "Service d'Action Bénévole « Au c?ur du jardin »"]
+                print("ok")
+                
+            }
+            
+            if (value == ["Montréal"]){
+                simpleDataArray = ["Accès Bénévolat-Centre d'action bénévole Est de Montréal", "Centre d'action bénévole Bordeaux-Cartierville", "Centre d'action bénévole de Montréal", "Centre d'action bénévole de Montréal-Nord", "Centre d'action bénévole de Rivière-des-Prairies", "Centre d'action bénévole de Saint-Laurent","Centre d'action bénévole Ouest de l'île / Volunteer West Island", "Fédération des centres d'action bénévole du Québec"]
+                print("ok")
+                
+            }
+            
+            if (value == ["Outaouais"]){
+                simpleDataArray = ["Centre d'action bénévole Accès", "Centre d'action bénévole de Gatineau", "Centre d'action bénévole de Hull", "Centre d'entraide aux aînés"]
+                print("ok")
+                
+            }
+            
+            
+            if (value == ["Saguenay-Lac-St-Jean"]){
+                simpleDataArray = ["CAB Chicoutimi", "Centre d'action bénévole de Jonquière", "Centre d'action bénévole de Saint-Félicien", "Centre d'action bénévole du lac", "Centre d'action bénévole Maria-Chapdelaine", "Centre de bénévolat « Soif de Vivre » de La Baie"]
+                print("ok")
+                
+            }
+            
+            
+            // Show menu with datasource array - Default SelectionType = Single
+            // Here you'll get cell configuration where you can set any text based on condition
+            // Cell configuration following parameters.
+            // 1. UITableViewCell   2. Object of type T   3. IndexPath
+            var simpleSelectedArray = [String]()
+            let selectionMenu =  RSSelectionMenu(dataSource: simpleDataArray) { (cell, object, indexPath) in
+                cell.textLabel?.text = object
+                
+                // Change tint color (if needed)
+                cell.tintColor = .orange
+            }
+            
+            // set default selected items when menu present on screen.
+            // Here you'll get onDidSelectRow
+            
+            selectionMenu.setSelectedItems(items: simpleSelectedArray) { (text, isSelected, selectedItems) in
+                
+                // update your existing array with updated selected items, so when menu presents second time updated items will be default selected.
+                simpleSelectedArray = selectedItems
+                print(String(describing: selectedItems))
+                self.value = simpleSelectedArray
+            }
+            selectionMenu.showSearchBar(withPlaceHolder: "Search Player", tintColor: UIColor.white) { (searchtext) -> ([String]) in
+                return simpleDataArray.filter({ $0.lowercased().hasPrefix(searchtext.lowercased()) })
+            }
+            
+            // customize default cancel button of seachbar
+            // 1. Set cancel button title to "Dismiss"
+            // 2. Change tint color. - nil value will set the default tint color
+            
+            selectionMenu.searchBarCancelButtonAttributes = SearchBarCancelButtonAttributes("Dismiss", nil)
+            // show as PresentationStyle = Push
+            //selectionMenu.show(style: .Present, from: self)
+            selectionMenu.show(style: .Formsheet, from: self)
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             print("regionPicker")
         case .phoneCodePicker:
             let alert = UIAlertController(style: self.alertStyle)
@@ -496,5 +714,25 @@ extension ViewController: UICollectionViewDataSource {
         item.subtitle.textColor = .darkGray
         
         return item
+    }
+}
+
+
+
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+    
+    convenience init(rgb: Int) {
+        self.init(
+            red: (rgb >> 16) & 0xFF,
+            green: (rgb >> 8) & 0xFF,
+            blue: rgb & 0xFF
+        )
     }
 }
