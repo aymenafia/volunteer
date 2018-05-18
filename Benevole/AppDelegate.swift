@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-
+import IQKeyboardManagerSwift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         UITabBar.appearance().tintColor = UIColor.black
-        
+        IQKeyboardManager.sharedManager().enable = true
         
         return true
     }
