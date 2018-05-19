@@ -75,6 +75,12 @@
 		DED83B11209810E4007004DC /* VegaScrollFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83B10209810E4007004DC /* VegaScrollFlowLayout.swift */; };
 		DED83B132098113B007004DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83B122098113B007004DC /* ViewController.swift */; };
 		DED83B15209812E7007004DC /* TypeOneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83B14209812E7007004DC /* TypeOneCell.swift */; };
+		DEE5D4C420AF1A5B00D0A7BD /* Etape1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D4C320AF1A5B00D0A7BD /* Etape1ViewController.swift */; };
+		DEE5D4C620AF1A7200D0A7BD /* Etape2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D4C520AF1A7200D0A7BD /* Etape2ViewController.swift */; };
+		DEE5D4C820AF1AD900D0A7BD /* Etape3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D4C720AF1AD900D0A7BD /* Etape3ViewController.swift */; };
+		DEE5D4CA20AF299800D0A7BD /* Etape4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D4C920AF299800D0A7BD /* Etape4ViewController.swift */; };
+		DEE5D4CC20AF712700D0A7BD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D4CB20AF712700D0A7BD /* ProfileViewController.swift */; };
+		DEE5D4CE20AFAB6200D0A7BD /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D4CD20AFAB6200D0A7BD /* test.swift */; };
 		FE33E78AAA5994345E2CBB45 /* Pods_Benevole.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B706929C8E6FB0EE1749C463 /* Pods_Benevole.framework */; };
 /* End PBXBuildFile section */
 
@@ -172,6 +178,12 @@
 		DED83B10209810E4007004DC /* VegaScrollFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VegaScrollFlowLayout.swift; sourceTree = "<group>"; };
 		DED83B122098113B007004DC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DED83B14209812E7007004DC /* TypeOneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeOneCell.swift; sourceTree = "<group>"; };
+		DEE5D4C320AF1A5B00D0A7BD /* Etape1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Etape1ViewController.swift; sourceTree = "<group>"; };
+		DEE5D4C520AF1A7200D0A7BD /* Etape2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Etape2ViewController.swift; sourceTree = "<group>"; };
+		DEE5D4C720AF1AD900D0A7BD /* Etape3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Etape3ViewController.swift; sourceTree = "<group>"; };
+		DEE5D4C920AF299800D0A7BD /* Etape4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Etape4ViewController.swift; sourceTree = "<group>"; };
+		DEE5D4CB20AF712700D0A7BD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		DEE5D4CD20AFAB6200D0A7BD /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		F93A823545285877410A6D3E /* Pods-Benevole.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Benevole.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Benevole/Pods-Benevole.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -254,6 +266,12 @@
 				DEAA682520980C12003C06B5 /* Info.plist */,
 				DEAA681D20980C12003C06B5 /* Benevole.xcdatamodeld */,
 				DE07389E20AD29A900131ABF /* Step2ViewController.swift */,
+				DEE5D4C320AF1A5B00D0A7BD /* Etape1ViewController.swift */,
+				DEE5D4C520AF1A7200D0A7BD /* Etape2ViewController.swift */,
+				DEE5D4C720AF1AD900D0A7BD /* Etape3ViewController.swift */,
+				DEE5D4C920AF299800D0A7BD /* Etape4ViewController.swift */,
+				DEE5D4CB20AF712700D0A7BD /* ProfileViewController.swift */,
+				DEE5D4CD20AFAB6200D0A7BD /* test.swift */,
 			);
 			path = Benevole;
 			sourceTree = "<group>";
@@ -732,13 +750,21 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Benevole/Pods-Benevole-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BulletinBoard/BulletinBoard.framework",
+				"${BUILT_PRODUCTS_DIR}/Former/Former.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RSSelectionMenu/RSSelectionMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/StretchHeader/StretchHeader.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 				"${BUILT_PRODUCTS_DIR}/TweeTextField/TweeTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BulletinBoard.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Former.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSSelectionMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StretchHeader.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TweeTextField.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -754,12 +780,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DED83AED209810D6007004DC /* Contact.swift in Sources */,
+				DEE5D4CE20AFAB6200D0A7BD /* test.swift in Sources */,
 				DED83AE8209810D6007004DC /* UIView+Extensions.swift in Sources */,
 				DED83ADA209810D6007004DC /* Common+Extensions.swift in Sources */,
 				DED83AF8209810D6007004DC /* PhoneCodeCell.swift in Sources */,
 				DED83AFB209810D6007004DC /* SearchHistoryManager.swift in Sources */,
 				DED83B02209810D6007004DC /* TelegramPickerViewController.swift in Sources */,
 				DE83045720A4A88700A37EBF /* parsing.swift in Sources */,
+				DEE5D4C820AF1AD900D0A7BD /* Etape3ViewController.swift in Sources */,
 				DED83ADE209810D6007004DC /* String+Extensions.swift in Sources */,
 				DED83ADD209810D6007004DC /* Optional+Extensions.swift in Sources */,
 				DE07389F20AD29A900131ABF /* Step2ViewController.swift in Sources */,
@@ -774,6 +802,7 @@
 				DED83AF4209810D6007004DC /* LocaleStore.swift in Sources */,
 				DED83B03209810D6007004DC /* ItemWithPhoto.swift in Sources */,
 				DED83B09209810D6007004DC /* Button.swift in Sources */,
+				DEE5D4C620AF1A7200D0A7BD /* Etape2ViewController.swift in Sources */,
 				DED83AFC209810D6007004DC /* Address.swift in Sources */,
 				DED83B132098113B007004DC /* ViewController.swift in Sources */,
 				DED83AEE209810D6007004DC /* ContactCell.swift in Sources */,
@@ -784,8 +813,10 @@
 				DED83AD9209810D6007004DC /* Array+Extensions.swift in Sources */,
 				DED83AE4209810D6007004DC /* UISearchBar+Extensions.swift in Sources */,
 				DED83B00209810D6007004DC /* PickerViewViewController.swift in Sources */,
+				DEE5D4CA20AF299800D0A7BD /* Etape4ViewController.swift in Sources */,
 				DED83AF1209810D6007004DC /* ItemWithImage.swift in Sources */,
 				DED83AF3209810D6007004DC /* LocalePickerViewController.swift in Sources */,
+				DEE5D4CC20AF712700D0A7BD /* ProfileViewController.swift in Sources */,
 				DED83B0A209810D6007004DC /* GradientSlider.swift in Sources */,
 				DED83AF5209810D6007004DC /* LocaleInfo.swift in Sources */,
 				DED83B0D209810D6007004DC /* TextField.swift in Sources */,
@@ -802,6 +833,7 @@
 				DED83AF7209810D6007004DC /* CurrencyCell.swift in Sources */,
 				DED83ADB209810D6007004DC /* Date+Extension.swift in Sources */,
 				DED83B05209810D6007004DC /* OneTextFieldViewController.swift in Sources */,
+				DEE5D4C420AF1A5B00D0A7BD /* Etape1ViewController.swift in Sources */,
 				DED83AE1209810D6007004DC /* UIColor+Extensions.swift in Sources */,
 				DED83B01209810D6007004DC /* PhotoLayout.swift in Sources */,
 				DED83AF9209810D6007004DC /* LocationPickerViewController.swift in Sources */,

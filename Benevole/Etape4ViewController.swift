@@ -8,28 +8,54 @@
 
 import UIKit
 
-class Etape4ViewController: UIViewController {
+class Etape4ViewController: UIViewController,UITextViewDelegate {
     
+    @IBOutlet var textViewNatureB: UITextView!
+    @IBOutlet var textViewInstructionSp: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        textViewNatureB.delegate = self
+        textViewInstructionSp.delegate = self
+        
+        textViewNatureB.text = "Nature du Bénévolat"
+        textViewNatureB.textColor = UIColor.lightGray
+        
+        textViewInstructionSp.text = "Instruction Spécifique"
+        textViewInstructionSp.textColor = UIColor.lightGray
+        
         
         // Do any additional setup after loading the view.
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func textViewDidBeginEditing(_ textViewNatureB: UITextView) {
+        if textViewNatureB.textColor == UIColor.lightGray {
+            textViewNatureB.text = nil
+            textViewNatureB.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textViewNatureB: UITextView) {
+        
+        
+        if textViewNatureB.text.isEmpty {
+            if textViewNatureB.tag == 0{
+                textViewNatureB.text = "Nature du Bénévolat"
+                textViewNatureB.textColor = UIColor.lightGray
+                
+            }
+
+            if textViewNatureB.tag == 1{
+                textViewNatureB.text = "Instruction Spécifique"
+                textViewNatureB.textColor = UIColor.lightGray
+                
+            }
+        }
     }
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+    
+    
+    
     
 }
