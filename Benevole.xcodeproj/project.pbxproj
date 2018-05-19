@@ -10,6 +10,11 @@
 		DE07389F20AD29A900131ABF /* Step2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE07389E20AD29A900131ABF /* Step2ViewController.swift */; };
 		DE5F9286209A1B4C00601537 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F9285209A1B4C00601537 /* Region.swift */; };
 		DE83045720A4A88700A37EBF /* parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83045620A4A88700A37EBF /* parsing.swift */; };
+		DE9A612E20B0682F00475516 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9A612D20B0682F00475516 /* Post.swift */; };
+		DE9A613320B06E3700475516 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9A613220B06E3700475516 /* PostTableViewCell.swift */; };
+		DE9A613520B07B9500475516 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9A613420B07B9500475516 /* ListViewController.swift */; };
+		DE9A613720B08DE800475516 /* Etape12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9A613620B08DE800475516 /* Etape12ViewController.swift */; };
+		DE9A613920B0976D00475516 /* EditPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9A613820B0976D00475516 /* EditPostViewController.swift */; };
 		DEAA681720980C12003C06B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA681620980C12003C06B5 /* AppDelegate.swift */; };
 		DEAA681C20980C12003C06B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAA681A20980C12003C06B5 /* Main.storyboard */; };
 		DEAA681F20980C12003C06B5 /* Benevole.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEAA681D20980C12003C06B5 /* Benevole.xcdatamodeld */; };
@@ -107,6 +112,11 @@
 		DE07389E20AD29A900131ABF /* Step2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step2ViewController.swift; sourceTree = "<group>"; };
 		DE5F9285209A1B4C00601537 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
 		DE83045620A4A88700A37EBF /* parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parsing.swift; sourceTree = "<group>"; };
+		DE9A612D20B0682F00475516 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		DE9A613220B06E3700475516 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		DE9A613420B07B9500475516 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		DE9A613620B08DE800475516 /* Etape12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Etape12ViewController.swift; sourceTree = "<group>"; };
+		DE9A613820B0976D00475516 /* EditPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPostViewController.swift; sourceTree = "<group>"; };
 		DEAA681320980C12003C06B5 /* Benevole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Benevole.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEAA681620980C12003C06B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEAA681B20980C12003C06B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -230,6 +240,42 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DE9A612B20B0679A00475516 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DEAA684820980E24003C06B5 /* LaunchViewController.swift */,
+				DED83B122098113B007004DC /* ViewController.swift */,
+				DEAA684720980E23003C06B5 /* LoginViewController.swift */,
+				DE07389E20AD29A900131ABF /* Step2ViewController.swift */,
+				DEE5D4C320AF1A5B00D0A7BD /* Etape1ViewController.swift */,
+				DEE5D4C520AF1A7200D0A7BD /* Etape2ViewController.swift */,
+				DEE5D4C720AF1AD900D0A7BD /* Etape3ViewController.swift */,
+				DEE5D4C920AF299800D0A7BD /* Etape4ViewController.swift */,
+				DEE5D4CB20AF712700D0A7BD /* ProfileViewController.swift */,
+				DEE5D4CD20AFAB6200D0A7BD /* test.swift */,
+				DE9A613420B07B9500475516 /* ListViewController.swift */,
+				DE9A613620B08DE800475516 /* Etape12ViewController.swift */,
+				DE9A613820B0976D00475516 /* EditPostViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE9A612C20B0680B00475516 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE9A612D20B0682F00475516 /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE9A612F20B06D8500475516 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE9A613220B06E3700475516 /* PostTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DEAA680A20980C12003C06B5 = {
 			isa = PBXGroup;
 			children = (
@@ -255,23 +301,16 @@
 		DEAA681520980C12003C06B5 /* Benevole */ = {
 			isa = PBXGroup;
 			children = (
+				DE9A612F20B06D8500475516 /* View */,
+				DE9A612C20B0680B00475516 /* Model */,
+				DE9A612B20B0679A00475516 /* Controller */,
 				DED83A88209810D5007004DC /* Source */,
 				DEAA681620980C12003C06B5 /* AppDelegate.swift */,
-				DEAA684820980E24003C06B5 /* LaunchViewController.swift */,
-				DED83B122098113B007004DC /* ViewController.swift */,
-				DEAA684720980E23003C06B5 /* LoginViewController.swift */,
 				DEAA681A20980C12003C06B5 /* Main.storyboard */,
 				DEAA682020980C12003C06B5 /* Assets.xcassets */,
 				DEAA682220980C12003C06B5 /* LaunchScreen.storyboard */,
 				DEAA682520980C12003C06B5 /* Info.plist */,
 				DEAA681D20980C12003C06B5 /* Benevole.xcdatamodeld */,
-				DE07389E20AD29A900131ABF /* Step2ViewController.swift */,
-				DEE5D4C320AF1A5B00D0A7BD /* Etape1ViewController.swift */,
-				DEE5D4C520AF1A7200D0A7BD /* Etape2ViewController.swift */,
-				DEE5D4C720AF1AD900D0A7BD /* Etape3ViewController.swift */,
-				DEE5D4C920AF299800D0A7BD /* Etape4ViewController.swift */,
-				DEE5D4CB20AF712700D0A7BD /* ProfileViewController.swift */,
-				DEE5D4CD20AFAB6200D0A7BD /* test.swift */,
 			);
 			path = Benevole;
 			sourceTree = "<group>";
@@ -786,11 +825,13 @@
 				DED83AF8209810D6007004DC /* PhoneCodeCell.swift in Sources */,
 				DED83AFB209810D6007004DC /* SearchHistoryManager.swift in Sources */,
 				DED83B02209810D6007004DC /* TelegramPickerViewController.swift in Sources */,
+				DE9A613320B06E3700475516 /* PostTableViewCell.swift in Sources */,
 				DE83045720A4A88700A37EBF /* parsing.swift in Sources */,
 				DEE5D4C820AF1AD900D0A7BD /* Etape3ViewController.swift in Sources */,
 				DED83ADE209810D6007004DC /* String+Extensions.swift in Sources */,
 				DED83ADD209810D6007004DC /* Optional+Extensions.swift in Sources */,
 				DE07389F20AD29A900131ABF /* Step2ViewController.swift in Sources */,
+				DE9A612E20B0682F00475516 /* Post.swift in Sources */,
 				DEAA684920980E24003C06B5 /* LoginViewController.swift in Sources */,
 				DED83AFE209810D6007004DC /* Assets.swift in Sources */,
 				DED83AEB209810D6007004DC /* ContactsPickerViewController.swift in Sources */,
@@ -818,6 +859,7 @@
 				DED83AF3209810D6007004DC /* LocalePickerViewController.swift in Sources */,
 				DEE5D4CC20AF712700D0A7BD /* ProfileViewController.swift in Sources */,
 				DED83B0A209810D6007004DC /* GradientSlider.swift in Sources */,
+				DE9A613520B07B9500475516 /* ListViewController.swift in Sources */,
 				DED83AF5209810D6007004DC /* LocaleInfo.swift in Sources */,
 				DED83B0D209810D6007004DC /* TextField.swift in Sources */,
 				DED83B0C209810D6007004DC /* SegmentedControl.swift in Sources */,
@@ -832,6 +874,7 @@
 				DED83AEA209810D6007004DC /* ColorPickerViewController.swift in Sources */,
 				DED83AF7209810D6007004DC /* CurrencyCell.swift in Sources */,
 				DED83ADB209810D6007004DC /* Date+Extension.swift in Sources */,
+				DE9A613920B0976D00475516 /* EditPostViewController.swift in Sources */,
 				DED83B05209810D6007004DC /* OneTextFieldViewController.swift in Sources */,
 				DEE5D4C420AF1A5B00D0A7BD /* Etape1ViewController.swift in Sources */,
 				DED83AE1209810D6007004DC /* UIColor+Extensions.swift in Sources */,
@@ -847,6 +890,7 @@
 				DEAA681720980C12003C06B5 /* AppDelegate.swift in Sources */,
 				DED83AEC209810D6007004DC /* Contacts.swift in Sources */,
 				DED83B08209810D6007004DC /* TextViewController.swift in Sources */,
+				DE9A613720B08DE800475516 /* Etape12ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
