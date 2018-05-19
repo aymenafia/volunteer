@@ -8,28 +8,75 @@
 
 import UIKit
 
-class EditPostViewController: UIViewController {
-
+class EditPostViewController: UIViewController,UITextViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    @IBOutlet var textViewNatureB: UITextView!
+    @IBOutlet var textViewInstructionSp: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        textViewNatureB.delegate = self
+        textViewInstructionSp.delegate = self
+        
+        textViewNatureB.text = "Nature du Bénévolat"
+        textViewNatureB.textColor = UIColor.lightGray
+        
+        textViewInstructionSp.text = "Instruction Spécifique"
+        textViewInstructionSp.textColor = UIColor.lightGray
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func textViewDidBeginEditing(_ textViewNatureB: UITextView) {
+        if textViewNatureB.textColor == UIColor.lightGray {
+            textViewNatureB.text = nil
+            textViewNatureB.textColor = UIColor.black
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func textViewDidEndEditing(_ textViewNatureB: UITextView) {
+        
+        
+        if textViewNatureB.text.isEmpty {
+            if textViewNatureB.tag == 0{
+                textViewNatureB.text = "Nature du Bénévolat"
+                textViewNatureB.textColor = UIColor.lightGray
+                
+            }
+            
+            if textViewNatureB.tag == 1{
+                textViewNatureB.text = "Instruction Spécifique"
+                textViewNatureB.textColor = UIColor.lightGray
+                
+            }
+        }
     }
-    */
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        let selectPhoto = info[UIImagePickerControllerOriginalImage] as! UIImage
+        PostImageview.image = selectPhoto
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
+        
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = .photoLibrary
+        imagePickerController.delegate = self
+        
+        print("image button tapped")
+        
+        
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    @IBOutlet weak var PostImageview: UIImageView!
+    
+    
+    
+    
 
 }
