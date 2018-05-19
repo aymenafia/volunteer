@@ -9,8 +9,38 @@
 import UIKit
 
 class EditPostViewController: UIViewController,UITextViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    
+    
+     @IBOutlet weak var PostImageview: UIImageView!
+    
+    
+    @IBOutlet var TitreTextField: UITextField!
+    
+    
+    @IBOutlet var DescritionTextVIew: UITextView!
+    
+    @IBOutlet var CompetenceTextView: UITextView!
+    @IBOutlet var TacheTextView: UITextView!
+    
+    
     @IBOutlet var textViewNatureB: UITextView!
     @IBOutlet var textViewInstructionSp: UITextView!
+    
+    @IBOutlet var DuréeTextField: UITextField!
+    
+    @IBOutlet var NombredePosteTextField: UITextField!
+    
+    @IBOutlet var SecteurTextField: UITextField!
+    
+    
+    @IBOutlet var LangueTextField: UITextField!
+    
+    
+    @IBOutlet var CauseTextField: UITextField!
+    
+    
+    
+    var posts : Post!
     override func viewDidLoad() {
         super.viewDidLoad()
         textViewNatureB.delegate = self
@@ -21,6 +51,11 @@ class EditPostViewController: UIViewController,UITextViewDelegate,UIImagePickerC
         
         textViewInstructionSp.text = "Instruction Spécifique"
         textViewInstructionSp.textColor = UIColor.lightGray
+        setView()
+        
+        print(posts)
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -73,10 +108,40 @@ class EditPostViewController: UIViewController,UITextViewDelegate,UIImagePickerC
         
         present(imagePickerController, animated: true, completion: nil)
     }
-    @IBOutlet weak var PostImageview: UIImageView!
+   
     
     
-    
+    func setView(){
+        
+        
+        TitreTextField.text = posts.postTitre!
+        
+        
+        DescritionTextVIew.text = posts.postDescrition!
+        
+        CompetenceTextView.text = posts.postCompetence!
+        
+        TacheTextView.text = posts.postTache!
+        
+        
+        textViewNatureB.text = posts.postNature!
+        textViewInstructionSp.text = posts.postInstruction!
+        
+        DuréeTextField.text = posts.postDurée!
+        
+       NombredePosteTextField.text = posts.postNombrePost!
+        
+        SecteurTextField.text = posts.postSecteur!
+        
+        
+       LangueTextField.text = posts.postLangue!
+        
+        
+        CauseTextField.text = posts.postCause!
+        
+        
+        
+    }
     
 
 }

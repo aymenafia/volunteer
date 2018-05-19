@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1X8-Dn-SX0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gdm-rH-qgT">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -112,7 +112,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="test:" destination="oin-OX-iae" eventType="touchUpInside" id="6rr-2O-X7M"/>
                                     <segue destination="cj0-J4-xTR" kind="show" id="1Jl-8f-5Ek"/>
                                 </connections>
                             </button>
@@ -124,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TCB-du-Vlc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2234.7826086956525" y="1239.9456521739132"/>
+            <point key="canvasLocation" x="2377" y="2168"/>
         </scene>
         <!--Etape2 View Controller-->
         <scene sceneID="5Ep-km-3BZ">
@@ -147,7 +146,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="test:" destination="oin-OX-iae" eventType="touchUpInside" id="Zi4-0f-TXE"/>
                                     <segue destination="BTN-lQ-VnI" kind="show" id="USQ-v3-d8r"/>
                                 </connections>
                             </button>
@@ -192,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFZ-AG-1aW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4171" y="1240"/>
+            <point key="canvasLocation" x="4106" y="2168"/>
         </scene>
         <!--Etape3 View Controller-->
         <scene sceneID="TSf-Fj-4Hs">
@@ -260,7 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HMQ-WT-Xtx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5159" y="1240"/>
+            <point key="canvasLocation" x="4974" y="2168"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="1EU-QG-Y8Z">
@@ -482,12 +480,12 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1454" y="2163"/>
+            <point key="canvasLocation" x="1596" y="3106"/>
         </scene>
         <!--Edit Post View Controller-->
         <scene sceneID="2Qz-i6-nCC">
             <objects>
-                <viewController id="1X8-Dn-SX0" customClass="EditPostViewController" customModule="Benevole" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Edit" id="1X8-Dn-SX0" customClass="EditPostViewController" customModule="Benevole" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dVW-ag-zW9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1793"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -515,7 +513,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Smg-Kq-dEq" customClass="TweeActiveTextField" customModule="TweeTextField">
-                                                <rect key="frame" x="15" y="333" width="357" height="50"/>
+                                                <rect key="frame" x="15" y="355" width="357" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="textColor"/>
@@ -534,7 +532,6 @@
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                         <color key="value" red="0.93532937770000002" green="0.26048082109999998" blue="0.37841790910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="Titre"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="activeLineColor">
                                                         <color key="value" red="0.93532937770000002" green="0.26048082109999998" blue="0.37841790910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
@@ -564,7 +561,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  Tâche" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJE-Ob-hk8">
-                                                <rect key="frame" x="28" y="671" width="98" height="21"/>
+                                                <rect key="frame" x="15" y="671" width="98" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.34250867369999999" green="0.418538034" blue="0.48936504130000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -587,13 +584,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="compétences recherchées" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRL-n4-iO2">
-                                                <rect key="frame" x="40" y="958" width="204" height="21"/>
+                                                <rect key="frame" x="28" y="958" width="204" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.34250867369999999" green="0.418538034" blue="0.48936504130000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4kx-vF-Opn" customClass="TweeActiveTextField" customModule="TweeTextField">
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4kx-vF-Opn" customClass="TweeActiveTextField" customModule="TweeTextField">
                                                 <rect key="frame" x="41" y="1373" width="357" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -612,7 +609,6 @@
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                         <color key="value" red="0.93532937770000002" green="0.26048082109999998" blue="0.37841790910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="Durée"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="activeLineColor">
                                                         <color key="value" red="0.93532937770000002" green="0.26048082109999998" blue="0.37841790910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
@@ -635,12 +631,11 @@
                                                         <color key="value" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                        <color key="value" red="0.93532937770000002" green="0.26048082109999998" blue="0.37841790910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="value" red="0.93725490196078431" green="0.25882352941176467" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="activeLineColor">
                                                         <color key="value" red="0.93532937770000002" green="0.26048082109999998" blue="0.37841790910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="Nombre de poste"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVw-GA-vNn" customClass="TweeActiveTextField" customModule="TweeTextField">
@@ -662,7 +657,6 @@
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                         <color key="value" red="0.93532937770000002" green="0.26048082109999998" blue="0.37841790910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="Secteur d'activité"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="activeLineColor">
                                                         <color key="value" red="0.93532937770000002" green="0.26048082109999998" blue="0.37841790910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
@@ -687,14 +681,13 @@
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                         <color key="value" red="0.93532937770000002" green="0.26048082109999998" blue="0.37841790910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="Langue"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="activeLineColor">
                                                         <color key="value" red="0.93532937770000002" green="0.26048082109999998" blue="0.37841790910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5dz-iH-6eR" customClass="TweeActiveTextField" customModule="TweeTextField">
-                                                <rect key="frame" x="41" y="1602" width="357" height="32"/>
+                                                <rect key="frame" x="41" y="1610" width="357" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
@@ -712,14 +705,13 @@
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                         <color key="value" red="0.93532937770000002" green="0.26048082109999998" blue="0.37841790910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="Cause"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="activeLineColor">
                                                         <color key="value" red="0.93532937770000002" green="0.26048082109999998" blue="0.37841790910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VzN-bL-nXh">
-                                                <rect key="frame" x="28" y="1292" width="357" height="59"/>
+                                                <rect key="frame" x="28" y="1274" width="357" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -734,7 +726,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qOE-bb-n81">
-                                                <rect key="frame" x="28" y="1214" width="357" height="60"/>
+                                                <rect key="frame" x="28" y="1214" width="357" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -764,6 +756,48 @@
                                                     <action selector="test:" destination="oin-OX-iae" eventType="touchUpInside" id="Nyu-7T-ady"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Durée" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBw-YU-lOn">
+                                                <rect key="frame" x="41" y="1344" width="46" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.93725490199999995" green="0.25882352939999997" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre de poste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvl-p9-sh9">
+                                                <rect key="frame" x="40" y="1405" width="164" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.93725490199999995" green="0.25882352939999997" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Secteur d'activité" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Tm-Q6-W3p">
+                                                <rect key="frame" x="40" y="1462" width="135" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.93725490199999995" green="0.25882352939999997" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Langue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvW-II-nng">
+                                                <rect key="frame" x="41" y="1522" width="57" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.93725490199999995" green="0.25882352939999997" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cause" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bt3-9L-op4">
+                                                <rect key="frame" x="41" y="1585" width="49" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.93725490199999995" green="0.25882352939999997" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4k-bI-pRr">
+                                                <rect key="frame" x="15" y="326" width="35" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.93725490199999995" green="0.25882352939999997" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -771,7 +805,7 @@
                                         </constraints>
                                     </view>
                                     <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="uploadimage" translatesAutoresizingMaskIntoConstraints="NO" id="vqF-By-rp4">
-                                        <rect key="frame" x="20" y="41" width="383" height="197"/>
+                                        <rect key="frame" x="20" y="41" width="383" height="126"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.93532937770000002" green="0.26048082109999998" blue="0.37841790910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
@@ -800,7 +834,16 @@
                     </view>
                     <size key="freeformSize" width="414" height="1793"/>
                     <connections>
+                        <outlet property="CauseTextField" destination="5dz-iH-6eR" id="J5W-r4-kMg"/>
+                        <outlet property="CompetenceTextView" destination="uhv-gY-UCY" id="T6i-4k-aYO"/>
+                        <outlet property="DescritionTextVIew" destination="9gx-pB-jFb" id="sFj-nl-VM3"/>
+                        <outlet property="DuréeTextField" destination="4kx-vF-Opn" id="Kbp-1D-e5g"/>
+                        <outlet property="LangueTextField" destination="k5e-rc-kA0" id="rLW-39-xfs"/>
+                        <outlet property="NombredePosteTextField" destination="L39-6B-3az" id="nPo-uf-BQO"/>
                         <outlet property="PostImageview" destination="vqF-By-rp4" id="lt1-nq-kh9"/>
+                        <outlet property="SecteurTextField" destination="LVw-GA-vNn" id="pte-5n-Sjy"/>
+                        <outlet property="TacheTextView" destination="zW8-v5-ddX" id="smO-Jw-yIO"/>
+                        <outlet property="TitreTextField" destination="Smg-Kq-dEq" id="4ce-rA-hPc"/>
                         <outlet property="textViewInstructionSp" destination="VzN-bL-nXh" id="YKW-U9-DEt"/>
                         <outlet property="textViewNatureB" destination="qOE-bb-n81" id="Hgr-Wk-Qj2"/>
                     </connections>
@@ -812,7 +855,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2266.666666666667" y="2593.614130434783"/>
+            <point key="canvasLocation" x="3005.7971014492755" y="903.66847826086962"/>
         </scene>
         <!--Etape4 View Controller-->
         <scene sceneID="vpY-ZD-yLI">
@@ -1022,7 +1065,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="itX-Cv-9PE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6068" y="1240"/>
+            <point key="canvasLocation" x="5913" y="2168"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="fhg-v6-foI">
@@ -1033,7 +1076,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YpC-rI-3Pu">
-                                <rect key="frame" x="0.0" y="51" width="414" height="636"/>
+                                <rect key="frame" x="0.0" y="95" width="414" height="592"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="111" id="JKc-zp-zO7" customClass="PostTableViewCell" customModule="Benevole" customModuleProvider="target">
@@ -1109,17 +1152,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f8P-ZP-AgF"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="list" id="LVx-Ix-9PW">
-                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-15"/>
-                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="GnA-qM-6cp"/>
                     <connections>
                         <outlet property="tvListPosts" destination="YpC-rI-3Pu" id="lqi-0U-Nxi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Unu-QJ-IyT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1454" y="474"/>
+            <point key="canvasLocation" x="1760.8695652173915" y="473.64130434782612"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8g1-xb-lyl">
@@ -1131,7 +1171,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="SjC-HJ-0oH" kind="relationship" relationship="viewControllers" id="VG5-Z6-2Wk"/>
+                        <segue destination="kMP-bR-fve" kind="relationship" relationship="viewControllers" id="VG5-Z6-2Wk"/>
                         <segue destination="3F9-SG-25R" kind="relationship" relationship="viewControllers" id="ti3-5E-qdj"/>
                         <segue destination="2BJ-Yd-DSe" kind="relationship" relationship="viewControllers" id="9Z7-LT-FO0"/>
                     </connections>
@@ -1451,12 +1491,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLf-Ly-VcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1455" y="1240"/>
+            <point key="canvasLocation" x="1596" y="2169"/>
         </scene>
         <!--Etape12 View Controller-->
         <scene sceneID="RHH-75-6TO">
             <objects>
-                <viewController storyboardIdentifier="step12" id="cj0-J4-xTR" customClass="Etape12ViewController" customModule="Benevole" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cj0-J4-xTR" customClass="Etape12ViewController" customModule="Benevole" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dmL-8g-joH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1483,7 +1523,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="test:" destination="cj0-J4-xTR" eventType="touchUpInside" id="a3K-Th-x4I"/>
                                     <segue destination="zfb-hr-OH0" kind="show" id="b8U-mU-eCc"/>
                                 </connections>
                             </button>
@@ -1528,7 +1567,29 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3196" y="1240"/>
+            <point key="canvasLocation" x="3196" y="2168"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CT5-KB-E7K">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kMP-bR-fve" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="list" id="LVx-Ix-9PW">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-15"/>
+                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5PT-0H-CUN">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SjC-HJ-0oH" kind="relationship" relationship="rootViewController" id="wlx-Lh-SSo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VBF-fI-oMT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957" y="473"/>
         </scene>
     </scenes>
     <resources>
