@@ -10,6 +10,7 @@ import UIKit
 
 class Etape1ViewController: UIViewController {
 
+    @IBOutlet var descrition: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +22,9 @@ class Etape1ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func SuivantButton(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 

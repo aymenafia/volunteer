@@ -12,6 +12,12 @@ class Etape4ViewController: UIViewController,UITextViewDelegate {
     
     @IBOutlet var textViewNatureB: UITextView!
     @IBOutlet var textViewInstructionSp: UITextView!
+    
+    @IBOutlet var durée: UITextField!
+    @IBOutlet var nombrePoste: UITextField!
+    @IBOutlet var secteur: UITextField!
+    @IBOutlet var langue: UITextField!
+    @IBOutlet var cause: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         textViewNatureB.delegate = self
@@ -32,6 +38,9 @@ class Etape4ViewController: UIViewController,UITextViewDelegate {
             textViewNatureB.text = nil
             textViewNatureB.textColor = UIColor.black
         }
+    }
+    
+    @IBAction func suivantButton(_ sender: Any) {
     }
     
     func textViewDidEndEditing(_ textViewNatureB: UITextView) {

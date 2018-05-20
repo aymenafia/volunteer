@@ -112,7 +112,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="cj0-J4-xTR" kind="show" id="1Jl-8f-5Ek"/>
+                                    <action selector="SuivantButton:" destination="Oxy-Zp-jFS" eventType="touchUpInside" id="mOV-TY-vdM"/>
+                                    <segue destination="zfb-hr-OH0" kind="show" id="U1U-xa-78N"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -123,6 +124,9 @@
                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-15"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="r2p-Ku-lHf"/>
+                    <connections>
+                        <outlet property="descrition" destination="yHd-s5-oeO" id="3f5-e1-C2C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TCB-du-Vlc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -149,6 +153,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="suivantButton:" destination="zfb-hr-OH0" eventType="touchUpInside" id="dH5-3m-ugv"/>
                                     <segue destination="BTN-lQ-VnI" kind="show" id="USQ-v3-d8r"/>
                                 </connections>
                             </button>
@@ -190,6 +195,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Qhp-kd-O2P"/>
                     </view>
+                    <connections>
+                        <outlet property="tache" destination="WTJ-9s-cxC" id="ALS-f1-KYa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFZ-AG-1aW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -216,6 +224,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="suivantButton:" destination="BTN-lQ-VnI" eventType="touchUpInside" id="hSv-bt-2l1"/>
                                     <action selector="test:" destination="oin-OX-iae" eventType="touchUpInside" id="ypY-PM-WJs"/>
                                     <segue destination="0qK-2f-bqc" kind="show" id="5gx-Rt-fhV"/>
                                 </connections>
@@ -258,6 +267,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="BHH-K9-STY"/>
                     </view>
+                    <connections>
+                        <outlet property="competence" destination="YoR-HN-yVM" id="yV7-fL-6Pg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HMQ-WT-Xtx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -937,7 +949,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="suivantButton:" destination="0qK-2f-bqc" eventType="touchUpInside" id="YH1-AS-KTj"/>
                                     <action selector="test:" destination="oin-OX-iae" eventType="touchUpInside" id="24P-6C-gjx"/>
+                                    <segue destination="cj0-J4-xTR" kind="show" id="u1j-1v-Pq9"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hoR-Wi-qb5" customClass="TweeActiveTextField" customModule="TweeTextField">
@@ -1070,13 +1084,18 @@
                         <viewLayoutGuide key="safeArea" id="wSL-YQ-vY5"/>
                     </view>
                     <connections>
+                        <outlet property="cause" destination="70c-1w-Xvx" id="a9x-wU-wWj"/>
+                        <outlet property="durée" destination="hoR-Wi-qb5" id="xa8-XM-V8f"/>
+                        <outlet property="langue" destination="Pr9-AN-RK0" id="NBv-Pf-D0x"/>
+                        <outlet property="nombrePoste" destination="pf6-Y9-gBw" id="pS6-ah-dhK"/>
+                        <outlet property="secteur" destination="FXZ-KT-dzp" id="iLT-Za-jBU"/>
                         <outlet property="textViewInstructionSp" destination="X7V-Kg-v2y" id="gPk-TB-I8j"/>
                         <outlet property="textViewNatureB" destination="55s-cD-6xH" id="IMn-kL-J2J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="itX-Cv-9PE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5913" y="2168"/>
+            <point key="canvasLocation" x="5777" y="2168"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="fhg-v6-foI">
@@ -1529,9 +1548,6 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="zfb-hr-OH0" kind="show" id="b8U-mU-eCc"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3XH-0G-MQv" customClass="TweeActiveTextField" customModule="TweeTextField">
                                 <rect key="frame" x="37" y="466" width="357" height="50"/>
@@ -1574,7 +1590,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3196" y="2168"/>
+            <point key="canvasLocation" x="6612" y="2168"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Npj-Il-jr2">
