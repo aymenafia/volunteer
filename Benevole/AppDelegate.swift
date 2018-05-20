@@ -26,6 +26,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
 
         
+        Auth.auth().addStateDidChangeListener { auth, user in
+            if user != nil {
+                
+                print("user in")
+                
+                
+                // User is signed in. Show home screen
+            } else {
+                print("user out")
+                // No User is signed in. Show user the login screen
+            }
+        }
+        
+        
         return true
     }
 

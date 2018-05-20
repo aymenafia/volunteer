@@ -8,6 +8,7 @@
 
 import UIKit
 import TweeTextField
+import Firebase
 class LoginViewController: UIViewController {
 
     @IBOutlet var txtemail: UITextField!
@@ -16,7 +17,38 @@ class LoginViewController: UIViewController {
     
     var Useruid : String?
     
+    @IBAction func testNav(_ sender: Any) {
+        
+        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let nav = mainStoryboardIpad.instantiateViewController(withIdentifier: "MainNavController") as! UINavigationController
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = nav
+    }
     
+    @IBAction func signIn(_ sender: Any) {
+        
+        
+        print("toped in")
+        Auth.auth().signIn(withEmail: txtemail.text!, password: txtpassword.text!) { (user, error) in
+            
+            if let error = error {
+                
+                print(error.localizedDescription)
+            }else{
+                
+                self.Useruid = (user?.uid)!
+                print((user?.uid)!)
+                print("login")
+                let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let nav = mainStoryboardIpad.instantiateViewController(withIdentifier: "MainNavController") as! UINavigationController
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController = nav
+                //self.GoToPosting()
+            }
+            
+        }
+        
+    }
     
     @IBOutlet var identifier: UIButton!
     override func viewDidLoad() {
@@ -32,20 +64,5 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  
 }

@@ -8,12 +8,32 @@
 
 import UIKit
 import StretchHeader
-
+import FirebaseAuth
 
 import UIKit
 
 class ProfileViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
-  
+    @IBAction func logout(_ sender: Any) {
+        
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            navigationController?.dismiss(animated: true, completion: nil)
+            
+            
+            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let nav = mainStoryboardIpad.instantiateViewController(withIdentifier: "FirstNav") as! UINavigationController
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = nav
+            
+            
+            
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +42,17 @@ class ProfileViewController: UIViewController,UIImagePickerControllerDelegate,UI
         
         imageView.layer.borderColor = UIColor.white.cgColor
         imageView.layer.borderWidth = 8
+        
+        
+        let button = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(tapbutton))
+        self.navigationItem.leftBarButtonItem = button
+        
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func tapbutton(){
+        
+        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

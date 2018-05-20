@@ -13,6 +13,9 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     var listOfPosts = [Post]()
     var listOfPosts2 = [Post]()
+    
+    
+    var postDetails : Post?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -55,12 +58,38 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         
         vc.posts = listOfPosts[indexPath.row]
-        self.show(vc, sender: nil)
+        postDetails = listOfPosts[indexPath.row]
+        
+        GoToPosting()
+        //self.show(vc, sender: nil)
         //self.performSegue(withIdentifier: "step12", sender: nil)
         
     }
     
     
+    func GoToPosting(){
+        
+        performSegue(withIdentifier: "show", sender: postDetails)
+    }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        if  segue.identifier == "show"{
+            
+            if let vcposting = segue.destination as? EditPostViewController{
+                
+                if let userUID = sender as? Post{
+                    
+                    vcposting.posts = userUID
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
     
 }
