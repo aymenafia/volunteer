@@ -6,6 +6,14 @@ import RSSelectionMenu
 
 class ViewController: UIViewController {
     
+    
+
+    
+    var nomOrganisation : String = ""
+    var internetSite : String = ""
+    var regionAdministrative : String = ""
+    var actionBenevole : String = ""
+    
     // MARK: Enums
     
     enum AlertType: String {
@@ -174,7 +182,7 @@ class ViewController: UIViewController {
     var value = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let button = UIButton(frame: CGRect(x: 110, y: 600, width: 200, height: 50))
         button.backgroundColor = UIColor(hex: 0xEF4260)
         button.setTitle("Suivant", for: .normal)
@@ -226,8 +234,19 @@ class ViewController: UIViewController {
         
         let step2VC = storyboard?.instantiateViewController(withIdentifier: "step2") as! Step2ViewController
 
-        self.performSegue(withIdentifier: "step2", sender: nil)
-
+       
+        step2VC.organisation = Organisation(userUID: "", nomOrganisation: nomOrganisation, siteInternet: internetSite, RegionAdministrative: regionAdministrative, CentreActionBenevole: actionBenevole, ImageOrganisation: "", EmailOrganisation: "")
+        
+        
+        //step2VC.x = "hahahah"
+        
+self.show(step2VC, sender: nil)
+        
+        
+        
+        
+        
+        
         //show(step2VC, sender: nil)
         
     }
@@ -271,7 +290,7 @@ class ViewController: UIViewController {
                 textField.returnKeyType = .done
                 textField.action { textField in
                     Log("textField = \(String(describing: textField.text))")
-                    
+                    self.nomOrganisation = textField.text!
                     
                 }
             }
@@ -300,8 +319,8 @@ class ViewController: UIViewController {
                 textField.returnKeyType = .done
                 textField.action { textField in
                     Log("textField = \(String(describing: textField.text))")
-                    
-                    
+                    self.internetSite = textField.text!
+                    print(self.internetSite)
                 }
             }
             
@@ -433,8 +452,10 @@ class ViewController: UIViewController {
                 
                 // update your existing array with updated selected items, so when menu presents second time updated items will be default selected.
           simpleSelectedArray = selectedItems
-                print(String(describing: selectedItems))
+                //print(String(describing: selectedItems))
                 self.value = simpleSelectedArray
+                print(simpleSelectedArray.item(at: 0)!)
+                self.regionAdministrative = simpleSelectedArray.item(at: 0)!
             }
             selectionMenu.showSearchBar(withPlaceHolder: "Search Player", tintColor: UIColor.white) { (searchtext) -> ([String]) in
                 return simpleDataArray.filter({ $0.lowercased().hasPrefix(searchtext.lowercased()) })
@@ -458,8 +479,8 @@ class ViewController: UIViewController {
 //            }
 //            alert.addAction(title: "Cancel", style: .cancel)
 //            alert.show()
-            
-            var simpleDataArray = ["Abitibi-Témiscamingue"]
+            var simpleSelectedArray = [String]()
+            var simpleDataArray = simpleSelectedArray
             if (value == ["Abitibi-Témiscamingue"]){
                 simpleDataArray = ["Centre d'action bénévole l'Amicale" , "Centre de bénévolat Rouyn-Noranda"]
                 print("ok")
@@ -560,7 +581,7 @@ class ViewController: UIViewController {
             // Here you'll get cell configuration where you can set any text based on condition
             // Cell configuration following parameters.
             // 1. UITableViewCell   2. Object of type T   3. IndexPath
-            var simpleSelectedArray = [String]()
+            
             let selectionMenu =  RSSelectionMenu(dataSource: simpleDataArray) { (cell, object, indexPath) in
                 cell.textLabel?.text = object
                 
@@ -577,6 +598,7 @@ class ViewController: UIViewController {
                 simpleSelectedArray = selectedItems
                 print(String(describing: selectedItems))
                 self.value = simpleSelectedArray
+                self.actionBenevole  = simpleSelectedArray.item(at: 0)!
             }
             selectionMenu.showSearchBar(withPlaceHolder: "Search Player", tintColor: UIColor.white) { (searchtext) -> ([String]) in
                 return simpleDataArray.filter({ $0.lowercased().hasPrefix(searchtext.lowercased()) })

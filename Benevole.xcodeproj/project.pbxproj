@@ -15,6 +15,8 @@
 		DE9A613520B07B9500475516 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9A613420B07B9500475516 /* ListViewController.swift */; };
 		DE9A613720B08DE800475516 /* Etape12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9A613620B08DE800475516 /* Etape12ViewController.swift */; };
 		DE9A613920B0976D00475516 /* EditPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9A613820B0976D00475516 /* EditPostViewController.swift */; };
+		DE9A613B20B0F4C200475516 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE9A613A20B0F4C200475516 /* GoogleService-Info.plist */; };
+		DE9A613D20B0FAA200475516 /* Organisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9A613C20B0FAA200475516 /* Organisation.swift */; };
 		DEAA681720980C12003C06B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA681620980C12003C06B5 /* AppDelegate.swift */; };
 		DEAA681C20980C12003C06B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAA681A20980C12003C06B5 /* Main.storyboard */; };
 		DEAA681F20980C12003C06B5 /* Benevole.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEAA681D20980C12003C06B5 /* Benevole.xcdatamodeld */; };
@@ -117,6 +119,8 @@
 		DE9A613420B07B9500475516 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		DE9A613620B08DE800475516 /* Etape12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Etape12ViewController.swift; sourceTree = "<group>"; };
 		DE9A613820B0976D00475516 /* EditPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPostViewController.swift; sourceTree = "<group>"; };
+		DE9A613A20B0F4C200475516 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DE9A613C20B0FAA200475516 /* Organisation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organisation.swift; sourceTree = "<group>"; };
 		DEAA681320980C12003C06B5 /* Benevole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Benevole.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEAA681620980C12003C06B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEAA681B20980C12003C06B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -264,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				DE9A612D20B0682F00475516 /* Post.swift */,
+				DE9A613C20B0FAA200475516 /* Organisation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 				DEAA681A20980C12003C06B5 /* Main.storyboard */,
 				DEAA682020980C12003C06B5 /* Assets.xcassets */,
 				DEAA682220980C12003C06B5 /* LaunchScreen.storyboard */,
+				DE9A613A20B0F4C200475516 /* GoogleService-Info.plist */,
 				DEAA682520980C12003C06B5 /* Info.plist */,
 				DEAA681D20980C12003C06B5 /* Benevole.xcdatamodeld */,
 			);
@@ -741,6 +747,7 @@
 			files = (
 				DED83AF2209810D6007004DC /* Countries.bundle in Resources */,
 				DEAA682420980C12003C06B5 /* LaunchScreen.storyboard in Resources */,
+				DE9A613B20B0F4C200475516 /* GoogleService-Info.plist in Resources */,
 				DEAA682120980C12003C06B5 /* Assets.xcassets in Resources */,
 				DEAA681C20980C12003C06B5 /* Main.storyboard in Resources */,
 			);
@@ -790,21 +797,31 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Benevole/Pods-Benevole-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BulletinBoard/BulletinBoard.framework",
 				"${BUILT_PRODUCTS_DIR}/Former/Former.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RSLoadingView/RSLoadingView.framework",
 				"${BUILT_PRODUCTS_DIR}/RSSelectionMenu/RSSelectionMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/StretchHeader/StretchHeader.framework",
 				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 				"${BUILT_PRODUCTS_DIR}/TweeTextField/TweeTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BulletinBoard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Former.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSLoadingView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSSelectionMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StretchHeader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TweeTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -878,6 +895,7 @@
 				DED83B05209810D6007004DC /* OneTextFieldViewController.swift in Sources */,
 				DEE5D4C420AF1A5B00D0A7BD /* Etape1ViewController.swift in Sources */,
 				DED83AE1209810D6007004DC /* UIColor+Extensions.swift in Sources */,
+				DE9A613D20B0FAA200475516 /* Organisation.swift in Sources */,
 				DED83B01209810D6007004DC /* PhotoLayout.swift in Sources */,
 				DED83AF9209810D6007004DC /* LocationPickerViewController.swift in Sources */,
 				DED83B15209812E7007004DC /* TypeOneCell.swift in Sources */,

@@ -1271,6 +1271,8 @@
                     </view>
                     <connections>
                         <outlet property="circularImageview" destination="JYi-63-6LS" id="yDV-du-jms"/>
+                        <outlet property="emailTF" destination="k41-CO-vp5" id="NJ2-f4-5La"/>
+                        <outlet property="passwordTF" destination="laA-Wd-eR9" id="dXw-Yk-5qy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egX-sD-Ybv" userLabel="First Responder" sceneMemberID="firstResponder"/>
