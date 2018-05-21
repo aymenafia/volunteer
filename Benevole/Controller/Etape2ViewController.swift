@@ -9,11 +9,13 @@
 import UIKit
 
 class Etape2ViewController: UIViewController {
-
+    
+var posts : String?
     @IBOutlet var tache: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+ let des = UserDefaults.standard.value(forKey: "description") as? String
+        print(des)
         // Do any additional setup after loading the view.
     }
 
@@ -23,6 +25,8 @@ class Etape2ViewController: UIViewController {
     }
     
     @IBAction func suivantButton(_ sender: Any) {
+        
+         UserDefaults.standard.set(tache.text!, forKey: "tache")
     }
     
     /*

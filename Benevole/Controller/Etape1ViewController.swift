@@ -13,7 +13,6 @@ class Etape1ViewController: UIViewController {
     @IBOutlet var descrition: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -23,6 +22,7 @@ class Etape1ViewController: UIViewController {
     }
     
     @IBAction func SuivantButton(_ sender: Any) {
+        UserDefaults.standard.set(descrition.text!, forKey: "description")
     }
     
     /*

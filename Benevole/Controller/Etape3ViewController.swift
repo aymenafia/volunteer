@@ -23,6 +23,9 @@ class Etape3ViewController: UIViewController {
     }
     
     @IBAction func suivantButton(_ sender: Any) {
+        
+        UserDefaults.standard.set(competence.text!, forKey: "competence")
+
     }
     
     /*

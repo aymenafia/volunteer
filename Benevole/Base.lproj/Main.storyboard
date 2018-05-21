@@ -878,7 +878,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3005.7971014492755" y="903.66847826086962"/>
+            <point key="canvasLocation" x="2961" y="845"/>
         </scene>
         <!--Etape4 View Controller-->
         <scene sceneID="vpY-ZD-yLI">
@@ -1193,7 +1193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Unu-QJ-IyT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1872" y="473"/>
+            <point key="canvasLocation" x="1743" y="845"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8g1-xb-lyl">
@@ -1540,7 +1540,7 @@
                                 <rect key="frame" x="106" y="626" width="200" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.25882352939999997" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Suivant">
+                                <state key="normal" title="Valider">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1548,6 +1548,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="uploadButton:" destination="cj0-J4-xTR" eventType="touchUpInside" id="dGe-IB-AYQ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3XH-0G-MQv" customClass="TweeActiveTextField" customModule="TweeTextField">
                                 <rect key="frame" x="37" y="466" width="357" height="50"/>
@@ -1581,6 +1584,7 @@
                     </view>
                     <connections>
                         <outlet property="circularImageview" destination="rEA-Vf-Qvl" id="7u3-kc-gnq"/>
+                        <outlet property="titreTF" destination="3XH-0G-MQv" id="IME-6t-toO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vab-dI-W1I" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -18,7 +18,7 @@ class ProfileViewController: UIViewController,UIImagePickerControllerDelegate,UI
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
-            navigationController?.dismiss(animated: true, completion: nil)
+            //navigationController?.dismiss(animated: true, completion: nil)
             
             
             let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

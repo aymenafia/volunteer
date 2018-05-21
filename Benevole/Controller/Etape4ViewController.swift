@@ -29,7 +29,8 @@ class Etape4ViewController: UIViewController,UITextViewDelegate {
         textViewInstructionSp.text = "Instruction Spécifique"
         textViewInstructionSp.textColor = UIColor.lightGray
         
-        
+      
+
         // Do any additional setup after loading the view.
     }
     
@@ -41,6 +42,14 @@ class Etape4ViewController: UIViewController,UITextViewDelegate {
     }
     
     @IBAction func suivantButton(_ sender: Any) {
+        
+        UserDefaults.standard.set(textViewNatureB.text!, forKey: "nature")
+        UserDefaults.standard.set(textViewInstructionSp.text!, forKey: "instruction")
+        UserDefaults.standard.set(durée.text!, forKey: "durée")
+        UserDefaults.standard.set(nombrePoste.text!, forKey: "nombrePoste")
+        UserDefaults.standard.set(secteur.text!, forKey: "secteur")
+        UserDefaults.standard.set(langue.text!, forKey: "langue")
+        UserDefaults.standard.set(cause.text!, forKey: "cause")
     }
     
     func textViewDidEndEditing(_ textViewNatureB: UITextView) {
