@@ -11,7 +11,7 @@ import Firebase
 class Etape12ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
  var ref: DatabaseReference!
     var UserUID:String?
-    var imageURL:String = "no image"
+    var imageURL:String?
     
     var imagePath:String = "no image"
     @IBOutlet weak var circularImageview: UIImageView!
@@ -52,7 +52,7 @@ class Etape12ViewController: UIViewController,UIImagePickerControllerDelegate,UI
     
 
     func collectData(){
-        
+            UploadImage(image: circularImageview.image!)
         let nature =  UserDefaults.standard.value(forKey: "nature") as? String
         let instruction =  UserDefaults.standard.value(forKey:"instruction") as? String
         let durée =  UserDefaults.standard.value(forKey: "durée") as? String
@@ -75,7 +75,7 @@ class Etape12ViewController: UIViewController,UIImagePickerControllerDelegate,UI
         var postMsg = ["userUID":UserUID!,"nature":nature,"imagePath":imageURL,"postDate":ServerValue.timestamp(),"instruction":instruction,"durée":durée,"nombrePoste":nombrePoste,"secteur":secteur,"langue":langue,"cause":cause,"competence":competence,"tache":tache,"description":description,"titre":titreTF.text!] as [String : Any]
         ref.child("Posts").childByAutoId().setValue(postMsg)
         
-        UploadImage(image: circularImageview.image!)
+    
   }
     
     func UploadImage(image:UIImage){
@@ -89,13 +89,14 @@ class Etape12ViewController: UIViewController,UIImagePickerControllerDelegate,UI
         dataformat.dateFormat = "MM_DD_yy_h_mm_a"
         let imageName = "\(self.UserUID!)_ \(dataformat.string(from: NSDate() as Date))"
         
-        imagePath = "UsersPosts/\(imageName).jpg"
+        imagePath = "OrganisationPosts//\(imageName).jpg"
+        imageURL = imagePath
         let childUserImages =  storageRef.child(imagePath)
         let metaData = StorageMetadata()
         metaData.contentType = "image/jpeg"
         //Upload image
         childUserImages.putData(data as Data, metadata: metaData)
-        imageURL = imagePath
+        
         //save to datab ase
         //SaveToFirebaseDabase(UserImagePath: imagePath,UserName: txtusername.text!)
     }

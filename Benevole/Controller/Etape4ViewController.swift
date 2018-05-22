@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import RSSelectionMenu
 
-class Etape4ViewController: UIViewController,UITextViewDelegate {
+class Etape4ViewController: UIViewController,UITextViewDelegate,UITextFieldDelegate {
     
     @IBOutlet var textViewNatureB: UITextView!
     @IBOutlet var textViewInstructionSp: UITextView!
@@ -18,6 +19,9 @@ class Etape4ViewController: UIViewController,UITextViewDelegate {
     @IBOutlet var secteur: UITextField!
     @IBOutlet var langue: UITextField!
     @IBOutlet var cause: UITextField!
+    
+    
+    var secteurvalue : String?
     override func viewDidLoad() {
         super.viewDidLoad()
         textViewNatureB.delegate = self
@@ -29,7 +33,7 @@ class Etape4ViewController: UIViewController,UITextViewDelegate {
         textViewInstructionSp.text = "Instruction Spécifique"
         textViewInstructionSp.textColor = UIColor.lightGray
         
-      
+        secteur.delegate = self as! UITextFieldDelegate
 
         // Do any additional setup after loading the view.
     }
@@ -41,8 +45,7 @@ class Etape4ViewController: UIViewController,UITextViewDelegate {
         }
     }
     
-    @IBAction func suivantButton(_ sender: Any) {
-        
+    fileprivate func userDefaultCollect() {
         UserDefaults.standard.set(textViewNatureB.text!, forKey: "nature")
         UserDefaults.standard.set(textViewInstructionSp.text!, forKey: "instruction")
         UserDefaults.standard.set(durée.text!, forKey: "durée")
@@ -51,6 +54,25 @@ class Etape4ViewController: UIViewController,UITextViewDelegate {
         UserDefaults.standard.set(langue.text!, forKey: "langue")
         UserDefaults.standard.set(cause.text!, forKey: "cause")
     }
+    
+   
+    
+  
+    
+    
+    @IBAction func suivantButton(_ sender: Any) {
+
+        
+        
+        
+        print("countryPicker")
+  
+        
+        
+        
+      userDefaultCollect()
+        
+ }
     
     func textViewDidEndEditing(_ textViewNatureB: UITextView) {
         

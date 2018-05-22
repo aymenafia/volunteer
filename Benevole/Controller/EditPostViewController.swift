@@ -116,7 +116,6 @@ class EditPostViewController: UIViewController,UITextViewDelegate,UIImagePickerC
         
         TitreTextField.text = posts.postTitre!
         
-        
         DescritionTextVIew.text = posts.postDescrition!
         
         CompetenceTextView.text = posts.postCompetence!
@@ -129,12 +128,12 @@ class EditPostViewController: UIViewController,UITextViewDelegate,UIImagePickerC
         
         DuréeTextField.text = posts.postDurée!
         
-       NombredePosteTextField.text = posts.postNombrePost!
+        NombredePosteTextField.text = posts.postNombrePost!
         
         SecteurTextField.text = posts.postSecteur!
         
         
-       LangueTextField.text = posts.postLangue!
+        LangueTextField.text = posts.postLangue!
         
         
         CauseTextField.text = posts.postCause!

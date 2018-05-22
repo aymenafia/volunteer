@@ -7,8 +7,10 @@
 //
 
 import UIKit
-
+import Firebase
 class PostTableViewCell: UITableViewCell {
+    
+    var ref: DatabaseReference!
 
     
     @IBOutlet var iv_postImage: UIImageView!
@@ -33,7 +35,7 @@ class PostTableViewCell: UITableViewCell {
         PostText.text = post.postTitre!
         PostDatePub.text = post.postDate!
         PostType.text  = post.postSecteur
-        iv_postImage.image = UIImage(named:post.postSecteur!)
+        iv_postImage.image = UIImage(named:"location")
     }
     
     
