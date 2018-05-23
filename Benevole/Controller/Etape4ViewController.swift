@@ -11,6 +11,7 @@ import RSSelectionMenu
 
 class Etape4ViewController: UIViewController,UITextViewDelegate,UITextFieldDelegate {
     
+    @IBOutlet var secteurLbl: UILabel!
     @IBOutlet var textViewNatureB: UITextView!
     @IBOutlet var textViewInstructionSp: UITextView!
     
@@ -34,10 +35,21 @@ class Etape4ViewController: UIViewController,UITextViewDelegate,UITextFieldDeleg
         textViewInstructionSp.textColor = UIColor.lightGray
         
         secteur.delegate = self as! UITextFieldDelegate
+        //let tap = UITapGestureRecognizer(target: self, action: Selector("tapFunction:"))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapFunction))
 
+        secteurLbl.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
     }
     
+    
+    @objc func tapFunction(sender:UITapGestureRecognizer) {
+        print("tap working")
+        
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "test") as! test
+        present(vc, animated: true, completion: nil)
+    }
     func textViewDidBeginEditing(_ textViewNatureB: UITextView) {
         if textViewNatureB.textColor == UIColor.lightGray {
             textViewNatureB.text = nil
@@ -91,7 +103,6 @@ class Etape4ViewController: UIViewController,UITextViewDelegate,UITextFieldDeleg
             }
         }
     }
-    
     
     
     

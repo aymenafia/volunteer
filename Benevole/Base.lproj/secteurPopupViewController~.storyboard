@@ -39,6 +39,55 @@
             </objects>
             <point key="canvasLocation" x="2224.8000000000002" y="-258.62068965517244"/>
         </scene>
+        <!--Test-->
+        <scene sceneID="THr-Ll-XgC">
+            <objects>
+                <viewController storyboardIdentifier="test" modalPresentationStyle="overCurrentContext" id="MhK-FA-unI" customClass="test" customModule="Benevole" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t6r-jO-mle">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8f3-hb-p2c">
+                                <rect key="frame" x="20" y="238" width="374" height="269"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="select secteur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKh-gS-9ue">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.25882352939999997" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gqd-6S-X0s">
+                                        <rect key="frame" x="0.0" y="88" width="374" height="143"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfA-Gw-yMN">
+                                        <rect key="frame" x="94" y="231" width="186" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Enregistrer"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.5" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="vGH-aa-VoW"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="userr" id="WN9-Vf-vq9">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-15"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="pickerview1" destination="gqd-6S-X0s" id="CQn-e5-7Oy"/>
+                        <outlet property="saveButton" destination="gfA-Gw-yMN" id="rdE-LE-VAx"/>
+                        <outlet property="secteurLbl" destination="YKh-gS-9ue" id="Urv-s4-658"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YXl-pg-qBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5777" y="2955"/>
+        </scene>
         <!--Etape1 View Controller-->
         <scene sceneID="Ee2-eM-OFf">
             <objects>
@@ -1081,7 +1130,7 @@
                         <outlet property="secteurLbl" destination="rTv-Ud-w7a" id="Wam-Fb-Smg"/>
                         <outlet property="textViewInstructionSp" destination="X7V-Kg-v2y" id="gPk-TB-I8j"/>
                         <outlet property="textViewNatureB" destination="55s-cD-6xH" id="IMn-kL-J2J"/>
-                        <segue destination="vZx-aQ-VV5" kind="presentation" id="97H-k7-4mC"/>
+                        <segue destination="MhK-FA-unI" kind="presentation" id="bKq-s8-Mku"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="itX-Cv-9PE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1604,14 +1653,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ldm-lO-zdq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-839" y="845"/>
-        </scene>
-        <!--test-->
-        <scene sceneID="vFH-4u-FeJ">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="test" storyboardName="secteurPopupViewController" referencedIdentifier="test" id="vZx-aQ-VV5" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i3j-EJ-YZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5777" y="2926"/>
         </scene>
     </scenes>
     <resources>

@@ -26,6 +26,7 @@
 		DEAA683A20980C13003C06B5 /* BenevoleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA683920980C13003C06B5 /* BenevoleUITests.swift */; };
 		DEAA684920980E24003C06B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA684720980E23003C06B5 /* LoginViewController.swift */; };
 		DEAA684A20980E24003C06B5 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA684820980E24003C06B5 /* LaunchViewController.swift */; };
+		DEAB0B8920B50DFA00072464 /* secteurPopupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAB0B8820B50DFA00072464 /* secteurPopupViewController.storyboard */; };
 		DED83AD9209810D6007004DC /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A8A209810D5007004DC /* Array+Extensions.swift */; };
 		DED83ADA209810D6007004DC /* Common+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A8B209810D5007004DC /* Common+Extensions.swift */; };
 		DED83ADB209810D6007004DC /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A8C209810D5007004DC /* Date+Extension.swift */; };
@@ -136,6 +137,7 @@
 		DEAA683B20980C13003C06B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEAA684720980E23003C06B5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DEAA684820980E24003C06B5 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		DEAB0B8820B50DFA00072464 /* secteurPopupViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = secteurPopupViewController.storyboard; sourceTree = "<group>"; };
 		DED83A8A209810D5007004DC /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		DED83A8B209810D5007004DC /* Common+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Common+Extensions.swift"; sourceTree = "<group>"; };
 		DED83A8C209810D5007004DC /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 				DE9A612B20B0679A00475516 /* Controller */,
 				DED83A88209810D5007004DC /* Source */,
 				DEAA681620980C12003C06B5 /* AppDelegate.swift */,
+				DEAB0B8820B50DFA00072464 /* secteurPopupViewController.storyboard */,
 				DEAA681A20980C12003C06B5 /* Main.storyboard */,
 				DEAA682020980C12003C06B5 /* Assets.xcassets */,
 				DEAA682220980C12003C06B5 /* LaunchScreen.storyboard */,
@@ -745,6 +748,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEAB0B8920B50DFA00072464 /* secteurPopupViewController.storyboard in Resources */,
 				DED83AF2209810D6007004DC /* Countries.bundle in Resources */,
 				DEAA682420980C12003C06B5 /* LaunchScreen.storyboard in Resources */,
 				DE9A613B20B0F4C200475516 /* GoogleService-Info.plist in Resources */,
@@ -1078,6 +1082,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 793G5FAC49;
 				INFOPLIST_FILE = Benevole/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = esprit.tn.com.Benevole;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1094,6 +1099,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 793G5FAC49;
 				INFOPLIST_FILE = Benevole/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = esprit.tn.com.Benevole;
 				PRODUCT_NAME = "$(TARGET_NAME)";
