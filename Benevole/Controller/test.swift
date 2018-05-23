@@ -10,31 +10,16 @@ import UIKit
 
 class test: UIViewController {
 
-    @IBOutlet var imageView: UIImageView!
+
+    @IBOutlet var saveButton: UIButton!
+    @IBOutlet var pickerview1: UIPickerView!
+    @IBOutlet var secteurLbl: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.layer.cornerRadius = imageView.frame.size.width/2
-        imageView.clipsToBounds = true
-        
-        imageView.layer.borderColor = UIColor.white.cgColor
-        imageView.layer.borderWidth = 8
+      
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
