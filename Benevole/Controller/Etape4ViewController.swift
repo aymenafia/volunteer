@@ -48,8 +48,13 @@ class Etape4ViewController: UIViewController,UITextViewDelegate,UITextFieldDeleg
         
         
         let vc = storyboard?.instantiateViewController(withIdentifier: "test") as! test
+        vc.pickerViewState = "secteur"
         present(vc, animated: true, completion: nil)
     }
+    
+    
+    
+    
     func textViewDidBeginEditing(_ textViewNatureB: UITextView) {
         if textViewNatureB.textColor == UIColor.lightGray {
             textViewNatureB.text = nil
