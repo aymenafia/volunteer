@@ -55,15 +55,19 @@ class test: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
         
         return countries[row]
     }
-    
+    var descriptionSlected : String = ""
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        
-        print(countries[row])
+        descriptionSlected = countries[row]
+        //print(countries[row])
         
     }
 
     @IBAction func save(_ sender: Any) {
+        
+        NotificationCenter.default.post(name: Notification.Name.saveDescriptionOffre , object: self)
+        
+        
     self.dismiss(animated: true, completion: nil)
    }
     

@@ -217,6 +217,23 @@ class Etape1VC: UIViewController {
         //navigationItem.titleView = segments
         //alertStyle = .actionSheet
         //segments.selectedSegmentIndex = 1
+        
+        
+        NotificationCenter.default.addObserver(forName: .saveDescriptionOffre, object: nil, queue: OperationQueue.main) { (notification) in
+            
+            let valueReceived = notification.object as! test
+            print(valueReceived.descriptionSlected)
+            
+            
+        }
+        
+        
+        
+        
+        
+        
+        
+        
     }
     
     
@@ -295,7 +312,15 @@ extension Etape1VC: UICollectionViewDelegate {
         show(alert: alerts[indexPath.item])
         
         if alerts[indexPath.item].rawValue == "description de l'offre" {
-            print("first cell")}
+            print("first cell")
+             let storyboard = UIStoryboard(name: "secteurPopupViewController", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "DescriptionViewController") as! DescriptionViewController
+            //vc.pickerViewState = "secteur"
+            present(vc, animated: true, completion: nil)
+            
+            
+            
+        }
         
     }
 }

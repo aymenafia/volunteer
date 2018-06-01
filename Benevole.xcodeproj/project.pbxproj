@@ -28,6 +28,8 @@
 		DEAA684A20980E24003C06B5 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA684820980E24003C06B5 /* LaunchViewController.swift */; };
 		DEAB0B8920B50DFA00072464 /* secteurPopupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAB0B8820B50DFA00072464 /* secteurPopupViewController.storyboard */; };
 		DEAB0BFE20C0D94900072464 /* Etape1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB0BFD20C0D94900072464 /* Etape1VC.swift */; };
+		DEAB0C0120C18E4D00072464 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB0C0020C18E4D00072464 /* NotificationNameExtension.swift */; };
+		DEAB0C0320C1EF0700072464 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB0C0220C1EF0700072464 /* DescriptionViewController.swift */; };
 		DED83AD9209810D6007004DC /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A8A209810D5007004DC /* Array+Extensions.swift */; };
 		DED83ADA209810D6007004DC /* Common+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A8B209810D5007004DC /* Common+Extensions.swift */; };
 		DED83ADB209810D6007004DC /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A8C209810D5007004DC /* Date+Extension.swift */; };
@@ -140,6 +142,8 @@
 		DEAA684820980E24003C06B5 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		DEAB0B8820B50DFA00072464 /* secteurPopupViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = secteurPopupViewController.storyboard; sourceTree = "<group>"; };
 		DEAB0BFD20C0D94900072464 /* Etape1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Etape1VC.swift; sourceTree = "<group>"; };
+		DEAB0C0020C18E4D00072464 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
+		DEAB0C0220C1EF0700072464 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		DED83A8A209810D5007004DC /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		DED83A8B209810D5007004DC /* Common+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Common+Extensions.swift"; sourceTree = "<group>"; };
 		DED83A8C209810D5007004DC /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -265,6 +269,7 @@
 				DE9A613620B08DE800475516 /* Etape12ViewController.swift */,
 				DE9A613820B0976D00475516 /* EditPostViewController.swift */,
 				DEAB0BFD20C0D94900072464 /* Etape1VC.swift */,
+				DEAB0C0220C1EF0700072464 /* DescriptionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 		DEAA681520980C12003C06B5 /* Benevole */ = {
 			isa = PBXGroup;
 			children = (
+				DEAB0BFF20C18E2500072464 /* Extension */,
 				DE9A612F20B06D8500475516 /* View */,
 				DE9A612C20B0680B00475516 /* Model */,
 				DE9A612B20B0679A00475516 /* Controller */,
@@ -343,6 +349,14 @@
 				DEAA683B20980C13003C06B5 /* Info.plist */,
 			);
 			path = BenevoleUITests;
+			sourceTree = "<group>";
+		};
+		DEAB0BFF20C18E2500072464 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DEAB0C0020C18E4D00072464 /* NotificationNameExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		DED83A88209810D5007004DC /* Source */ = {
@@ -850,9 +864,11 @@
 				DED83AFB209810D6007004DC /* SearchHistoryManager.swift in Sources */,
 				DED83B02209810D6007004DC /* TelegramPickerViewController.swift in Sources */,
 				DE9A613320B06E3700475516 /* PostTableViewCell.swift in Sources */,
+				DEAB0C0320C1EF0700072464 /* DescriptionViewController.swift in Sources */,
 				DE83045720A4A88700A37EBF /* parsing.swift in Sources */,
 				DEE5D4C820AF1AD900D0A7BD /* Etape3ViewController.swift in Sources */,
 				DED83ADE209810D6007004DC /* String+Extensions.swift in Sources */,
+				DEAB0C0120C18E4D00072464 /* NotificationNameExtension.swift in Sources */,
 				DED83ADD209810D6007004DC /* Optional+Extensions.swift in Sources */,
 				DE07389F20AD29A900131ABF /* Step2ViewController.swift in Sources */,
 				DE9A612E20B0682F00475516 /* Post.swift in Sources */,
