@@ -249,6 +249,7 @@ class Etape1VC: UIViewController {
             
         case .descriptionOffre:
             print("description offre clicked")
+            self.dismiss(animated: true, completion: nil)
         case .simpleWithImages:
             print("")
         case .oneTextField1:
@@ -292,6 +293,10 @@ extension Etape1VC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         Log("selected alert - \(alerts[indexPath.item].rawValue)")
         show(alert: alerts[indexPath.item])
+        
+        if alerts[indexPath.item].rawValue == "description de l'offre" {
+            print("first cell")}
+        
     }
 }
 
