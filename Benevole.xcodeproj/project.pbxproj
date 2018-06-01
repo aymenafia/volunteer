@@ -27,6 +27,7 @@
 		DEAA684920980E24003C06B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA684720980E23003C06B5 /* LoginViewController.swift */; };
 		DEAA684A20980E24003C06B5 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAA684820980E24003C06B5 /* LaunchViewController.swift */; };
 		DEAB0B8920B50DFA00072464 /* secteurPopupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAB0B8820B50DFA00072464 /* secteurPopupViewController.storyboard */; };
+		DEAB0BFE20C0D94900072464 /* Etape1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB0BFD20C0D94900072464 /* Etape1VC.swift */; };
 		DED83AD9209810D6007004DC /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A8A209810D5007004DC /* Array+Extensions.swift */; };
 		DED83ADA209810D6007004DC /* Common+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A8B209810D5007004DC /* Common+Extensions.swift */; };
 		DED83ADB209810D6007004DC /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A8C209810D5007004DC /* Date+Extension.swift */; };
@@ -138,6 +139,7 @@
 		DEAA684720980E23003C06B5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DEAA684820980E24003C06B5 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		DEAB0B8820B50DFA00072464 /* secteurPopupViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = secteurPopupViewController.storyboard; sourceTree = "<group>"; };
+		DEAB0BFD20C0D94900072464 /* Etape1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Etape1VC.swift; sourceTree = "<group>"; };
 		DED83A8A209810D5007004DC /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		DED83A8B209810D5007004DC /* Common+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Common+Extensions.swift"; sourceTree = "<group>"; };
 		DED83A8C209810D5007004DC /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				DE9A613420B07B9500475516 /* ListViewController.swift */,
 				DE9A613620B08DE800475516 /* Etape12ViewController.swift */,
 				DE9A613820B0976D00475516 /* EditPostViewController.swift */,
+				DEAB0BFD20C0D94900072464 /* Etape1VC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -901,6 +904,7 @@
 				DED83AE1209810D6007004DC /* UIColor+Extensions.swift in Sources */,
 				DE9A613D20B0FAA200475516 /* Organisation.swift in Sources */,
 				DED83B01209810D6007004DC /* PhotoLayout.swift in Sources */,
+				DEAB0BFE20C0D94900072464 /* Etape1VC.swift in Sources */,
 				DED83AF9209810D6007004DC /* LocationPickerViewController.swift in Sources */,
 				DED83B15209812E7007004DC /* TypeOneCell.swift in Sources */,
 				DED83AE2209810D6007004DC /* UIImage+Extensions.swift in Sources */,
