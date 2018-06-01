@@ -4,7 +4,7 @@ import Photos
 import RSSelectionMenu
 
 
-class ViewController: UIViewController {
+class Etape1VC: UIViewController {
     
     
     
@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     enum AlertType: String {
         
         case simple = "Simple"
+        case descriptionOffre = "description de l'offre"
         case simpleWithImages = "Simple +Images"
         case oneTextField1 = "Nom de l'organisation"
         case oneTextField2 = "Site internet"
@@ -39,6 +40,7 @@ class ViewController: UIViewController {
         
         var description: String {
             switch self {
+            case .descriptionOffre: return ""
             case .simple: return "3 different buttons"
             case .simpleWithImages: return "3 buttons with image"
             case .dataPicker: return "Select date and time"
@@ -62,6 +64,7 @@ class ViewController: UIViewController {
         
         var image: UIImage {
             switch self {
+            case .descriptionOffre: return #imageLiteral(resourceName: "pen")
             case .simple: return #imageLiteral(resourceName: "title")
             case .simpleWithImages: return #imageLiteral(resourceName: "two_squares")
             case .dataPicker: return #imageLiteral(resourceName: "calendar")
@@ -87,7 +90,7 @@ class ViewController: UIViewController {
             switch self {
             case .simple, .simpleWithImages, .telegramPicker:
                 return UIColor(hex: 0x007AFF)
-            case .oneTextField1,.oneTextField2, .twoTextFields:
+            case .oneTextField1,.oneTextField2, .twoTextFields, .descriptionOffre:
                 return UIColor(hex: 0x5AC8FA)
             case .dataPicker, .pickerView, .contactsPicker, .locationPicker:
                 return UIColor(hex: 0x4CD964)
@@ -101,7 +104,7 @@ class ViewController: UIViewController {
         }
     }
     
-    fileprivate lazy var alerts: [AlertType] = [.oneTextField1,.oneTextField2,  .countryPicker,.regionPicker]
+    fileprivate lazy var alerts: [AlertType] = [.descriptionOffre]
     
     // MARK: UI Metrics
     
@@ -244,7 +247,8 @@ class ViewController: UIViewController {
             alert.addAction(title: "Destructive", style: .destructive)
             alert.show()
             
-
+        case .descriptionOffre:
+            print("description offre clicked")
         case .simpleWithImages:
             print("")
         case .oneTextField1:
@@ -283,7 +287,7 @@ class ViewController: UIViewController {
 
 // MARK: - CollectionViewDelegate
 
-extension ViewController: UICollectionViewDelegate {
+extension Etape1VC: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         Log("selected alert - \(alerts[indexPath.item].rawValue)")
@@ -293,7 +297,7 @@ extension ViewController: UICollectionViewDelegate {
 
 // MARK: - CollectionViewDataSource
 
-extension ViewController: UICollectionViewDataSource {
+extension Etape1VC: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1

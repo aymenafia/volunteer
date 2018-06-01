@@ -4,7 +4,7 @@ import Photos
 import RSSelectionMenu
 
 
-class Etape1VC: UIViewController {
+class ViewController: UIViewController {
     
     
 
@@ -719,7 +719,7 @@ self.show(step2VC, sender: nil)
 
 // MARK: - CollectionViewDelegate
 
-extension Etape1VC: UICollectionViewDelegate {
+extension ViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         Log("selected alert - \(alerts[indexPath.item].rawValue)")
@@ -729,7 +729,7 @@ extension Etape1VC: UICollectionViewDelegate {
 
 // MARK: - CollectionViewDataSource
 
-extension Etape1VC: UICollectionViewDataSource {
+extension ViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
