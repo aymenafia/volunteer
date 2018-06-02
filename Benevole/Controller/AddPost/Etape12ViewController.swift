@@ -105,6 +105,22 @@ class Etape12ViewController: UIViewController,UIImagePickerControllerDelegate,UI
     override func viewDidLoad() {
         super.viewDidLoad()
      
+        let nature =  UserDefaults.standard.value(forKey: "nature") as? String
+        let instruction =  UserDefaults.standard.value(forKey:"instruction") as? String
+        let durée =  UserDefaults.standard.value(forKey: "durée") as? String
+        let nombrePoste =  UserDefaults.standard.value(forKey:"nombrePoste") as? String
+        let secteur =  UserDefaults.standard.value(forKey: "secteur") as? String
+        let langue =  UserDefaults.standard.value(forKey: "langue") as? String
+        let cause =  UserDefaults.standard.value(forKey: "cause") as? String
+        
+        
+        let competence =  UserDefaults.standard.value(forKey: "competence") as? String
+        let tache =  UserDefaults.standard.value(forKey: "tache") as? String
+        let description =  UserDefaults.standard.value(forKey: "description") as? String
+        
+        print(nature,instruction,durée,nombrePoste,secteur,langue,cause,competence,tache,description)
+        
+        
         let user = Auth.auth().currentUser
         UserUID = (user?.uid)!
         // Do any additional setup after loading the view.

@@ -13,14 +13,20 @@ class TacheViewController: UIViewController {
     @IBOutlet var tacheTV: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let value =  UserDefaults.standard.value(forKey: "tache") as? String{
+            
+            
+            tacheTV.text = value
+            
+        }
         // Do any additional setup after loading the view.
     }
 
    
     
     @IBAction func saveTache(_ sender: Any) {
-        
+        UserDefaults.standard.set(tacheTV.text!, forKey: "tache")
+
         dismiss(animated: true, completion: nil)
         
         

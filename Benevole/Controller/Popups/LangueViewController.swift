@@ -11,6 +11,21 @@ import UIKit
 class LangueViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
 var langues = ["Français","Anglais"]
     @IBOutlet var LanguePickerView: UIPickerView!
+    var langueSlected : String = ""
+    var languerowSlected : String = ""
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let value = UserDefaults.standard.value(forKey: "languerowSlected") as? String , value != ""{
+            
+            LanguePickerView.selectRow(Int(value)!, inComponent:0, animated:true)
+        }else{
+            
+            print("")
+        }
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         LanguePickerView.delegate = self
@@ -19,6 +34,7 @@ var langues = ["Français","Anglais"]
     }
 
     @IBAction func saveLangue(_ sender: Any) {
+       
         dismiss(animated: true, completion: nil)
     }
     /////////
@@ -43,11 +59,12 @@ var langues = ["Français","Anglais"]
         
         return langues[row]
     }
-    var langueSlected : String = ""
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
+        languerowSlected = String(row)
         langueSlected = langues[row]
         print(langues[row])
-        
+        UserDefaults.standard.set(langueSlected, forKey: "langue")
+        UserDefaults.standard.set(languerowSlected, forKey: "languerowSlected")
     }
 }

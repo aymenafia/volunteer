@@ -22,7 +22,6 @@ class Etape1ViewController: UIViewController {
     }
     
     @IBAction func SuivantButton(_ sender: Any) {
-        UserDefaults.standard.set(descrition.text!, forKey: "description")
     }
     
     /*

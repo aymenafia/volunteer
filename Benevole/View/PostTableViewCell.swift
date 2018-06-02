@@ -32,10 +32,16 @@ class PostTableViewCell: UITableViewCell {
     
     
     func setText(post:Post){
+        let x = Double(post.postDate!)! / 1000
+        let date = NSDate(timeIntervalSince1970: x)
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        
+        
         PostText.text = post.postTitre!
-        PostDatePub.text = post.postDate!
+        PostDatePub.text = String(formatter.string(from: date as Date))
         PostType.text  = post.postSecteur
-        iv_postImage.image = UIImage(named:"location")
+        iv_postImage.image = UIImage(named:post.postSecteur!)
     }
     
     
