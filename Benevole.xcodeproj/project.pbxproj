@@ -32,6 +32,14 @@
 		DEAB0C0320C1EF0700072464 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB0C0220C1EF0700072464 /* DescriptionViewController.swift */; };
 		DEAB0C0520C2015800072464 /* TacheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB0C0420C2015800072464 /* TacheViewController.swift */; };
 		DEAB0C0720C2375900072464 /* CompetencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB0C0620C2375800072464 /* CompetencesViewController.swift */; };
+		DEAB0C0920C23DE600072464 /* NaturebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB0C0820C23DE600072464 /* NaturebViewController.swift */; };
+		DEAB0C0B20C23E1600072464 /* InstructionspViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB0C0A20C23E1600072464 /* InstructionspViewController.swift */; };
+		DEAB0C0D20C244D000072464 /* DureeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB0C0C20C244D000072464 /* DureeViewController.swift */; };
+		DEAB0C0F20C244E600072464 /* NbPosteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB0C0E20C244E600072464 /* NbPosteViewController.swift */; };
+		DEAB0C1120C244FE00072464 /* SecteurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB0C1020C244FE00072464 /* SecteurViewController.swift */; };
+		DEAB0C1320C2451000072464 /* LangueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB0C1220C2451000072464 /* LangueViewController.swift */; };
+		DEAB0C1520C2451F00072464 /* CauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB0C1420C2451F00072464 /* CauseViewController.swift */; };
+		DEAB0C1720C24E6B00072464 /* Etape2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB0C1620C24E6B00072464 /* Etape2VC.swift */; };
 		DED83AD9209810D6007004DC /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A8A209810D5007004DC /* Array+Extensions.swift */; };
 		DED83ADA209810D6007004DC /* Common+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A8B209810D5007004DC /* Common+Extensions.swift */; };
 		DED83ADB209810D6007004DC /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A8C209810D5007004DC /* Date+Extension.swift */; };
@@ -148,6 +156,14 @@
 		DEAB0C0220C1EF0700072464 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		DEAB0C0420C2015800072464 /* TacheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TacheViewController.swift; sourceTree = "<group>"; };
 		DEAB0C0620C2375800072464 /* CompetencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetencesViewController.swift; sourceTree = "<group>"; };
+		DEAB0C0820C23DE600072464 /* NaturebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturebViewController.swift; sourceTree = "<group>"; };
+		DEAB0C0A20C23E1600072464 /* InstructionspViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionspViewController.swift; sourceTree = "<group>"; };
+		DEAB0C0C20C244D000072464 /* DureeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DureeViewController.swift; sourceTree = "<group>"; };
+		DEAB0C0E20C244E600072464 /* NbPosteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NbPosteViewController.swift; sourceTree = "<group>"; };
+		DEAB0C1020C244FE00072464 /* SecteurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecteurViewController.swift; sourceTree = "<group>"; };
+		DEAB0C1220C2451000072464 /* LangueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangueViewController.swift; sourceTree = "<group>"; };
+		DEAB0C1420C2451F00072464 /* CauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CauseViewController.swift; sourceTree = "<group>"; };
+		DEAB0C1620C24E6B00072464 /* Etape2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Etape2VC.swift; sourceTree = "<group>"; };
 		DED83A8A209810D5007004DC /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		DED83A8B209810D5007004DC /* Common+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Common+Extensions.swift"; sourceTree = "<group>"; };
 		DED83A8C209810D5007004DC /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -259,6 +275,8 @@
 		DE9A612B20B0679A00475516 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DEAB0C1920C261AD00072464 /* AddPost */,
+				DEAB0C1820C260EB00072464 /* Popups */,
 				DEAA684820980E24003C06B5 /* LaunchViewController.swift */,
 				DED83B122098113B007004DC /* ViewController.swift */,
 				DEAA684720980E23003C06B5 /* LoginViewController.swift */,
@@ -270,12 +288,7 @@
 				DEE5D4CB20AF712700D0A7BD /* ProfileViewController.swift */,
 				DEE5D4CD20AFAB6200D0A7BD /* test.swift */,
 				DE9A613420B07B9500475516 /* ListViewController.swift */,
-				DE9A613620B08DE800475516 /* Etape12ViewController.swift */,
 				DE9A613820B0976D00475516 /* EditPostViewController.swift */,
-				DEAB0BFD20C0D94900072464 /* Etape1VC.swift */,
-				DEAB0C0220C1EF0700072464 /* DescriptionViewController.swift */,
-				DEAB0C0420C2015800072464 /* TacheViewController.swift */,
-				DEAB0C0620C2375800072464 /* CompetencesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -363,6 +376,33 @@
 				DEAB0C0020C18E4D00072464 /* NotificationNameExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		DEAB0C1820C260EB00072464 /* Popups */ = {
+			isa = PBXGroup;
+			children = (
+				DEAB0C0220C1EF0700072464 /* DescriptionViewController.swift */,
+				DEAB0C0420C2015800072464 /* TacheViewController.swift */,
+				DEAB0C0620C2375800072464 /* CompetencesViewController.swift */,
+				DEAB0C0820C23DE600072464 /* NaturebViewController.swift */,
+				DEAB0C0A20C23E1600072464 /* InstructionspViewController.swift */,
+				DEAB0C0C20C244D000072464 /* DureeViewController.swift */,
+				DEAB0C0E20C244E600072464 /* NbPosteViewController.swift */,
+				DEAB0C1020C244FE00072464 /* SecteurViewController.swift */,
+				DEAB0C1220C2451000072464 /* LangueViewController.swift */,
+				DEAB0C1420C2451F00072464 /* CauseViewController.swift */,
+			);
+			path = Popups;
+			sourceTree = "<group>";
+		};
+		DEAB0C1920C261AD00072464 /* AddPost */ = {
+			isa = PBXGroup;
+			children = (
+				DE9A613620B08DE800475516 /* Etape12ViewController.swift */,
+				DEAB0BFD20C0D94900072464 /* Etape1VC.swift */,
+				DEAB0C1620C24E6B00072464 /* Etape2VC.swift */,
+			);
+			path = AddPost;
 			sourceTree = "<group>";
 		};
 		DED83A88209810D5007004DC /* Source */ = {
@@ -881,6 +921,7 @@
 				DE9A612E20B0682F00475516 /* Post.swift in Sources */,
 				DEAA684920980E24003C06B5 /* LoginViewController.swift in Sources */,
 				DED83AFE209810D6007004DC /* Assets.swift in Sources */,
+				DEAB0C0B20C23E1600072464 /* InstructionspViewController.swift in Sources */,
 				DED83AEB209810D6007004DC /* ContactsPickerViewController.swift in Sources */,
 				DED83AFA209810D6007004DC /* LocationSearchResultsViewController.swift in Sources */,
 				DED83AE0209810D6007004DC /* UIApplication+Extensions.swift in Sources */,
@@ -900,6 +941,7 @@
 				DED83B11209810E4007004DC /* VegaScrollFlowLayout.swift in Sources */,
 				DED83AD9209810D6007004DC /* Array+Extensions.swift in Sources */,
 				DED83AE4209810D6007004DC /* UISearchBar+Extensions.swift in Sources */,
+				DEAB0C0920C23DE600072464 /* NaturebViewController.swift in Sources */,
 				DED83B00209810D6007004DC /* PickerViewViewController.swift in Sources */,
 				DEE5D4CA20AF299800D0A7BD /* Etape4ViewController.swift in Sources */,
 				DED83AF1209810D6007004DC /* ItemWithImage.swift in Sources */,
@@ -910,11 +952,16 @@
 				DED83AF5209810D6007004DC /* LocaleInfo.swift in Sources */,
 				DED83B0D209810D6007004DC /* TextField.swift in Sources */,
 				DED83B0C209810D6007004DC /* SegmentedControl.swift in Sources */,
+				DEAB0C1320C2451000072464 /* LangueViewController.swift in Sources */,
 				DEAA684A20980E24003C06B5 /* LaunchViewController.swift in Sources */,
 				DED83B07209810D6007004DC /* AttributedTextBlock.swift in Sources */,
+				DEAB0C0F20C244E600072464 /* NbPosteViewController.swift in Sources */,
+				DEAB0C1520C2451F00072464 /* CauseViewController.swift in Sources */,
+				DEAB0C1720C24E6B00072464 /* Etape2VC.swift in Sources */,
 				DEAB0C0720C2375900072464 /* CompetencesViewController.swift in Sources */,
 				DED83AE6209810D6007004DC /* UITextField+Extensions.swift in Sources */,
 				DEAA681F20980C12003C06B5 /* Benevole.xcdatamodeld in Sources */,
+				DEAB0C1120C244FE00072464 /* SecteurViewController.swift in Sources */,
 				DED83AFF209810D6007004DC /* PhotoLibraryPickerViewController.swift in Sources */,
 				DED83AEF209810D6007004DC /* DatePickerViewController.swift in Sources */,
 				DED83B04209810D6007004DC /* LikeButtonCell.swift in Sources */,
@@ -926,6 +973,7 @@
 				DED83B05209810D6007004DC /* OneTextFieldViewController.swift in Sources */,
 				DEE5D4C420AF1A5B00D0A7BD /* Etape1ViewController.swift in Sources */,
 				DED83AE1209810D6007004DC /* UIColor+Extensions.swift in Sources */,
+				DEAB0C0D20C244D000072464 /* DureeViewController.swift in Sources */,
 				DE9A613D20B0FAA200475516 /* Organisation.swift in Sources */,
 				DED83B01209810D6007004DC /* PhotoLayout.swift in Sources */,
 				DEAB0BFE20C0D94900072464 /* Etape1VC.swift in Sources */,

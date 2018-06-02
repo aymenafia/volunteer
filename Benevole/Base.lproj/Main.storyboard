@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R5n-KP-BEM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EX2-3L-XF5">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -932,7 +932,6 @@
                                 <connections>
                                     <action selector="suivantButton:" destination="0qK-2f-bqc" eventType="touchUpInside" id="YH1-AS-KTj"/>
                                     <action selector="test:" destination="oin-OX-iae" eventType="touchUpInside" id="24P-6C-gjx"/>
-                                    <segue destination="cj0-J4-xTR" kind="show" id="u1j-1v-Pq9"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hoR-Wi-qb5" customClass="TweeActiveTextField" customModule="TweeTextField">
@@ -1197,8 +1196,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="2BJ-Yd-DSe" kind="relationship" relationship="viewControllers" id="9Z7-LT-FO0"/>
-                        <segue destination="Oxy-Zp-jFS" kind="relationship" relationship="viewControllers" id="AbC-Nw-gHe"/>
                         <segue destination="SjC-HJ-0oH" kind="relationship" relationship="viewControllers" id="Spe-OF-D1g"/>
+                        <segue destination="R5n-KP-BEM" kind="relationship" relationship="viewControllers" id="bT5-A3-B0G"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFz-42-Xuf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1512,7 +1511,7 @@
         <!--Etape12 View Controller-->
         <scene sceneID="RHH-75-6TO">
             <objects>
-                <viewController id="cj0-J4-xTR" customClass="Etape12ViewController" customModule="Benevole" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Etape12ViewController" id="cj0-J4-xTR" customClass="Etape12ViewController" customModule="Benevole" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dmL-8g-joH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1584,7 +1583,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="6612" y="2168"/>
+            <point key="canvasLocation" x="4319" y="2928"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Npj-Il-jr2">
@@ -1614,10 +1613,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="r1r-Il-a4P"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="add" id="iSx-ij-eA5">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-15"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYG-gW-knX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4790" y="2989"/>
+            <point key="canvasLocation" x="2886" y="2928"/>
         </scene>
         <!--test-->
         <scene sceneID="vFH-4u-FeJ">
@@ -1626,6 +1628,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3j-EJ-YZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5822" y="2929"/>
+        </scene>
+        <!--Etape2VC-->
+        <scene sceneID="ZhZ-EX-vUO">
+            <objects>
+                <viewController storyboardIdentifier="Etape2VC" id="zN8-n8-TJM" customClass="Etape2VC" customModule="Benevole" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t6d-Mv-L1w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="guI-9o-rzY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5fF-Vn-jI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3593" y="2928"/>
         </scene>
     </scenes>
     <resources>

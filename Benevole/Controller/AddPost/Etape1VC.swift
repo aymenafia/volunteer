@@ -18,6 +18,8 @@ class Etape1VC: UIViewController {
     
     enum AlertType: String {
         //Competences Recherchées
+        case instruction =  "Instruction Spécifique"
+        case nature = "Nature du Bénévolat"
         case competences = "Competences Recherchées"
         case simple = "Simple"
         case tache = "Taches"
@@ -42,6 +44,8 @@ class Etape1VC: UIViewController {
         
         var description: String {
             switch self {
+            case .instruction: return ""
+            case .nature: return ""
             case .competences: return ""
             case .tache: return ""
             case .descriptionOffre: return ""
@@ -68,6 +72,8 @@ class Etape1VC: UIViewController {
         
         var image: UIImage {
             switch self {
+            case .instruction: return #imageLiteral(resourceName: "pen")
+            case .nature: return #imageLiteral(resourceName: "pen")
             case .competences: return #imageLiteral(resourceName: "pen")
             case .tache: return #imageLiteral(resourceName: "pen")
             case .descriptionOffre: return #imageLiteral(resourceName: "pen")
@@ -96,7 +102,7 @@ class Etape1VC: UIViewController {
             switch self {
             case .simple, .simpleWithImages, .telegramPicker:
                 return UIColor(hex: 0x007AFF)
-            case .oneTextField1,.oneTextField2, .twoTextFields, .descriptionOffre, .tache, .competences:
+            case .oneTextField1,.oneTextField2, .twoTextFields, .descriptionOffre, .tache, .competences, .nature, .instruction:
                 return UIColor(hex: 0x5AC8FA)
             case .dataPicker, .pickerView, .contactsPicker, .locationPicker:
                 return UIColor(hex: 0x4CD964)
@@ -110,7 +116,7 @@ class Etape1VC: UIViewController {
         }
     }
     
-    fileprivate lazy var alerts: [AlertType] = [.descriptionOffre, .tache, .competences]
+    fileprivate lazy var alerts: [AlertType] = [.descriptionOffre, .tache, .competences, .nature, .instruction]
     
     // MARK: UI Metrics
     
@@ -150,7 +156,7 @@ class Etape1VC: UIViewController {
     
     fileprivate lazy var layout: VerticalScrollFlowLayout = {
         $0.minimumLineSpacing = UI.lineSpacing
-        $0.sectionInset = UIEdgeInsets(top: 200, left: 0, bottom: 0, right: 0)
+        $0.sectionInset = UIEdgeInsets(top: 100, left: 0, bottom: 0, right: 0)
         $0.itemSize = itemSize
         
         return $0
@@ -181,7 +187,7 @@ class Etape1VC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let button = UIButton(frame: CGRect(x: 110, y: 600, width: 200, height: 50))
+        let button = UIButton(frame: CGRect(x: 110, y: 550, width: 200, height: 50))
         button.backgroundColor = UIColor(hex: 0xEF4260)
         button.setTitle("Suivant", for: .normal)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
@@ -239,15 +245,19 @@ class Etape1VC: UIViewController {
     @objc func buttonAction(sender: UIButton!) {
         print("Button tapped")
         
-        let step2VC = storyboard?.instantiateViewController(withIdentifier: "step2") as! Step2ViewController
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "Etape2VC") as! Etape2VC
         
         
-        step2VC.organisation = Organisation(userUID: "", nomOrganisation: nomOrganisation, siteInternet: internetSite, RegionAdministrative: regionAdministrative, CentreActionBenevole: actionBenevole, ImageOrganisation: "", EmailOrganisation: "")
+//        let step2VC = storyboard?.instantiateViewController(withIdentifier: "step2") as! Step2ViewController
+//
+//
+//        step2VC.organisation = Organisation(userUID: "", nomOrganisation: nomOrganisation, siteInternet: internetSite, RegionAdministrative: regionAdministrative, CentreActionBenevole: actionBenevole, ImageOrganisation: "", EmailOrganisation: "")
         
         
         //step2VC.x = "hahahah"
         
-        self.show(step2VC, sender: nil)
+        self.show(vc, sender: nil)
       //show(step2VC, sender: nil)
    }
     
@@ -335,6 +345,23 @@ extension Etape1VC: UICollectionViewDelegate {
             print("first cell")
             let storyboard = UIStoryboard(name: "secteurPopupViewController", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "CompetencesViewController") as! CompetencesViewController
+            //vc.pickerViewState = "secteur"
+            present(vc, animated: true, completion: nil)
+        }
+        
+        //NaturebViewController
+        if alerts[indexPath.item].rawValue == "Nature du Bénévolat" {
+            print("first cell")
+            let storyboard = UIStoryboard(name: "secteurPopupViewController", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "NaturebViewController") as! NaturebViewController
+            //vc.pickerViewState = "secteur"
+            present(vc, animated: true, completion: nil)
+        }
+        //InstructionspViewController
+        if alerts[indexPath.item].rawValue == "Instruction Spécifique" {
+            print("first cell")
+            let storyboard = UIStoryboard(name: "secteurPopupViewController", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "InstructionspViewController") as! InstructionspViewController
             //vc.pickerViewState = "secteur"
             present(vc, animated: true, completion: nil)
         }

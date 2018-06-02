@@ -27,7 +27,7 @@ class Etape4ViewController: UIViewController,UITextViewDelegate,UITextFieldDeleg
         super.viewDidLoad()
         textViewNatureB.delegate = self
         textViewInstructionSp.delegate = self
-        
+       
         textViewNatureB.text = "Nature du Bénévolat"
         textViewNatureB.textColor = UIColor.lightGray
         

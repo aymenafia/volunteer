@@ -1,5 +1,5 @@
 //
-//  DescriptionViewController.swift
+//  TâcheViewController.swift
 //  Benevole
 //
 //  Created by Mohamed aymen AFIA on 01/06/2018.
@@ -8,19 +8,21 @@
 
 import UIKit
 
-class DescriptionViewController: UIViewController {
+class TacheViewController: UIViewController {
 
+    @IBOutlet var tacheTV: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func save(_ sender: Any) {
+   
+    
+    @IBAction func saveTache(_ sender: Any) {
         
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
+        
         
     }
-    
-
 }
