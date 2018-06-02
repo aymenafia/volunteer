@@ -1625,7 +1625,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="test" storyboardName="secteurPopupViewController" referencedIdentifier="test" id="vZx-aQ-VV5" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3j-EJ-YZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5777" y="2926"/>
+            <point key="canvasLocation" x="5822" y="2929"/>
         </scene>
     </scenes>
     <resources>

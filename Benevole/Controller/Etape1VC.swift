@@ -17,8 +17,10 @@ class Etape1VC: UIViewController {
     // MARK: Enums
     
     enum AlertType: String {
-        
+        //Competences Recherchées
+        case competences = "Competences Recherchées"
         case simple = "Simple"
+        case tache = "Taches"
         case descriptionOffre = "description de l'offre"
         case simpleWithImages = "Simple +Images"
         case oneTextField1 = "Nom de l'organisation"
@@ -40,6 +42,8 @@ class Etape1VC: UIViewController {
         
         var description: String {
             switch self {
+            case .competences: return ""
+            case .tache: return ""
             case .descriptionOffre: return ""
             case .simple: return "3 different buttons"
             case .simpleWithImages: return "3 buttons with image"
@@ -64,6 +68,8 @@ class Etape1VC: UIViewController {
         
         var image: UIImage {
             switch self {
+            case .competences: return #imageLiteral(resourceName: "pen")
+            case .tache: return #imageLiteral(resourceName: "pen")
             case .descriptionOffre: return #imageLiteral(resourceName: "pen")
             case .simple: return #imageLiteral(resourceName: "title")
             case .simpleWithImages: return #imageLiteral(resourceName: "two_squares")
@@ -90,7 +96,7 @@ class Etape1VC: UIViewController {
             switch self {
             case .simple, .simpleWithImages, .telegramPicker:
                 return UIColor(hex: 0x007AFF)
-            case .oneTextField1,.oneTextField2, .twoTextFields, .descriptionOffre:
+            case .oneTextField1,.oneTextField2, .twoTextFields, .descriptionOffre, .tache, .competences:
                 return UIColor(hex: 0x5AC8FA)
             case .dataPicker, .pickerView, .contactsPicker, .locationPicker:
                 return UIColor(hex: 0x4CD964)
@@ -104,7 +110,7 @@ class Etape1VC: UIViewController {
         }
     }
     
-    fileprivate lazy var alerts: [AlertType] = [.descriptionOffre]
+    fileprivate lazy var alerts: [AlertType] = [.descriptionOffre, .tache, .competences]
     
     // MARK: UI Metrics
     
@@ -226,15 +232,7 @@ class Etape1VC: UIViewController {
             
             
         }
-        
-        
-        
-        
-        
-        
-        
-        
-    }
+  }
     
     
     
@@ -253,55 +251,60 @@ class Etape1VC: UIViewController {
       //show(step2VC, sender: nil)
    }
     
+//
+//    func show(alert type: AlertType) {
+//        switch type {
+//
+//        case .simple:
+//            let alert = UIAlertController(style: self.alertStyle, title: "Simple Alert", message: "3 kinds of actions")
+//            alert.addAction(title: "Default", style: .default)
+//            alert.addAction(title: "Cancel", style: .cancel)
+//            alert.addAction(title: "Destructive", style: .destructive)
+//            alert.show()
+//
+//        case .descriptionOffre:
+//            print("description offre clicked")
+//            self.dismiss(animated: true, completion: nil)
+//        case .simpleWithImages:
+//            print("")
+//        case .oneTextField1:
+//            print("")
+//        case .oneTextField2:
+//            print("")
+//        case .twoTextFields:
+//            print("")
+//        case .dataPicker:
+//            print("")
+//        case .pickerView:
+//            print("")
+//        case .countryPicker:
+//            print("")
+//        case .regionPicker:
+//            print("")
+//        case .phoneCodePicker:
+//            print("")
+//        case .currencyPicker:
+//            print("")
+//        case .imagePicker:
+//            print("")
+//        case .photoLibraryPicker:
+//            print("")
+//        case .colorPicker:
+//            print("")
+//        case .textViewer:
+//            print("")
+//        case .contactsPicker:
+//            print("")
+//        case .locationPicker:
+//            print("")
+//        case .telegramPicker:
+//            print("")
+//        }
+//
+//
+//    }
     
-    func show(alert type: AlertType) {
-        switch type {
-            
-        case .simple:
-            let alert = UIAlertController(style: self.alertStyle, title: "Simple Alert", message: "3 kinds of actions")
-            alert.addAction(title: "Default", style: .default)
-            alert.addAction(title: "Cancel", style: .cancel)
-            alert.addAction(title: "Destructive", style: .destructive)
-            alert.show()
-            
-        case .descriptionOffre:
-            print("description offre clicked")
-            self.dismiss(animated: true, completion: nil)
-        case .simpleWithImages:
-            print("")
-        case .oneTextField1:
-            print("")
-        case .oneTextField2:
-            print("")
-        case .twoTextFields:
-            print("")
-        case .dataPicker:
-            print("")
-        case .pickerView:
-            print("")
-        case .countryPicker:
-            print("")
-        case .regionPicker:
-            print("")
-        case .phoneCodePicker:
-            print("")
-        case .currencyPicker:
-            print("")
-        case .imagePicker:
-            print("")
-        case .photoLibraryPicker:
-            print("")
-        case .colorPicker:
-            print("")
-        case .textViewer:
-            print("")
-        case .contactsPicker:
-            print("")
-        case .locationPicker:
-            print("")
-        case .telegramPicker:
-            print("")
-        }}}
+}
 
 // MARK: - CollectionViewDelegate
 
@@ -309,7 +312,7 @@ extension Etape1VC: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         Log("selected alert - \(alerts[indexPath.item].rawValue)")
-        show(alert: alerts[indexPath.item])
+        //rshow(alert: alerts[indexPath.item])
         
         if alerts[indexPath.item].rawValue == "description de l'offre" {
             print("first cell")
@@ -317,11 +320,24 @@ extension Etape1VC: UICollectionViewDelegate {
             let vc = storyboard.instantiateViewController(withIdentifier: "DescriptionViewController") as! DescriptionViewController
             //vc.pickerViewState = "secteur"
             present(vc, animated: true, completion: nil)
-            
-            
-            
-        }
+       }
         
+        
+        if alerts[indexPath.item].rawValue == "Taches" {
+            print("first cell")
+            let storyboard = UIStoryboard(name: "secteurPopupViewController", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "TacheViewController") as! TacheViewController
+            //vc.pickerViewState = "secteur"
+            present(vc, animated: true, completion: nil)
+        }
+        //Competences Recherchées
+        if alerts[indexPath.item].rawValue == "Competences Recherchées" {
+            print("first cell")
+            let storyboard = UIStoryboard(name: "secteurPopupViewController", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "CompetencesViewController") as! CompetencesViewController
+            //vc.pickerViewState = "secteur"
+            present(vc, animated: true, completion: nil)
+        }
     }
 }
 

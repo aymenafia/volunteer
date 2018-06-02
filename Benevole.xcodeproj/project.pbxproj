@@ -30,6 +30,8 @@
 		DEAB0BFE20C0D94900072464 /* Etape1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB0BFD20C0D94900072464 /* Etape1VC.swift */; };
 		DEAB0C0120C18E4D00072464 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB0C0020C18E4D00072464 /* NotificationNameExtension.swift */; };
 		DEAB0C0320C1EF0700072464 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB0C0220C1EF0700072464 /* DescriptionViewController.swift */; };
+		DEAB0C0520C2015800072464 /* TacheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB0C0420C2015800072464 /* TacheViewController.swift */; };
+		DEAB0C0720C2375900072464 /* CompetencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB0C0620C2375800072464 /* CompetencesViewController.swift */; };
 		DED83AD9209810D6007004DC /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A8A209810D5007004DC /* Array+Extensions.swift */; };
 		DED83ADA209810D6007004DC /* Common+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A8B209810D5007004DC /* Common+Extensions.swift */; };
 		DED83ADB209810D6007004DC /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83A8C209810D5007004DC /* Date+Extension.swift */; };
@@ -144,6 +146,8 @@
 		DEAB0BFD20C0D94900072464 /* Etape1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Etape1VC.swift; sourceTree = "<group>"; };
 		DEAB0C0020C18E4D00072464 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
 		DEAB0C0220C1EF0700072464 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		DEAB0C0420C2015800072464 /* TacheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TacheViewController.swift; sourceTree = "<group>"; };
+		DEAB0C0620C2375800072464 /* CompetencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetencesViewController.swift; sourceTree = "<group>"; };
 		DED83A8A209810D5007004DC /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		DED83A8B209810D5007004DC /* Common+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Common+Extensions.swift"; sourceTree = "<group>"; };
 		DED83A8C209810D5007004DC /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -270,6 +274,8 @@
 				DE9A613820B0976D00475516 /* EditPostViewController.swift */,
 				DEAB0BFD20C0D94900072464 /* Etape1VC.swift */,
 				DEAB0C0220C1EF0700072464 /* DescriptionViewController.swift */,
+				DEAB0C0420C2015800072464 /* TacheViewController.swift */,
+				DEAB0C0620C2375800072464 /* CompetencesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -861,6 +867,7 @@
 				DED83AE8209810D6007004DC /* UIView+Extensions.swift in Sources */,
 				DED83ADA209810D6007004DC /* Common+Extensions.swift in Sources */,
 				DED83AF8209810D6007004DC /* PhoneCodeCell.swift in Sources */,
+				DEAB0C0520C2015800072464 /* TacheViewController.swift in Sources */,
 				DED83AFB209810D6007004DC /* SearchHistoryManager.swift in Sources */,
 				DED83B02209810D6007004DC /* TelegramPickerViewController.swift in Sources */,
 				DE9A613320B06E3700475516 /* PostTableViewCell.swift in Sources */,
@@ -905,6 +912,7 @@
 				DED83B0C209810D6007004DC /* SegmentedControl.swift in Sources */,
 				DEAA684A20980E24003C06B5 /* LaunchViewController.swift in Sources */,
 				DED83B07209810D6007004DC /* AttributedTextBlock.swift in Sources */,
+				DEAB0C0720C2375900072464 /* CompetencesViewController.swift in Sources */,
 				DED83AE6209810D6007004DC /* UITextField+Extensions.swift in Sources */,
 				DEAA681F20980C12003C06B5 /* Benevole.xcdatamodeld in Sources */,
 				DED83AFF209810D6007004DC /* PhotoLibraryPickerViewController.swift in Sources */,
