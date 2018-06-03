@@ -15,9 +15,15 @@ import UIKit
 class ProfileViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     @IBOutlet weak var imageView: UIImageView!
     var ref: DatabaseReference!
+    var UserUID:String?
+    var imageURL:String?
+    var imagePath:String = "no image"
 let userUID = Auth.auth().currentUser?.uid
     var UserData: [Post] = []
     
+    @IBAction func updateButton(_ sender: Any) {
+        updateValue()
+    }
     @IBOutlet var nomOrganisationLbl: UITextField!
     @IBOutlet var emailLbl: UILabel!
     @IBOutlet var siteInternetLbl: UITextField!
@@ -35,12 +41,59 @@ let userUID = Auth.auth().currentUser?.uid
     var tel:String?
     var email:String?
     
+    func UploadImage(image:UIImage){
+        
+        
+        let storageRef = Storage.storage().reference(forURL:"gs://notrequebec-67065.appspot.com")
+        
+        var data = NSData()
+        data = UIImageJPEGRepresentation(image,0.8) as! NSData
+        let dataformat = DateFormatter()
+        dataformat.dateFormat = "MM_DD_yy_h_mm_a"
+        let imageName = "\(self.UserUID!)_ \(dataformat.string(from: NSDate() as Date))"
+        
+        imagePath = "OrganisationImages/\(imageName).jpg"
+        imageURL = imagePath
+        let childUserImages =  storageRef.child(imagePath)
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/jpeg"
+        //Upload image
+        childUserImages.putData(data as Data, metadata: metaData)
+        
+        //save to datab ase
+        //SaveToFirebaseDabase(UserImagePath: imagePath,UserName: txtusername.text!)
+    }
     
     
     
-    
-    
-    
+    func updateValue(){
+        
+        //let key = ref.child("Organisation").childByAutoId().key
+     UploadImage(image: imageView.image!)
+        let centrel = CentreActionBenevoleLbl.text
+        let Regionl = RegionAdministrativeLbl.text
+        let nomOrganisationl = nomOrganisationLbl.text
+        let siteInternetl = siteInternetLbl.text
+        let addressl = addressLbl.text
+        let tell = telLbl.text
+        let emaill = emailLbl.text
+        let data = ["CentreActionBenevole": centrel,
+                    "OrgImagePath": imagePath,
+                    "RegionAdministrative": Regionl,
+                    "nomOrganisation": nomOrganisationl,
+                    "siteInternet": siteInternetl,
+                    "address": addressl,
+                    "tel": tell,
+                    "email": emaill
+            ] as [String : Any]
+        //let childUpdates = ["/posts/\(key)": post,"/user-posts/\(userID)/\(key)/": post]
+        ref.child("Organisation").child("FonH6Ro8AxbWYPaOSCTYAN5RtHW2").updateChildValues(data)
+        
+        
+        
+   }
+   
+
     
     
     @IBAction func logout(_ sender: Any) {
@@ -74,7 +127,8 @@ let userUID = Auth.auth().currentUser?.uid
         imageView.layer.borderWidth = 8
         
         ref = Database.database().reference()
-
+        let user = Auth.auth().currentUser
+        UserUID = (user?.uid)!
         let button = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(tapbutton))
         self.navigationItem.leftBarButtonItem = button
         loadUserFormFirebase()

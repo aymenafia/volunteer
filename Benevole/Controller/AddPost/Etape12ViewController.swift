@@ -13,9 +13,10 @@ class Etape12ViewController: UIViewController,UIImagePickerControllerDelegate,UI
  var ref: DatabaseReference!
     var UserUID:String?
     var imageURL:String?
+     var imagePath:String = "no image"
     let loadingView = RSLoadingView()
    
-    var imagePath:String = "no image"
+   
     @IBOutlet weak var circularImageview: UIImageView!
     
     @IBOutlet var titreTF: UITextField!

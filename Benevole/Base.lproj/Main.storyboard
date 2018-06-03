@@ -466,6 +466,14 @@
                                     <action selector="logout:" destination="2BJ-Yd-DSe" eventType="touchUpInside" id="G2U-wb-6w7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAW-en-kBa">
+                                <rect key="frame" x="325" y="249" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateButton:" destination="2BJ-Yd-DSe" eventType="touchUpInside" id="Wp6-eV-P9b"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="gaC-jg-PID"/>
