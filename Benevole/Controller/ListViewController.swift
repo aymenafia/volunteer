@@ -46,7 +46,7 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let cellWithImage = tableView.dequeueReusableCell(withIdentifier: "cell",for: indexPath) as! PostTableViewCell
         
         
-        
+        cellWithImage.count = indexPath.row
         cellWithImage.setText(post: post)
         return cellWithImage
         

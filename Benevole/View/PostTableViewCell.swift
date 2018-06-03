@@ -17,7 +17,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet var PostDatePub: UILabel!
     @IBOutlet var PostType: UILabel!
     @IBOutlet var PostText: UILabel!
-    
+    @IBOutlet var countLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,9 +28,10 @@ class PostTableViewCell: UITableViewCell {
         // Initialization code
     }
 
+   
     
     
-    
+    var count : Int!
     func setText(post:Post){
         let x = Double(post.postDate!)! / 1000
         let date = NSDate(timeIntervalSince1970: x)
@@ -42,6 +43,8 @@ class PostTableViewCell: UITableViewCell {
         PostDatePub.text = String(formatter.string(from: date as Date))
         PostType.text  = post.postSecteur
         iv_postImage.image = UIImage(named:post.postSecteur!)
+        
+        countLbl.text = String(count + 1)
     }
     
     
