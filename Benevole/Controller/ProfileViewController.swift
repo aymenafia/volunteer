@@ -87,7 +87,7 @@ let userUID = Auth.auth().currentUser?.uid
                     "email": emaill
             ] as [String : Any]
         //let childUpdates = ["/posts/\(key)": post,"/user-posts/\(userID)/\(key)/": post]
-        ref.child("Organisation").child("FonH6Ro8AxbWYPaOSCTYAN5RtHW2").updateChildValues(data)
+        ref.child("Organisation").child(self.UserUID!).updateChildValues(data)
         
         
         
@@ -192,7 +192,7 @@ let userUID = Auth.auth().currentUser?.uid
     
     func loadUserFormFirebase(){
        
-        ref.child("Organisation").child ("FonH6Ro8AxbWYPaOSCTYAN5RtHW2").observe(.value, with: {
+        ref.child("Organisation").child (self.UserUID!).observe(.value, with: {
             (snapshot) in
             
             //print(snapshot)
