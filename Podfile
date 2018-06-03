@@ -17,7 +17,7 @@ pod 'IQKeyboardManagerSwift'
 pod 'TextFieldEffects'
 pod 'Former'
 pod 'StretchHeader'
-
+pod 'Kingfisher', '~> 4.0'
 
 pod "RSLoadingView"
 pod 'Firebase/Core'

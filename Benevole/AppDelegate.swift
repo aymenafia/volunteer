@@ -26,26 +26,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
 
         
-//        Auth.auth().addStateDidChangeListener { auth, user in
-//            if user != nil {
-//                
-//                print("user in")
-//                let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                let nav = mainStoryboardIpad.instantiateViewController(withIdentifier: "MainNavController") as! UINavigationController
-//                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//                appDelegate.window?.rootViewController = nav
+        Auth.auth().addStateDidChangeListener { auth, user in
+            if user != nil {
+                
+                print("user in")
+                let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let nav = mainStoryboardIpad.instantiateViewController(withIdentifier: "MainNavController") as! UINavigationController
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController = nav
 //                
 //                // User is signed in. Show home screen
-//            } else {
-//                print("user out")
+            } else {
+                print("user out")
 //                
-//                let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                let nav = mainStoryboardIpad.instantiateViewController(withIdentifier: "FirstNav") as! UINavigationController
-//                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//                appDelegate.window?.rootViewController = nav
-//                // No User is signed in. Show user the login screen
-//            }
-//        }
+                let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let nav = mainStoryboardIpad.instantiateViewController(withIdentifier: "FirstNav") as! UINavigationController
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+             appDelegate.window?.rootViewController = nav
+                // No User is signed in. Show user the login screen
+            }
+        }
         
         
         return true

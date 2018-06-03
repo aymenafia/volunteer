@@ -8,11 +8,13 @@
 
 import UIKit
 import Firebase
+import RSLoadingView
 class Etape12ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
  var ref: DatabaseReference!
     var UserUID:String?
     var imageURL:String?
-    
+    let loadingView = RSLoadingView()
+   
     var imagePath:String = "no image"
     @IBOutlet weak var circularImageview: UIImageView!
     
@@ -22,9 +24,8 @@ class Etape12ViewController: UIViewController,UIImagePickerControllerDelegate,UI
         
     }
     @IBAction func uploadButton(_ sender: Any) {
-        
-        
-        collectData()
+         loadingView.show(on: view)
+    collectData()
         
     }
     
@@ -74,8 +75,8 @@ class Etape12ViewController: UIViewController,UIImagePickerControllerDelegate,UI
         ref = Database.database().reference()
         var postMsg = ["userUID":UserUID!,"nature":nature,"imagePath":imageURL,"postDate":ServerValue.timestamp(),"instruction":instruction,"durée":durée,"nombrePoste":nombrePoste,"secteur":secteur,"langue":langue,"cause":cause,"competence":competence,"tache":tache,"description":description,"titre":titreTF.text!] as [String : Any]
         ref.child("Posts").childByAutoId().setValue(postMsg)
-        
-    
+        sleep(2)
+RSLoadingView.hide(from: view)
   }
     
     func UploadImage(image:UIImage){
@@ -104,7 +105,7 @@ class Etape12ViewController: UIViewController,UIImagePickerControllerDelegate,UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+       
         let nature =  UserDefaults.standard.value(forKey: "nature") as? String
         let instruction =  UserDefaults.standard.value(forKey:"instruction") as? String
         let durée =  UserDefaults.standard.value(forKey: "durée") as? String
