@@ -56,14 +56,14 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "Edit") as! EditPostViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DescViewController") as! DescViewController
+        let post = listOfPosts2[indexPath.row]
         
+        //vc.posts = listOfPosts[indexPath.row]
+        vc.postDetails = post
         
-        vc.posts = listOfPosts[indexPath.row]
-        postDetails = listOfPosts[indexPath.row]
-        
-        GoToPosting()
-        //self.show(vc, sender: nil)
+        //GoToPosting()
+       self.show(vc, sender: nil)
         //self.performSegue(withIdentifier: "step12", sender: nil)
         
     }
@@ -138,9 +138,64 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                             secteurText = postSecteur
                         }
                         
+                        var descriptionText:String?
+                        if let value = postDic["description"] as? String {
+                            
+                            descriptionText = value
+                        }
+                        var tacheText:String?
+                        if let value = postDic["tache"] as? String {
+                            
+                            tacheText = value
+                        }
+                        var competenceText:String?
+                        if let value = postDic["competence"] as? String {
+                            
+                            competenceText = value
+                        }
+                        var natureText:String?
+                        if let value = postDic["nature"] as? String {
+                            
+                            natureText = value
+                        }
+                        
+                        var instuctionText:String?
+                        if let value = postDic["instruction"] as? String {
+                            
+                            instuctionText = value
+                        }
+                        var duréeText:String?
+                        if let value = postDic["durée"] as? String {
+                            
+                            duréeText = value
+                        }
+                        var nbPosteText:String?
+                        if let value = postDic["nombrePoste"] as? String {
+                            
+                            nbPosteText = value
+                        }
+                        var langueText:String?
+                        if let value = postDic["langue"] as? String {
+                            
+                            langueText = value
+                        }
+                        
+                        var causeText:String?
+                        if let value = postDic["cause"] as? String {
+                            
+                            causeText = value
+                        }
+                        
+                        var imageurl:String?
+                        if let value = postDic["imagePath"] as? String {
+                            
+                            imageurl = value
+                        }
+                        
                         self.listOfPosts.append(Post(postTitre: titreText!, userUID: userUID!, postDate: "\(postDate!)", postSecteur: secteurText!))
                         
-                        //self.listOfPosts.append(Post(postText: postText!, userUID: userUID!, postDate: "\(postDate!)", postImage: postImage!))
+                        
+                        self.listOfPosts2.append(Post(userUID: userUID!, postTitre: titreText!, postDescrition: descriptionText!, postTache: tacheText!, postCompetence: competenceText!, postNature: natureText!, postInstruction: instuctionText!, postDurée: duréeText!, postNombrePost: nbPosteText!, postSecteur: secteurText!, postLangue: langueText!, postCause: causeText!, postDate: "\(postDate!)", postImage: imageurl!))
                         
                     }
                     

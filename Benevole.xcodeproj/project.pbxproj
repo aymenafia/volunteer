@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DE07389F20AD29A900131ABF /* Step2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE07389E20AD29A900131ABF /* Step2ViewController.swift */; };
+		DE2BD1FE20C461A80026EE88 /* DescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2BD1FD20C461A80026EE88 /* DescViewController.swift */; };
 		DE5F9286209A1B4C00601537 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F9285209A1B4C00601537 /* Region.swift */; };
 		DE83045720A4A88700A37EBF /* parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83045620A4A88700A37EBF /* parsing.swift */; };
 		DE9A612E20B0682F00475516 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9A612D20B0682F00475516 /* Post.swift */; };
@@ -126,6 +127,7 @@
 		99243C816CAF470BA4488821 /* Pods-Benevole.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Benevole.release.xcconfig"; path = "Pods/Target Support Files/Pods-Benevole/Pods-Benevole.release.xcconfig"; sourceTree = "<group>"; };
 		B706929C8E6FB0EE1749C463 /* Pods_Benevole.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Benevole.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE07389E20AD29A900131ABF /* Step2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step2ViewController.swift; sourceTree = "<group>"; };
+		DE2BD1FD20C461A80026EE88 /* DescViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescViewController.swift; sourceTree = "<group>"; };
 		DE5F9285209A1B4C00601537 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
 		DE83045620A4A88700A37EBF /* parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parsing.swift; sourceTree = "<group>"; };
 		DE9A612D20B0682F00475516 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				DEE5D4CD20AFAB6200D0A7BD /* test.swift */,
 				DE9A613420B07B9500475516 /* ListViewController.swift */,
 				DE9A613820B0976D00475516 /* EditPostViewController.swift */,
+				DE2BD1FD20C461A80026EE88 /* DescViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -945,6 +948,7 @@
 				DED83AE4209810D6007004DC /* UISearchBar+Extensions.swift in Sources */,
 				DEAB0C0920C23DE600072464 /* NaturebViewController.swift in Sources */,
 				DED83B00209810D6007004DC /* PickerViewViewController.swift in Sources */,
+				DE2BD1FE20C461A80026EE88 /* DescViewController.swift in Sources */,
 				DEE5D4CA20AF299800D0A7BD /* Etape4ViewController.swift in Sources */,
 				DED83AF1209810D6007004DC /* ItemWithImage.swift in Sources */,
 				DED83AF3209810D6007004DC /* LocalePickerViewController.swift in Sources */,
