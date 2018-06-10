@@ -165,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XgD-0Y-hb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5839" y="2781"/>
+            <point key="canvasLocation" x="5838" y="2781"/>
         </scene>
         <!--Tache View Controller-->
         <scene sceneID="Ug2-4e-OZA">
@@ -248,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YfD-EK-kDB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6649" y="2781"/>
+            <point key="canvasLocation" x="6673" y="2781"/>
         </scene>
         <!--Competences View Controller-->
         <scene sceneID="obz-oQ-vLb">
@@ -331,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5mw-4I-h9u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7598" y="2781"/>
+            <point key="canvasLocation" x="7591" y="2781"/>
         </scene>
         <!--Instructionsp View Controller-->
         <scene sceneID="uzO-gE-Nhj">
@@ -562,7 +562,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qyY-RS-ynz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5837.6000000000004" y="3521.2893553223389"/>
+            <point key="canvasLocation" x="5838" y="3520"/>
         </scene>
         <!--Secteur View Controller-->
         <scene sceneID="kkm-w9-olr">
@@ -880,8 +880,100 @@
             </objects>
             <point key="canvasLocation" x="8198" y="3520"/>
         </scene>
+        <!--Desc Pop UpVC-->
+        <scene sceneID="fU2-co-yez">
+            <objects>
+                <viewController storyboardIdentifier="DescPopUp" modalPresentationStyle="overCurrentContext" id="Vhj-E1-fPs" customClass="DescPopUpVC" customModule="Benevole" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9je-mI-XhB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzF-MU-qma">
+                                <rect key="frame" x="0.0" y="100" width="375" height="461"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="popGroup" translatesAutoresizingMaskIntoConstraints="NO" id="DX3-9N-HPW">
+                                        <rect key="frame" x="8" y="82" width="351" height="379"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdC-ac-RPE">
+                                        <rect key="frame" x="109" y="408" width="168" height="30"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.25882352939999997" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="5xy-bV-IIb"/>
+                                            <constraint firstAttribute="width" constant="168" id="Pjm-Oi-u0u"/>
+                                        </constraints>
+                                        <state key="normal" title="Ok">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dismissButton:" destination="Vhj-E1-fPs" eventType="touchUpInside" id="zxL-ni-f2L"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" indicatorStyle="black" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ij0-K1-hju">
+                                        <rect key="frame" x="14" y="293" width="340" height="102"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instruction Supplémentaire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ov-kt-yQH">
+                                        <rect key="frame" x="20" y="253" width="347" height="23"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="DX3-9N-HPW" secondAttribute="bottom" id="29S-ck-5tx"/>
+                                    <constraint firstAttribute="bottom" secondItem="DX3-9N-HPW" secondAttribute="bottom" id="6Tc-rz-ITx"/>
+                                    <constraint firstItem="5Ov-kt-yQH" firstAttribute="top" secondItem="bzF-MU-qma" secondAttribute="top" constant="253" id="GDh-su-2ec"/>
+                                    <constraint firstItem="DX3-9N-HPW" firstAttribute="top" secondItem="bzF-MU-qma" secondAttribute="top" id="K9d-kn-z8v"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ij0-K1-hju" secondAttribute="trailing" constant="8" id="Ncl-vD-fZs"/>
+                                    <constraint firstItem="gdC-ac-RPE" firstAttribute="leading" secondItem="bzF-MU-qma" secondAttribute="leading" constant="109" id="Q9f-xP-zgo"/>
+                                    <constraint firstItem="Ij0-K1-hju" firstAttribute="top" secondItem="5Ov-kt-yQH" secondAttribute="bottom" constant="12" id="S2c-Lj-JP7"/>
+                                    <constraint firstItem="gdC-ac-RPE" firstAttribute="top" secondItem="Ij0-K1-hju" secondAttribute="bottom" constant="13" id="Va0-ac-HIK"/>
+                                    <constraint firstAttribute="bottom" secondItem="gdC-ac-RPE" secondAttribute="bottom" constant="23" id="YQq-q9-3il"/>
+                                    <constraint firstAttribute="trailing" secondItem="gdC-ac-RPE" secondAttribute="trailing" constant="98" id="b2c-uN-kXQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="DX3-9N-HPW" secondAttribute="trailing" id="jOu-LO-92M"/>
+                                    <constraint firstItem="5Ov-kt-yQH" firstAttribute="leading" secondItem="bzF-MU-qma" secondAttribute="leading" constant="20" id="jYn-sa-uf6"/>
+                                    <constraint firstItem="DX3-9N-HPW" firstAttribute="top" secondItem="bzF-MU-qma" secondAttribute="top" id="kfK-yy-iMM"/>
+                                    <constraint firstItem="DX3-9N-HPW" firstAttribute="leading" secondItem="bzF-MU-qma" secondAttribute="leading" id="lJB-0i-w7Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Ov-kt-yQH" secondAttribute="trailing" constant="8" id="llr-9y-sCp"/>
+                                    <constraint firstItem="DX3-9N-HPW" firstAttribute="leading" secondItem="bzF-MU-qma" secondAttribute="leading" id="ogQ-sr-y5T"/>
+                                    <constraint firstItem="Ij0-K1-hju" firstAttribute="leading" secondItem="bzF-MU-qma" secondAttribute="leading" constant="8" id="qLW-W5-6OU"/>
+                                    <constraint firstAttribute="trailing" secondItem="DX3-9N-HPW" secondAttribute="trailing" id="uY8-dw-pvf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.093118913471698761" green="0.092875488102436066" blue="0.25517642498016357" alpha="0.60223137842465757" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bzF-MU-qma" firstAttribute="top" secondItem="ESZ-Ez-phw" secondAttribute="top" constant="80" id="5e5-EF-Ev2"/>
+                            <constraint firstItem="bzF-MU-qma" firstAttribute="trailing" secondItem="ESZ-Ez-phw" secondAttribute="trailing" id="5iS-Ok-EmH"/>
+                            <constraint firstItem="ESZ-Ez-phw" firstAttribute="bottom" secondItem="bzF-MU-qma" secondAttribute="bottom" constant="106" id="MRV-lp-vPv"/>
+                            <constraint firstItem="bzF-MU-qma" firstAttribute="leading" secondItem="ESZ-Ez-phw" secondAttribute="leading" id="Z29-Ok-Agj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ESZ-Ez-phw"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="userr" id="lc8-mq-za4">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-15"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="descriptionTV" destination="Ij0-K1-hju" id="fDV-f8-G6m"/>
+                        <outlet property="labelTitle" destination="5Ov-kt-yQH" id="HdL-S3-UZl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lEC-YJ-Bep" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8440.7999999999993" y="4276.9115442278862"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="popGroup" width="318" height="411"/>
         <image name="userr" width="32" height="32"/>
     </resources>
 </document>

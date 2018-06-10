@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DE07389F20AD29A900131ABF /* Step2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE07389E20AD29A900131ABF /* Step2ViewController.swift */; };
 		DE2BD1FE20C461A80026EE88 /* DescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2BD1FD20C461A80026EE88 /* DescViewController.swift */; };
+		DE2BD20020CC2E6D0026EE88 /* DescPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2BD1FF20CC2E6D0026EE88 /* DescPopUpVC.swift */; };
 		DE5F9286209A1B4C00601537 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F9285209A1B4C00601537 /* Region.swift */; };
 		DE83045720A4A88700A37EBF /* parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83045620A4A88700A37EBF /* parsing.swift */; };
 		DE9A612E20B0682F00475516 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9A612D20B0682F00475516 /* Post.swift */; };
@@ -128,6 +129,7 @@
 		B706929C8E6FB0EE1749C463 /* Pods_Benevole.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Benevole.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE07389E20AD29A900131ABF /* Step2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step2ViewController.swift; sourceTree = "<group>"; };
 		DE2BD1FD20C461A80026EE88 /* DescViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescViewController.swift; sourceTree = "<group>"; };
+		DE2BD1FF20CC2E6D0026EE88 /* DescPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescPopUpVC.swift; sourceTree = "<group>"; };
 		DE5F9285209A1B4C00601537 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
 		DE83045620A4A88700A37EBF /* parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parsing.swift; sourceTree = "<group>"; };
 		DE9A612D20B0682F00475516 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 				DEAB0C1020C244FE00072464 /* SecteurViewController.swift */,
 				DEAB0C1220C2451000072464 /* LangueViewController.swift */,
 				DEAB0C1420C2451F00072464 /* CauseViewController.swift */,
+				DE2BD1FF20CC2E6D0026EE88 /* DescPopUpVC.swift */,
 			);
 			path = Popups;
 			sourceTree = "<group>";
@@ -962,6 +965,7 @@
 				DEAA684A20980E24003C06B5 /* LaunchViewController.swift in Sources */,
 				DED83B07209810D6007004DC /* AttributedTextBlock.swift in Sources */,
 				DEAB0C0F20C244E600072464 /* NbPosteViewController.swift in Sources */,
+				DE2BD20020CC2E6D0026EE88 /* DescPopUpVC.swift in Sources */,
 				DEAB0C1520C2451F00072464 /* CauseViewController.swift in Sources */,
 				DEAB0C1720C24E6B00072464 /* Etape2VC.swift in Sources */,
 				DEAB0C0720C2375900072464 /* CompetencesViewController.swift in Sources */,

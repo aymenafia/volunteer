@@ -17,7 +17,7 @@ class DescViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     var UserImagePath: String?
     
     
-    let listOfDesc = ["Secteur","Description de l'offre","Tache","Compétences Recherchées","Instruction Supplémentaire","Nature","Durée","Nombre de Poste","Secteur d'activité","Langue","Cause"]
+    let listOfDesc = ["Description de l'offre","Tache","Compétences Recherchées","Instruction Supplémentaire","Nature","Durée","Nombre de Poste","Secteur d'activité","Langue","Cause"]
     
     @IBOutlet var imageOrg: UIImageView!
     
@@ -65,19 +65,10 @@ class DescViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         super.viewDidLoad()
         
         let user = Auth.auth().currentUser
-        UserUID = (user?.uid)!
+        //UserUID = (user?.uid)!
         ref = Database.database().reference()
-        
-        
-        
         tableView.dataSource = self
         tableView.delegate = self
-        
-        
-        
-        
-        
-        
         loadUserFormFirebase()
         print(postDetails.postTitre!)
         setUserImage(url:postDetails.postImage!)
@@ -111,16 +102,72 @@ class DescViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         //let post = listOfPosts[indexPath.row]
         
         let cellWithImage = tableView.dequeueReusableCell(withIdentifier: "cell",for: indexPath)
-        
-        
         cellWithImage.textLabel?.text = listOfDesc[indexPath.row]
         //cellWithImage.setText(post: post)
         return cellWithImage
-        
-        
-    }
+   }
     
     
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if alerts[indexPath.item].rawValue == "description de l'offre" {
+//            print("first cell")
+//            let storyboard = UIStoryboard(name: "secteurPopupViewController", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "DescriptionViewController") as! DescriptionViewController
+//            //vc.pickerViewState = "secteur"
+//            present(vc, animated: true, completion: nil)
+        //}
+      //["Secteur","Description de l'offre","Tache","Compétences Recherchées","Instruction Supplémentaire","Nature","Durée","Nombre de Poste","Secteur d'activité","Langue","Cause"]
+            let storyboard = UIStoryboard(name: "secteurPopupViewController", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DescPopUp") as! DescPopUpVC
+            //vc.pickerViewState = "secteur"
+        
+      
+        
+        if indexPath.row == 0 {
+            vc.titleValue = listOfDesc[indexPath.row]
+            vc.descriptionValue = postDetails.postDescrition!
+        }
+        if indexPath.row == 1 {
+            vc.titleValue = listOfDesc[indexPath.row]
+            vc.descriptionValue = postDetails.postTache!
+        }
+        if indexPath.row == 2 {
+            vc.titleValue = listOfDesc[indexPath.row]
+            vc.descriptionValue = postDetails.postCompetence!
+        }
+        if indexPath.row == 3 {
+            vc.titleValue = listOfDesc[indexPath.row]
+            vc.descriptionValue = postDetails.postInstruction!
+        }
+        if indexPath.row == 4 {
+            vc.titleValue = listOfDesc[indexPath.row]
+            vc.descriptionValue = postDetails.postNature!
+        }
+        if indexPath.row == 5 {
+            vc.titleValue = listOfDesc[indexPath.row]
+            vc.descriptionValue = postDetails.postDurée!
+        }
+        if indexPath.row == 6 {
+            vc.titleValue = listOfDesc[indexPath.row]
+            vc.descriptionValue = postDetails.postNombrePost!
+        }
+        if indexPath.row == 7 {
+            vc.titleValue = listOfDesc[indexPath.row]
+            vc.descriptionValue = postDetails.postSecteur!
+        }
+        if indexPath.row == 8 {
+            vc.titleValue = listOfDesc[indexPath.row]
+            vc.descriptionValue = postDetails.postLangue!
+        }
+        if indexPath.row == 9 {
+            vc.titleValue = listOfDesc[indexPath.row]
+            vc.descriptionValue = postDetails.postCause!
+        }
+         present(vc, animated: true, completion: nil)
+   }
+  
 
     func  setUserImage(url:String){
         
@@ -158,9 +205,7 @@ class DescViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 //            }
 //
 //        }
-        
-        
-    }
+   }
     func  dowloadImagePost(url:String){
         
         let storageRef = Storage.storage().reference(forURL:"gs://notrequebec-67065.appspot.com")

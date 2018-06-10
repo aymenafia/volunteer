@@ -994,6 +994,9 @@
                                 <state key="normal" image="benevole">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="SjC-HJ-0oH" kind="show" id="Ft8-bb-NhR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVy-0p-vA1">
                                 <rect key="frame" x="123" y="602" width="153" height="46"/>
@@ -1007,7 +1010,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hand" translatesAutoresizingMaskIntoConstraints="NO" id="W4I-5X-CSB">
-                                <rect key="frame" x="79" y="241" width="240" height="335"/>
+                                <rect key="frame" x="79" y="241" width="240" height="299"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -1028,7 +1031,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yun-k7-McF" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="690.39999999999998" y="-258.62068965517244"/>
+            <point key="canvasLocation" x="689.85507246376812" y="-259.23913043478262"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="5AE-Es-jSL">
@@ -1506,4 +1509,7 @@
         <image name="uploadimage" width="750" height="750"/>
         <image name="userr" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ft8-bb-NhR"/>
+    </inferredMetricsTieBreakers>
 </document>
