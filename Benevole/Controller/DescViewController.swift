@@ -9,13 +9,26 @@
 import UIKit
 import Firebase
 import Kingfisher
-class DescViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+import MessageUI
+class DescViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, MFMailComposeViewControllerDelegate {
     
+    @IBAction func sendEmail(_ sender: Any) {
+        
+        let mailComposeViewController = configureMailController()
+        if MFMailComposeViewController.canSendMail() {
+            self.present(mailComposeViewController, animated: true, completion: nil)
+        } else {
+            showMailError()
+        }
+        
+        
+        
+    }
     var ref: DatabaseReference!
     var postDetails : Post!
     var UserUID:String?
     var UserImagePath: String?
-    
+    var emailValue: String?
     
     let listOfDesc = ["Description de l'offre","Tache","Compétences Recherchées","Instruction Supplémentaire","Nature","Durée","Nombre de Poste","Secteur d'activité","Langue","Cause"]
     
@@ -73,6 +86,11 @@ class DescViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         print(postDetails.postTitre!)
         setUserImage(url:postDetails.postImage!)
         TitreTextField.text = postDetails.postTitre!
+        
+        
+        
+        
+        
 //        DescritionTextVIew.text = postDetails.postDescrition!
 //        CompetenceTextView.text = postDetails.postCompetence!
 //        TacheTextView.text = postDetails.postTache!
@@ -168,7 +186,16 @@ class DescViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
          present(vc, animated: true, completion: nil)
    }
   
-
+    func configureMailController() -> MFMailComposeViewController {
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self as! MFMailComposeViewControllerDelegate
+        
+        mailComposerVC.setToRecipients([emailValue!])
+        mailComposerVC.setSubject("Hello")
+        mailComposerVC.setMessageBody("How are you doing?", isHTML: false)
+        
+        return mailComposerVC
+    }
     func  setUserImage(url:String){
         
         let urll = URL(string: url)
@@ -286,6 +313,7 @@ class DescViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                             
                             let fullName = snap.value as? String
                             //self.emailLbl.text = fullName
+                            self.emailValue = fullName
                         }
                         
                         // print(CentreActionBenevole,RegionAdministrative,OrgImagePath,siteInternet)

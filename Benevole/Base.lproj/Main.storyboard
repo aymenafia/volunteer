@@ -1427,7 +1427,7 @@
                                                 <rect key="frame" x="107" y="1245" width="200" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.25882352939999997" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Suivant">
+                                                <state key="normal" title="envoyer email">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -1436,7 +1436,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="test:" destination="oin-OX-iae" eventType="touchUpInside" id="awd-2A-VAx"/>
+                                                    <action selector="sendEmail:" destination="Nht-yy-s5y" eventType="touchUpInside" id="F2v-gR-NGR"/>
                                                 </connections>
                                             </button>
                                         </subviews>
