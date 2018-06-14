@@ -23,8 +23,8 @@ class PostTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         
-        iv_postImage.layer.cornerRadius = iv_postImage.frame.size.width/2
-        iv_postImage.clipsToBounds = true
+       // iv_postImage.layer.cornerRadius = iv_postImage.frame.size.width/2
+        //iv_postImage.clipsToBounds = true
         // Initialization code
     }
 

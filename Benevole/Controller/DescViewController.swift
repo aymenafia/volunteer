@@ -20,9 +20,6 @@ class DescViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         } else {
             showMailError()
         }
-        
-        
-        
     }
     var ref: DatabaseReference!
     var postDetails : Post!
